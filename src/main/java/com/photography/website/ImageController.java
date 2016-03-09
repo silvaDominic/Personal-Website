@@ -2,6 +2,7 @@ package com.photography.website;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.json.JSONObject;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.File;
@@ -10,15 +11,25 @@ import java.util.ArrayList;
 //@CrossOrigin(origins = "http://localhost:8080", maxAge = 3600)
 @RestController
 public class ImageController {
+    /**
+     * Processes a request to specific url sub-directory
+     *
+     * @return a JSON string
+     */
     @RequestMapping("/church_album")
     @ResponseBody
     String getImages() {
 
-        return "{\"images\":[{\"filename\":\"IMG_5036.JPG\"}, " +
-                "{\"filename\":\"IMG_5040.JPG\"}, " +
-                "{\"filename\":\"IMG_5055.JPG\"}," +
-                "{\"filename\":\"IMG_5058.JPG\"}," +
-                "{\"filename\":\"IMG_5060.JPG\"}]}";
+        // Set resource path and create Image list
+        String imgDirectory = "/media/reclaimer/shared/software-development/photography-website/src/main/resources/images/church_album";
+        ArrayList<Image> files = listImageFiles(imgDirectory);
+        System.out.println(imgDirectory);
+
+        JSONObject JsonObj = new JSONObject(); // Initialize and instantiate JSON object
+        JsonObj.put("images", convertToJSON(files)); // Convert Image files to JSON object and add to JSON object as 'images'
+        System.out.println(JsonObj);
+
+        return JsonObj.toString();
     }
 
     // Private Methods -----------------------------------------------------------------------------------------------
