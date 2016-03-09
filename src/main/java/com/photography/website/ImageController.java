@@ -3,14 +3,65 @@ package com.photography.website;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.json.JSONObject;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.ServletContext;
+import javax.servlet.http.HttpServletRequest;
 import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 
 //@CrossOrigin(origins = "http://localhost:8080", maxAge = 3600)
 @RestController
 public class ImageController {
+    @Autowired
+    ServletContext servletContext;
+
+    /**
+     * Handles particular image request for church album
+     *
+     * @param id The requested image
+     * @return byte code representation of Image object
+     * @throws IOException if resource is of invalid type
+     */
+    @RequestMapping("/church_album/{id}")
+    ResponseEntity<byte[]> getChurchImages(@PathVariable String id) throws IOException {
+        // Set requested image as InputStream
+        InputStream in = servletContext.getResourceAsStream("/images/church_album/" + id + ".JPG");
+
+        // Initialize and instantiate HttpHeader object and set content type as JPEG
+        final HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.IMAGE_JPEG);
+
+        return new ResponseEntity<byte[]>(org.apache.commons.io.IOUtils.toByteArray(in), headers, HttpStatus.CREATED);
+    }
+
+    @RequestMapping("/nature_album/{id}")
+    ResponseEntity<byte[]> getNatureImages(@PathVariable String id) throws IOException {
+        InputStream in = servletContext.getResourceAsStream("/images/nature_album/" + id);
+
+        final HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.IMAGE_JPEG);
+
+        return new ResponseEntity<byte[]>(org.apache.commons.io.IOUtils.toByteArray(in), headers, HttpStatus.CREATED);
+    }
+
+    @RequestMapping("/restaurant_album/{id}")
+    ResponseEntity<byte[]> getRestaurantImages(@PathVariable String id) throws IOException {
+        InputStream in = servletContext.getResourceAsStream("/images/restaurant_album/" + id);
+
+        final HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.IMAGE_JPEG);
+
+        return new ResponseEntity<byte[]>(org.apache.commons.io.IOUtils.toByteArray(in), headers, HttpStatus.CREATED);
+    }
+
     /**
      * Processes a request to specific url sub-directory
      *
