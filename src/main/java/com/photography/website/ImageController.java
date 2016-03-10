@@ -11,13 +11,11 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.ServletContext;
-import javax.servlet.http.HttpServletRequest;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 
-@CrossOrigin(origins = "http://localhost:9000")
 @RestController
 public class ImageController {
     @Autowired
@@ -30,10 +28,11 @@ public class ImageController {
      * @return byte code representation of Image object
      * @throws IOException if resource is of invalid type
      */
+    //@CrossOrigin(origins = "http://localhost:9000")
     @RequestMapping("/church_album/{id}")
     ResponseEntity<byte[]> getChurchImages(@PathVariable String id) throws IOException {
         // Set requested image as InputStream
-        InputStream in = servletContext.getResourceAsStream("/images/church_album/" + id + ".JPG");
+        InputStream in = servletContext.getResourceAsStream("/resources/images/church_album/" + id + ".JPG");
 
         // Initialize and instantiate HttpHeader object and set content type as JPEG
         final HttpHeaders headers = new HttpHeaders();
@@ -44,7 +43,7 @@ public class ImageController {
 
     @RequestMapping("/nature_album/{id}")
     ResponseEntity<byte[]> getNatureImages(@PathVariable String id) throws IOException {
-        InputStream in = servletContext.getResourceAsStream("/images/nature_album/" + id);
+        InputStream in = servletContext.getResourceAsStream("/src/main/webapp/resources/images/nature_album/" + id + ".JPG");
 
         final HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.IMAGE_JPEG);
@@ -54,13 +53,14 @@ public class ImageController {
 
     @RequestMapping("/restaurant_album/{id}")
     ResponseEntity<byte[]> getRestaurantImages(@PathVariable String id) throws IOException {
-        InputStream in = servletContext.getResourceAsStream("/images/restaurant_album/" + id);
+        InputStream in = servletContext.getResourceAsStream("/src/main/webapp/resources/images/restaurant_album/" + id + ".JPG");
 
         final HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.IMAGE_JPEG);
 
         return new ResponseEntity<byte[]>(org.apache.commons.io.IOUtils.toByteArray(in), headers, HttpStatus.CREATED);
     }
+
 
     /**
      * Processes a request to specific url sub-directory
@@ -72,7 +72,7 @@ public class ImageController {
     String getImages() {
 
         // Set resource path and create Image list
-        String imgDirectory = "/media/reclaimer/shared/software-development/photography-website/src/main/resources/images/church_album";
+        String imgDirectory = "/media/reclaimer/shared/software-development/photography-website/src/main/webapp/resources/images/church_album";
         ArrayList<Image> files = listImageFiles(imgDirectory);
         System.out.println(imgDirectory);
 
