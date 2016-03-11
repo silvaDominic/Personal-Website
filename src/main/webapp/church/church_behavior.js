@@ -1,5 +1,5 @@
 document.domain = "localhost";
-var url = "http://localhost:8080/church_album/"
+var url = "http://localhost:8080/church_album/";
 console.log($.ajax());
 
 $.getJSON(url, function(data){
@@ -10,8 +10,14 @@ $.getJSON(url, function(data){
 	console.log(JSON.parse(val).filename)
 });
 
-  $( "<ul/>", {
-    "class": "my-new-list",
+  $( "<div/>", {
+    "class": "galleria",
     html: items.join( "" )
   }).appendTo( "body" );
 });
+
+
+if (Galleria) {
+    Galleria.loadTheme('../galleria/themes/classic/galleria.classic.min.js');
+    Galleria.run('.galleria');
+}

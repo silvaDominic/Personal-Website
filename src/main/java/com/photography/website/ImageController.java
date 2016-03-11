@@ -43,7 +43,7 @@ public class ImageController {
 
     @RequestMapping("/nature_album/{id}")
     ResponseEntity<byte[]> getNatureImages(@PathVariable String id) throws IOException {
-        InputStream in = servletContext.getResourceAsStream("/src/main/webapp/resources/images/nature_album/" + id + ".JPG");
+        InputStream in = servletContext.getResourceAsStream("/resources/images/nature_album/" + id + ".JPG");
 
         final HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.IMAGE_JPEG);
@@ -53,7 +53,7 @@ public class ImageController {
 
     @RequestMapping("/restaurant_album/{id}")
     ResponseEntity<byte[]> getRestaurantImages(@PathVariable String id) throws IOException {
-        InputStream in = servletContext.getResourceAsStream("/src/main/webapp/resources/images/restaurant_album/" + id + ".JPG");
+        InputStream in = servletContext.getResourceAsStream("/resources/images/restaurant_album/" + id + ".JPG");
 
         final HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.IMAGE_JPEG);
