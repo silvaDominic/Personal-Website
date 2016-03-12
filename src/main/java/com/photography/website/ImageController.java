@@ -74,11 +74,11 @@ public class ImageController {
         // Set resource path and create Image list
         String imgDirectory = "/media/reclaimer/shared/software-development/photography-website/src/main/webapp/resources/images/church_album";
         ArrayList<Image> files = listImageFiles(imgDirectory);
-        System.out.println(imgDirectory);
+        //System.out.println(imgDirectory);
 
         JSONObject JsonObj = new JSONObject(); // Initialize and instantiate JSON object
         JsonObj.put("images", convertToJSON(files)); // Convert Image files to JSON object and add to JSON object as 'images'
-        System.out.println(JsonObj);
+        //System.out.println(JsonObj);
 
         return JsonObj.toString();
     }

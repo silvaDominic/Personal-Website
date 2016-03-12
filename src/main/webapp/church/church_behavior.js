@@ -6,8 +6,8 @@ $.getJSON(url, function(data){
 	var items = [];
 	$.each(data.images, function(key, val){
 	items.push("<img height=\"400px\" src = \"" + url + JSON.parse(val).filename + "\"/>")
-	console.log(url + JSON.parse(val).filename)
-	console.log(JSON.parse(val).filename)
+	//console.log(url + JSON.parse(val).filename)
+	//console.log(JSON.parse(val).filename)
 });
 
   $( "<div/>", {
@@ -18,6 +18,15 @@ $.getJSON(url, function(data){
 
 
 if (Galleria) {
-    Galleria.loadTheme('../galleria/themes/classic/galleria.classic.min.js');
-    Galleria.run('.galleria');
+    Galleria.loadTheme('galleria/themes/classic/galleria.classic.min.js');
+    Galleria.run('.galleria', {
+        extend: function() {
+        var gallery = this;
+            $('#fullscreen').click(function() {
+              gallery.enterFullscreen();
+              });
+        }
+    });
 }
+
+//TODO: Find out why '../galleria...' isn't working.
