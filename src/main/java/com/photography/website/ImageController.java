@@ -21,6 +21,74 @@ public class ImageController {
     @Autowired
     ServletContext servletContext;
 
+    // Request Mapping for albums ------------------------------------------------------------------------------------
+
+    /**
+     * Processes a request to specific url sub-directory
+     *
+     * @return a JSON string
+     */
+    @RequestMapping("/port_jeff_album")
+    @ResponseBody
+    String getPortJeffImages() {
+
+        // Set resource path and create Image list
+        String imgDirectory = "/media/reclaimer/shared/software-development/photography-website/src/main/webapp/resources/images/port_jeff_album";
+        ArrayList<Image> files = listImageFiles(imgDirectory);
+        //System.out.println(imgDirectory);
+
+        JSONObject JsonObj = new JSONObject(); // Initialize and instantiate JSON object
+        JsonObj.put("images", convertToJSON(files)); // Convert Image files to JSON object and add to JSON object as 'images'
+        //System.out.println(JsonObj);
+
+        return JsonObj.toString();
+    }
+
+     /**
+     * Processes a request to specific url sub-directory
+     *
+     * @return a JSON string
+     */
+
+    @RequestMapping("/nature_album")
+    @ResponseBody
+    String getNatureImages() {
+
+        // Set resource path and create Image list
+        String imgDirectory = "/media/reclaimer/shared/software-development/photography-website/src/main/webapp/resources/images/nature_album";
+        ArrayList<Image> files = listImageFiles(imgDirectory);
+        //System.out.println(imgDirectory);
+
+        JSONObject JsonObj = new JSONObject(); // Initialize and instantiate JSON object
+        JsonObj.put("images", convertToJSON(files)); // Convert Image files to JSON object and add to JSON object as 'images'
+        //System.out.println(JsonObj);
+
+        return JsonObj.toString();
+    }
+
+    /**
+     * Processes a request to specific url sub-directory
+     *
+     * @return a JSON string
+     */
+    @RequestMapping("/restaurant_album")
+    @ResponseBody
+    String getRestaurantImages() {
+
+        // Set resource path and create Image list
+        String imgDirectory = "/media/reclaimer/shared/software-development/photography-website/src/main/webapp/resources/images/restaurant_album";
+        ArrayList<Image> files = listImageFiles(imgDirectory);
+        //System.out.println(imgDirectory);
+
+        JSONObject JsonObj = new JSONObject(); // Initialize and instantiate JSON object
+        JsonObj.put("images", convertToJSON(files)); // Convert Image files to JSON object and add to JSON object as 'images'
+        //System.out.println(JsonObj);
+
+        return JsonObj.toString();
+    }
+
+    // Request Mapping for specific images ---------------------------------------------------------------------------
+
     /**
      * Handles particular image request for church album
      *
@@ -29,10 +97,10 @@ public class ImageController {
      * @throws IOException if resource is of invalid type
      */
     //@CrossOrigin(origins = "http://localhost:9000")
-    @RequestMapping("/church_album/{id}")
-    ResponseEntity<byte[]> getChurchImages(@PathVariable String id) throws IOException {
+    @RequestMapping("/port_jeff_album/{id}")
+    ResponseEntity<byte[]> getPortJeffImages(@PathVariable String id) throws IOException {
         // Set requested image as InputStream
-        InputStream in = servletContext.getResourceAsStream("/resources/images/church_album/" + id + ".JPG");
+        InputStream in = servletContext.getResourceAsStream("/resources/images/port_jeff_album/" + id + ".JPG");
 
         // Initialize and instantiate HttpHeader object and set content type as JPEG
         final HttpHeaders headers = new HttpHeaders();
@@ -59,28 +127,6 @@ public class ImageController {
         headers.setContentType(MediaType.IMAGE_JPEG);
 
         return new ResponseEntity<byte[]>(org.apache.commons.io.IOUtils.toByteArray(in), headers, HttpStatus.CREATED);
-    }
-
-
-    /**
-     * Processes a request to specific url sub-directory
-     *
-     * @return a JSON string
-     */
-    @RequestMapping("/church_album")
-    @ResponseBody
-    String getImages() {
-
-        // Set resource path and create Image list
-        String imgDirectory = "/media/reclaimer/shared/software-development/photography-website/src/main/webapp/resources/images/church_album";
-        ArrayList<Image> files = listImageFiles(imgDirectory);
-        //System.out.println(imgDirectory);
-
-        JSONObject JsonObj = new JSONObject(); // Initialize and instantiate JSON object
-        JsonObj.put("images", convertToJSON(files)); // Convert Image files to JSON object and add to JSON object as 'images'
-        //System.out.println(JsonObj);
-
-        return JsonObj.toString();
     }
 
     // Private Methods -----------------------------------------------------------------------------------------------
