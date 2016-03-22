@@ -7,7 +7,14 @@ border: 1px solid black;
 border-radius:50px;
 -moz-border-radius:50px;
 -webkit-border-radius: 50px;
+font-size: 25px;
+text-align: center;
+line-height: 50px;
 transition: background 0.5s linear 0s, color 0.5s linear 0s;
+}
+
+#about_text{
+
 }
 
 #about_node:hover{
@@ -15,11 +22,6 @@ transition: background 0.5s linear 0s, color 0.5s linear 0s;
     color: white;
 }
 
-#about_text{
-font-size: 25px;
-text-align: center;
-line-height: 50px;
-}
 
 #game_photo_node {
 background-color: white;
