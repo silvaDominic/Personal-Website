@@ -5,31 +5,31 @@ $(function() {
     var selfstudyNode = $('#self_study_node');
 
     $(aboutNode.mouseover(function() {
-        $(aboutNode).hover(hoverInHandler('#about_text', "About"), hoverOutHandler('#about_text', "A"));
-        alert("About Check");
+        hoverInHandler('#about_text', "About");
+        hoverOutHandler('#about_text', "A");
+        //alert("About Check");
     }));
 
     $(gamephotoNode.mouseover(function() {
         //aboutNode.hover(hoverInHandler('about_text', "About"), hoverOutHandler('about_text', "A"))
-        alert("gp Check");
+        //alert("gp Check");
     }));
 
     $(selfstudyNode.mouseover(function() {
         //aboutNode.hover(hoverInHandler('about_text', "About"), hoverOutHandler('about_text', "A"))
-        alert("ss Check");
+        //alert("ss Check");
     }));
         //});
 
     function hoverInHandler(nodeName, nodeText){
-        alert("hover in")
         $(nodeName).fadeOut(300, function() {
-            $(this).text(nodeName).fadeIn(300);
+            $(this).text(nodeText).fadeIn(300);
             });
     }
 
     function hoverOutHandler(nodeName, nodeText) {
-            $(nodeName).fadeOut(300, function() {
-            $(this).text(nodeText).fadeIn(300);
+         $(nodeName).fadeOut(300, function() {
+            $(this).text(nodeText).fadeIn(5000);
            });
     }
 

@@ -1,17 +1,59 @@
 #about_node {
-display: block;
-background-color: white;
-height: 100px;
-width: 100px;
-border: 1px solid black;
-border-radius:50px;
--moz-border-radius:50px;
--webkit-border-radius: 50px;
-font-size: 25px;
-text-align: center;
-line-height: 50px;
-transition: background 0.5s linear 0s, color 0.5s linear 0s;
+    position: absolute;
+    left: 50%;
+    bottom: 65%;
+    margin-left: -50px;
+    background-color: white;
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+    border-radius:50px;
+    -moz-border-radius:50px;
+    -webkit-border-radius: 50px;
+    font-size: 25px;
+    text-align: center;
+    line-height: 50px;
+    transition: background 0.8s linear 0s, color 0.8s linear 0s;
 }
+
+#left_about_subnode {
+    display: block;
+    position: absolute;
+    left: 20%;
+    bottom: 40%;
+    margin-left: -250px;
+    background-color: #ff4f4c;
+    color: white;
+    height: 500px;
+    width: 500px;
+    border: 1px solid black;
+    border-radius:250px;
+    -moz-border-radius:250px;
+    -webkit-border-radius: 250px;
+    font-size: 12px;
+    text-align: center;
+    transition: background 0.8s linear 0s, color 0.8s linear 0s;
+}
+
+#right_about_subnode {
+    display: block;
+    position: absolute;
+    left: 80%;
+    bottom: 40%;
+    margin-left: -250px;
+    background-color: #ff4f4c;
+    color: white;
+    height: 500px;
+    width: 500px;
+    border: 1px solid black;
+    border-radius:250px;
+    -moz-border-radius:250px;
+    -webkit-border-radius: 250px;
+    font-size: 12px;
+    text-align: center;
+    transition: background 0.8s linear 0s, color 0.8s linear 0s;
+}
+
 
 #about_node:hover{
     background-color: red;
@@ -19,18 +61,21 @@ transition: background 0.5s linear 0s, color 0.5s linear 0s;
 }
 
 #game_photo_node {
-display: block;
-background-color: white;
-height: 200px;
-width: 200px;
-border: 1px solid black;
-border-radius:100px;
--moz-border-radius:100px;
--webkit-border-radius: 100px;
-font-size: 25px;
-text-align: center;
-line-height: 200px;
-transition: background 0.5s linear 0s, color 0.5s linear 0s;
+    position: absolute;
+    left: 50%;
+    bottom: 35%;
+    margin-left: -100px;
+    background-color: white;
+    height: 200px;
+    width: 200px;
+    border: 1px solid black;
+    border-radius:100px;
+    -moz-border-radius:100px;
+    -webkit-border-radius: 100px;
+    font-size: 25px;
+    text-align: center;
+    line-height: 200px;
+    transition: background 0.5s linear 0s, color 0.5s linear 0s;
 }
 
 #game_photo_node:hover{
@@ -39,18 +84,21 @@ transition: background 0.5s linear 0s, color 0.5s linear 0s;
 }
 
 #self_study_node {
-display: block;
-background-color: white;
-height: 150px;
-width: 150px;
-border: 1px solid black;
-border-radius:75px;
--moz-border-radius:75px;
--webkit-border-radius:75px;
-font-size: 25px;
-text-align: center;
-line-height: 150px;
-transition: background 0.5s linear 0s, color 0.5s linear 0s;
+    position: absolute;
+    left: 50%;
+    bottom: 12%;
+    margin-left: -70px;
+    background-color: white;
+    height: 140px;
+    width: 140px;
+    border: 1px solid black;
+    border-radius:70px;
+    -moz-border-radius:70px;
+    -webkit-border-radius:70px;
+    font-size: 25px;
+    text-align: center;
+    line-height: 140px;
+    transition: background 0.5s linear 0s, color 0.5s linear 0s;
 }
 
 #self_study_node:hover{
@@ -58,4 +106,12 @@ transition: background 0.5s linear 0s, color 0.5s linear 0s;
     color: white;
 }
 
-/*TODO: Style rest of divs; center nodes; take notes on 'transition' property
+#head_icon{
+    display: block;
+    margin: 0 auto;
+    height: 20%;
+    width: 20%;
+
+}
+
+/*TODO: Style rest of divs; center nodes; take notes on 'transition' property*/
