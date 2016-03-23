@@ -13,17 +13,13 @@ line-height: 50px;
 transition: background 0.5s linear 0s, color 0.5s linear 0s;
 }
 
-#about_text{
-
-}
-
 #about_node:hover{
     background-color: red;
     color: white;
 }
 
-
 #game_photo_node {
+display: block;
 background-color: white;
 height: 200px;
 width: 200px;
@@ -34,9 +30,16 @@ border-radius:100px;
 font-size: 25px;
 text-align: center;
 line-height: 200px;
+transition: background 0.5s linear 0s, color 0.5s linear 0s;
+}
+
+#game_photo_node:hover{
+    background-color: orange;
+    color: white;
 }
 
 #self_study_node {
+display: block;
 background-color: white;
 height: 150px;
 width: 150px;
@@ -47,6 +50,12 @@ border-radius:75px;
 font-size: 25px;
 text-align: center;
 line-height: 150px;
+transition: background 0.5s linear 0s, color 0.5s linear 0s;
+}
+
+#self_study_node:hover{
+    background-color: blue;
+    color: white;
 }
 
 /*TODO: Style rest of divs; center nodes; take notes on 'transition' property
