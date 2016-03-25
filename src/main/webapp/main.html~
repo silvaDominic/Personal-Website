@@ -17,9 +17,9 @@
      <!-- The primary nodes that make up the main page -->
      <div class = nodes>
 
-	 <object>
-		<embed id = "about_node" src = "resources/node-images/about-node.svg" width = "25%" height = "25%" type = "image/svg-iml"></embed>
-	 </object>
+		 <object>
+			<embed id = "about_node" src = "resources/node-images/about-node.svg" width = "25%" height = "25%" type = "image/svg-iml"></embed>
+		 </object>
 		 
          <div id = "left_about_subnode">
              <p id = left_about_para>LEFT side text for the about me section</p>
