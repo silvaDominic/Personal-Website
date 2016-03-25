@@ -1,0 +1,62 @@
+<svg version="1.1" id="self_study_node" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="-0.531 -0.583 25.063 25.114" preserveAspectRatio="xMidYMid meet"
+	 style="enable-background:new -0.531 -0.583 25.063 25.114;" xml:space="preserve">
+	 
+	<defs>
+		<style type="text/css">
+		
+		.circle{fill:white;stroke:#000000;stroke-miterlimit:10;}
+		
+		.circle{
+			stroke-dasharray: 76;
+			stroke-dashoffset: 0;
+			-webkit-animation: dash 1s ease-in forwards;
+			-o-animation: dash 1 ease-in forwards;
+			-moz-animation: dash 1s ease-in forwards;
+			animation: dash 1s ease-in forwards;
+			transition: fill 0.5s linear 0s, color 0.5s linear 0s, stroke 0.5s linear 0s;
+		}
+		
+		#self_study_node:hover .circle{
+			fill: red;
+			transition: 1s;
+			stroke: red;
+		}
+		
+		#self_study_node.onClick .circle{
+			fill: blue;
+			transition: 1s;
+			stroke: blue;
+		}
+		
+		@-moz-keyframes dash{
+			from{
+				stroke-dashoffset: 76;
+			}
+			to{
+				stroke-dashoffset: 0;
+			}
+		}
+		
+		@-webkit-keyframes dash{
+			from{
+				stroke-dashoffset: 76;
+			}
+			to{
+				stroke-dashoffset: 0;
+			}
+		}
+		
+		</style>
+		
+		<script type = "text/javascript">
+			var clicker = document.querySelector('#self_study_node');
+			
+			clicker.addEventListener('click', function() {
+				this.classList.toggle('onClick');
+			});
+		</script>
+	</defs>
+	
+<circle class="circle" cx="12" cy="12" r="12"/>
+</svg>
