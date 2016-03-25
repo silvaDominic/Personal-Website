@@ -1,11 +1,7 @@
-#about_node {
+#circle {
     position: absolute;
-    left: 50%;
-    bottom: 65%;
     margin-left: -50px;
     background-color: white;
-    height: 100px;
-    width: 100px;
     border: 1px solid black;
     border-radius:50px;
     -moz-border-radius:50px;
@@ -15,45 +11,6 @@
     line-height: 50px;
     transition: background 0.8s linear 0s, color 0.8s linear 0s;
 }
-
-#left_about_subnode {
-    display: block;
-    position: absolute;
-    left: 20%;
-    bottom: 40%;
-    margin-left: -250px;
-    background-color: #ff4f4c;
-    color: white;
-    height: 500px;
-    width: 500px;
-    border: 1px solid black;
-    border-radius:250px;
-    -moz-border-radius:250px;
-    -webkit-border-radius: 250px;
-    font-size: 12px;
-    text-align: center;
-    transition: background 0.8s linear 0s, color 0.8s linear 0s;
-}
-
-#right_about_subnode {
-    display: block;
-    position: absolute;
-    left: 80%;
-    bottom: 40%;
-    margin-left: -250px;
-    background-color: #ff4f4c;
-    color: white;
-    height: 500px;
-    width: 500px;
-    border: 1px solid black;
-    border-radius:250px;
-    -moz-border-radius:250px;
-    -webkit-border-radius: 250px;
-    font-size: 12px;
-    text-align: center;
-    transition: background 0.8s linear 0s, color 0.8s linear 0s;
-}
-
 
 #about_node:hover{
     background-color: red;
