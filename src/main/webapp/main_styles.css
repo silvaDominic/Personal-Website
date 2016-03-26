@@ -1,10 +1,15 @@
 #about_svg{
+    display: inline;
+    position: absolute;
     width: 5%;
     height: 5%;
+    max-width: 5%;
+    max-height: 5%;
+    left: 50%;
+    -moz-transform: translateX(-50%);
     -webkit-border-radius: 100%;
     -moz-border-radius: 100%;
     border-radius: 100%;
-    display: block;
     margin-left: auto;
     margin-right: auto;
     margin-top: 3%;
@@ -12,33 +17,38 @@
 }
 
 #left_about_svg{
-    position: relative;
-    top: -200px;
-    right: 25%;
-    width: 35%;
-    height: 35%;
+    display:inline;
+    position: absolute;
+    width: 65%;
+    height: 65%;
+    min-width: 35%;
+    min-height: 35%;
+    left: 25%;
+    top: 3%;
+    -moz-transform: translateX(-50%);
     -webkit-border-radius: 100%;
     -moz-border-radius: 100%;
     border-radius: 100%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 10px;
+    margin-right: 10px;
     text-align: center;
 }
 
 #right_about_svg{
-    position: relative;
-    top: -600px;
-    left: 25%;
-    width: 35%;
-    height: 35%;
+    display: inline;
+    position: absolute;
+    width: 65%;
+    height: 65%;
+    min-width: 35%;
+    min-height: 35%;
+    left: 75%;
+    top: 3%;
+    -moz-transform: translateX(-50%);
     -webkit-border-radius: 100%;
     -moz-border-radius: 100%;
     border-radius: 100%;
-    transform: translate(800, 0);
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 10px;
+    margin-right: 10px;
     text-align: center;
 }
 

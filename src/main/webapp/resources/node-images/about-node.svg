@@ -5,9 +5,12 @@
 	<defs>
 		<style type="text/css">
 		
-		.circle{fill:white;stroke:#000000;stroke-miterlimit:10;}
-		
 		.circle{
+			fill:white;
+			stroke:#000000;
+			stroke-miterlimit:10;}
+
+<!--		.circle{
 			stroke-dasharray: 76;
 			stroke-dashoffset: 0;
 			-webkit-animation: dash 1s ease-in forwards;
@@ -45,7 +48,7 @@
 			to{
 				stroke-dashoffset: 0;
 			}
-		}
+		}-->
 		
 		</style>
 		
@@ -58,4 +61,5 @@
 		</script>
 	</defs>
 	<circle class = "circle" cx="12" cy="12" r="12"/>
+
 </svg>
