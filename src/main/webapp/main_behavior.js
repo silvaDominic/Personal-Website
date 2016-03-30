@@ -1,16 +1,12 @@
 $(function() {
-    $("#about-section").hide();
     $("#about-button").toggle(function() {
-        $("#about-button")
+        console.log("1st");
+        $(this)
             .animate({width: '800px'}, 500)
-            .animate({height: '300px'}, {duration: 500,
-                complete: function() {
-                $("#about-section").fadeIn(1000);
-                }
-             });
+            .animate({height: '300px'});
         }, function() {
-            $("#about-section").fadeOut(500);
-            $("#about-button")
+            console.log("2nd");
+            $(this)
                 .animate({height: '100px'}, 500)
                 .animate({width: '100px'}, 500);
             });
