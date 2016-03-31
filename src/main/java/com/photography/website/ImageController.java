@@ -132,7 +132,7 @@ public class ImageController {
     // Private Methods -----------------------------------------------------------------------------------------------
 
     /**
-     * Creates a list of Image files
+     * Creates a list of Image objects
      *
      * @param directoryName The location of the files to be processed
      * @return a list of Image objects

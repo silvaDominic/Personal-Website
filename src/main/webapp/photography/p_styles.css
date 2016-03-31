@@ -1,0 +1,21 @@
+a{
+    display: block-inline;
+    position: relative;
+    height: auto;
+    width: auto;
+    margin: 0 4.5%;
+}
+
+img{
+    height: 25%;
+    width: 25%;
+}
+
+.album-links{
+    position: absolute;
+    width: 90%;
+    height: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+}
