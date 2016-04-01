@@ -28,12 +28,12 @@ public class ImageController {
      *
      * @return a JSON string
      */
-    @RequestMapping("/port_jeff_album")
+    @RequestMapping("/port-jeff-album")
     @ResponseBody
     String getPortJeffImages() {
 
         // Set resource path and create Image list
-        String imgDirectory = "/media/reclaimer/shared/software-development/photography-website/src/main/webapp/resources/images/port_jeff_album";
+        String imgDirectory = "/media/reclaimer/shared/software-development/photography-website/src/main/webapp/resources/images/port-jeff-album";
         ArrayList<Image> files = listImageFiles(imgDirectory);
         //System.out.println(imgDirectory);
 
@@ -50,12 +50,12 @@ public class ImageController {
      * @return a JSON string
      */
 
-    @RequestMapping("/nature_album")
+    @RequestMapping("/nature-album")
     @ResponseBody
     String getNatureImages() {
 
         // Set resource path and create Image list
-        String imgDirectory = "/media/reclaimer/shared/software-development/photography-website/src/main/webapp/resources/images/nature_album";
+        String imgDirectory = "/media/reclaimer/shared/software-development/photography-website/src/main/webapp/resources/images/nature-album";
         ArrayList<Image> files = listImageFiles(imgDirectory);
         //System.out.println(imgDirectory);
 
@@ -71,12 +71,12 @@ public class ImageController {
      *
      * @return a JSON string
      */
-    @RequestMapping("/restaurant_album")
+    @RequestMapping("/restaurant-album")
     @ResponseBody
     String getRestaurantImages() {
 
         // Set resource path and create Image list
-        String imgDirectory = "/media/reclaimer/shared/software-development/photography-website/src/main/webapp/resources/images/restaurant_album";
+        String imgDirectory = "/media/reclaimer/shared/software-development/photography-website/src/main/webapp/resources/images/restaurant-album";
         ArrayList<Image> files = listImageFiles(imgDirectory);
         //System.out.println(imgDirectory);
 
@@ -97,10 +97,10 @@ public class ImageController {
      * @throws IOException if resource is of invalid type
      */
     //@CrossOrigin(origins = "http://localhost:9000")
-    @RequestMapping("/port_jeff_album/{id}")
+    @RequestMapping("/port-jeff-album/{id}")
     ResponseEntity<byte[]> getPortJeffImages(@PathVariable String id) throws IOException {
         // Set requested image as InputStream
-        InputStream in = servletContext.getResourceAsStream("/resources/images/port_jeff_album/" + id + ".JPG");
+        InputStream in = servletContext.getResourceAsStream("/resources/images/port-jeff-album/" + id + ".JPG");
 
         // Initialize and instantiate HttpHeader object and set content type as JPEG
         final HttpHeaders headers = new HttpHeaders();
@@ -109,9 +109,9 @@ public class ImageController {
         return new ResponseEntity<byte[]>(org.apache.commons.io.IOUtils.toByteArray(in), headers, HttpStatus.CREATED);
     }
 
-    @RequestMapping("/nature_album/{id}")
+    @RequestMapping("/nature-album/{id}")
     ResponseEntity<byte[]> getNatureImages(@PathVariable String id) throws IOException {
-        InputStream in = servletContext.getResourceAsStream("/resources/images/nature_album/" + id + ".JPG");
+        InputStream in = servletContext.getResourceAsStream("/resources/images/nature-album/" + id + ".JPG");
 
         final HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.IMAGE_JPEG);
@@ -119,9 +119,9 @@ public class ImageController {
         return new ResponseEntity<byte[]>(org.apache.commons.io.IOUtils.toByteArray(in), headers, HttpStatus.CREATED);
     }
 
-    @RequestMapping("/restaurant_album/{id}")
+    @RequestMapping("/restaurant-album/{id}")
     ResponseEntity<byte[]> getRestaurantImages(@PathVariable String id) throws IOException {
-        InputStream in = servletContext.getResourceAsStream("/resources/images/restaurant_album/" + id + ".JPG");
+        InputStream in = servletContext.getResourceAsStream("/resources/images/restaurant-album/" + id + ".JPG");
 
         final HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.IMAGE_JPEG);
