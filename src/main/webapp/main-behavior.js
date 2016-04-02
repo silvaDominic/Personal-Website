@@ -25,29 +25,46 @@ $(function() {
             }
         });*/
 
+    var aboutmeSection = {expandedHeight: '300px', get ExpandedHeight() {return this.expandedHeight;},
+                          expandedWidth: '80%', get ExpandedWidth() {return this.expandedWidth;},
+                          expandedTop: '60px', get ExpandedTop() {return this.expandedTop;}};
+
+    var toolsSection = {expandedHeight: '300px', get ExpandedHeight() {return this.expandedHeight;},
+                        expandedWidth: '80%', get ExpandedWidth() {return this.expandedWidth;},
+                        expandedTop: '-1', get ExpandedTop() {return this. expandedTop;}};
+
+    switch($(this)) {
+        case '#aboutme-section':
+        animateSection(aboutmeSection)
+    }
+
     $(".content").hide();
-    $(".container").click(function() {
-        if ($(this).hasClass("active")) {
-            $(this).find(".icon").fadeOut(150);
-            $(this)
-                .animate({width: '80%'}, 500)
-                .animate({height: '325px'}, {duration: 500,
-                    complete: function() {
-                    $(this).find(".content").fadeIn(750);
-                    $(this).removeClass("active");
-                    }
-                 });
-        }
-        else {
-            $(this).find(".content").fadeOut(500);
-            $(this)
-                .animate({height: '120px'}, 500)
-                .animate({width: '120px'}, {duration: 500,
-                complete: function() {
-                $(this).find(".icon").fadeIn(500);
-                $(this).addClass("active");
+    function animateSection(section) {
+        $(".container").click(function() {
+            if ($(this).hasClass("active")) {
+                $(this).find(".icon").fadeOut(150);
+                $(this)
+                    .animate({width: '80%'}, 500)
+                    .animate({height: '325px'}, {duration: 500,
+                        complete: function() {
+                        $(this).find(".content").fadeIn(750);
+                        $(this).removeClass("active");
                         }
-                });
-        }
-    });
+                     });
+            }
+            else {
+                $(this).find(".content").fadeOut(500);
+                $(this)
+                    .animate({height: '120px'}, 500)
+                    .animate({width: '120px'}, {duration: 500,
+                    complete: function() {
+                    $(this).find(".icon").fadeIn(500);
+                    $(this).addClass("active");
+                            }
+                    });
+            }
+        });
+    }
 });
+
+//TODO: incorporate getters into function
