@@ -25,46 +25,70 @@ $(function() {
             }
         });*/
 
-    var aboutmeSection = {expandedHeight: '300px', get ExpandedHeight() {return this.expandedHeight;},
+    var aboutmeSection = {id: '#aboutme-section', get SectionID() {return this.id;},
+                          expandedHeight: '325px', get ExpandedHeight() {return this.expandedHeight;},
                           expandedWidth: '80%', get ExpandedWidth() {return this.expandedWidth;},
                           expandedTop: '60px', get ExpandedTop() {return this.expandedTop;}};
 
-    var toolsSection = {expandedHeight: '300px', get ExpandedHeight() {return this.expandedHeight;},
+    var toolsSection = {id: '#tools-section', get SectionID() {return this.id;},
+                        expandedHeight: '325px', get ExpandedHeight() {return this.expandedHeight;},
                         expandedWidth: '80%', get ExpandedWidth() {return this.expandedWidth;},
-                        expandedTop: '-1', get ExpandedTop() {return this. expandedTop;}};
-
-    switch($(this)) {
-        case '#aboutme-section':
-        animateSection(aboutmeSection)
-    }
+                        expandedTop: '50%', get ExpandedTop() {return this. expandedTop;}};
 
     $(".content").hide();
-    function animateSection(section) {
-        $(".container").click(function() {
-            if ($(this).hasClass("active")) {
-                $(this).find(".icon").fadeOut(150);
-                $(this)
-                    .animate({width: '80%'}, 500)
-                    .animate({height: '325px'}, {duration: 500,
-                        complete: function() {
-                        $(this).find(".content").fadeIn(750);
-                        $(this).removeClass("active");
-                        }
-                     });
+    $(".container").click(function() {
+        if ($(this).hasClass("active")) {
+            switch($(this).attr('id')) {
+                case 'aboutme-section':
+                growSection(aboutmeSection);
+                break;
+
+                case 'tools-section':
+                growSection(toolsSection);
+                break;
+
+                default:
+                break;
             }
-            else {
-                $(this).find(".content").fadeOut(500);
-                $(this)
-                    .animate({height: '120px'}, 500)
-                    .animate({width: '120px'}, {duration: 500,
+        } else {
+            switch($(this).attr('id')) {
+                case 'aboutme-section':
+                shrinkSection(aboutmeSection);
+                break;
+
+                case 'tools-section':
+                shrinkSection(toolsSection);
+                break;
+
+                default:
+                break;
+            }
+        }
+    });
+
+    function growSection(section) {
+            var elem = section.SectionID;
+            $(elem).find(".icon").fadeOut(150);
+            $(elem)
+                .animate({width: section.ExpandedWidth}, 500)
+                .animate({top: section.ExpandedTop, height: section.ExpandedHeight}, {duration: 500,
                     complete: function() {
-                    $(this).find(".icon").fadeIn(500);
-                    $(this).addClass("active");
-                            }
-                    });
-            }
-        });
+                    $(elem).find(".content").fadeIn(750);
+                    $(elem).removeClass("active");
+                    }
+                 });
+        }
+
+    function shrinkSection(section){
+        var elem = section.SectionID;
+        $(elem).find(".content").fadeOut(500);
+        $(elem)
+            .animate({top: $(elem).css('top'), height: $(elem).css('height')}, 500)
+            .animate({width: $(elem).css('width')}, {duration: 500,
+            complete: function() {
+            $(elem).find(".icon").fadeIn(500);
+            $(elem).addClass("active");
+                    }
+            });
     }
 });
-
-//TODO: incorporate getters into function
