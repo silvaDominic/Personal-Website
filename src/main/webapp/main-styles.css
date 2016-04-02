@@ -1,4 +1,4 @@
-#aboutme-container{
+#aboutme-section{
     position: absolute;
     top: 25%;
     left: 50%;
@@ -10,7 +10,7 @@
     background-color: red;
 }
 
-#aboutme-image{
+#aboutme-icon{
     position: absolute;
     left: 50%;
     top: 100%;
@@ -26,7 +26,7 @@
     text-align: center;
 }
 
-#tools-container{
+#tools-section{
     display: block;
     position: absolute;
     top: 50%;
@@ -39,7 +39,7 @@
     background-color: red;
 }
 
-#tools-image{
+#tools-icon{
     position: absolute;
     left: 50%;
     top: 50%;
