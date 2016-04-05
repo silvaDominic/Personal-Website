@@ -42,7 +42,7 @@ $(function() {
                 case 'aboutme-section':
                 growSection(aboutmeSection);
                 break;
-4
+                
                 case 'tools-section':
                 growSection(toolsSection);
                 break;
@@ -87,8 +87,7 @@ $(function() {
 
         if (section.animatesHorizontally){
             $(elem)
-                .animate({left: section.Translate}, 500)
-                .animate({top: section.ExpandedTop, height: section.ExpandedHeight}, {duration: 500,
+                .animate({width: section.Translate}, {duration: 500,
                     complete: function() {
                     $(elem).find(".content").fadeIn(750);
                     $(elem).removeClass("active");
