@@ -6,7 +6,7 @@ $(function() {
                           animatesHorizontally: false, get AnimatesHorizontally() {return this.animatesHorizontally},
                           expandedHeight: '320px', get ExpandedHeight() {return this.expandedHeight;},
                           expandedWidth: '80%', get ExpandedWidth() {return this.expandedWidth;},
-                          expandedTop: '60px', get ExpandedTop() {return this.expandedTop;}};
+                          expandedTop: '5%', get ExpandedTop() {return this.expandedTop;}};
 
     var toolsSection = {id: '#tools-section', get SectionID() {return this.id;},
                         originalHeight: $('#tools-section').height(),
@@ -42,7 +42,7 @@ $(function() {
                 case 'aboutme-section':
                 growSection(aboutmeSection);
                 break;
-
+4
                 case 'tools-section':
                 growSection(toolsSection);
                 break;
