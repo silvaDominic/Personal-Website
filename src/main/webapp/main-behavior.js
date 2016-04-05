@@ -1,57 +1,36 @@
-$(function() {
+$(document).ready(function() {
     var aboutmeSection = {id: '#aboutme-section', get SectionID() {return this.id;},
                           originalHeight: $('#aboutme-section').height(),
                           originalWidth: $('#aboutme-section').width(),
                           originalTop: $('#aboutme-section').position().top,
                           animatesHorizontally: false, get AnimatesHorizontally() {return this.animatesHorizontally},
-                          expandedHeight: '320px', get ExpandedHeight() {return this.expandedHeight;},
-                          expandedWidth: '80%', get ExpandedWidth() {return this.expandedWidth;},
-                          expandedTop: '5%', get ExpandedTop() {return this.expandedTop;}};
+                          expandedHeight: '450px', get ExpandedHeight() {return this.expandedHeight;},
+                          expandedWidth: '65%', get ExpandedWidth() {return this.expandedWidth;},
+                          expandedTop: '65%', get ExpandedTop() {return this.expandedTop;}};
 
-    var toolsSection = {id: '#tools-section', get SectionID() {return this.id;},
-                        originalHeight: $('#tools-section').height(),
-                        originalWidth: $('#tools-section').width(),
-                        originalTop: $('#tools-section').position().top,
-                        animatesHorizontally: false, get AnimatesHorizontally() {return this.animatesHorizontally},
-                        expandedHeight: '320px', get ExpandedHeight() {return this.expandedHeight;},
-                        expandedWidth: '80%', get ExpandedWidth() {return this.expandedWidth;},
-                        expandedTop: '50%', get ExpandedTop() {return this. expandedTop;}};
-
-    var gamesSection = {id: '#games-section', get SectionID() {return this.id;},
-                          originalHeight: $('#games-section').height(),
-                          originalWidth: $('#games-section').width(),
-                          originalTop: $('#games-section').position().top,
+    var gamesSection = {id: '#games-tab', get SectionID() {return this.id;},
+                          originalWidth: $('#games-tab').width(),
                           animatesHorizontally: true, get AnimatesHorizontally() {return this.animatesHorizontally},
-                          expandedHeight: '80%', get ExpandedHeight() {return this.expandedHeight;},
-                          translate: '50%', get Translate() {return this.translate;},
-                          expandedTop: '50%', get ExpandedTop() {return this.expandedTop;}};
+                          expandedWidth: '40%', get ExpandedWidth() {return this.expandedWidth;}};
 
-    var photographySection = {id: '#photography-section', get SectionID() {return this.id;},
-                        originalHeight: $('#photography-section').height(),
-                        originalWidth: $('#photography-section').width(),
-                        originalTop: $('#photography-section').position().top,
+    var photographySection = {id: '#photography-tab', get SectionID() {return this.id;},
+                        originalWidth: $('#photography-tab').width(),
                         animatesHorizontally: true, get AnimatesHorizontally() {return this.animatesHorizontally},
-                        expandedHeight: '80%', get ExpandedHeight() {return this.expandedHeight;},
-                        expandedWidth: '400px', get ExpandedWidth() {return this.expandedWidth;},
-                        expandedTop: '50%', get ExpandedTop() {return this. expandedTop;}};
+                        expandedWidth: '40%', get ExpandedWidth() {return this.expandedWidth;}};
 
     $(".content").hide();
-    $(".container").click(function() {
+    $(".container").add(".image").click(function() {
         if ($(this).hasClass("active")) {
             switch($(this).attr('id')) {
-                case 'aboutme-section':
+                case 'person-icon':
                 growSection(aboutmeSection);
                 break;
-                
-                case 'tools-section':
-                growSection(toolsSection);
-                break;
 
-                case 'games-section':
+                case 'games-tab':
                 growSection(gamesSection);
                 break;
 
-                case 'photography-section':
+                case 'photography-tab':
                 growSection(photographySection);
                 break;
 
@@ -60,19 +39,15 @@ $(function() {
             }
         } else {
             switch($(this).attr('id')) {
-                case 'aboutme-section':
+                case 'person-icon':
                 shrinkSection(aboutmeSection);
                 break;
 
-                case 'tools-section':
-                shrinkSection(toolsSection);
-                break;
-
-                case 'games-section':
+                case 'games-tab':
                 shrinkSection(gamesSection);
                 break;
 
-                case 'photography-section':
+                case 'photography-tab':
                 shrinkSection(photographySection);
                 break;
 
@@ -84,10 +59,9 @@ $(function() {
 
     function growSection(section) {
         var elem = section.SectionID;
-
         if (section.animatesHorizontally){
             $(elem)
-                .animate({width: section.Translate}, {duration: 500,
+                .animate({width: section.ExpandedWidth}, {duration: 500,
                     complete: function() {
                     $(elem).find(".content").fadeIn(750);
                     $(elem).removeClass("active");
@@ -96,11 +70,11 @@ $(function() {
 
         } else {
             $(elem)
-                .animate({top: section.ExpandedTop, height: section.ExpandedHeight}, 500)
-                .animate({width: section.ExpandedWidth}, {duration: 500,
+                .animate({top: section.ExpandedTop, height: section.ExpandedHeight}, 250)
+                .animate({width: section.ExpandedWidth}, {duration: 250,
                     complete: function() {
                     $(elem).find(".content").fadeIn(750);
-                    $(elem).removeClass("active");
+                    $('#person-icon').removeClass("active");
                     }
                  });
         }
@@ -110,19 +84,18 @@ $(function() {
         var elem = section.SectionID;
 
         if (section.animatesHorizontally){
-            $(elem).find(".content").fadeOut(500);
-            $(elem)
-                .animate({top: section.originalTop, height: section.originalHeight}, 500)
-                .animate({width: section.originalWidth}, 500);
-                $(elem).addClass("active");
+            $(elem).find(".content").fadeOut(250, function(){
+                $(elem)
+                    .animate({width: section.originalWidth}, 500);
+                    $(elem).addClass("active");
+            });
         } else {
-           $(elem).find(".content").fadeOut(500);
-           $(elem)
-               .animate({width: section.originalWidth}, 500)
-               .animate({top: section.originalTop, height: section.originalHeight}, 500);
-               $(elem).addClass("active");
+           $(elem).find(".content").fadeOut(250, function() {
+               $(elem)
+                   .animate({width: section.originalWidth}, 500)
+                   .animate({top: section.originalTop, height: section.originalHeight}, 500);
+                   $('#person-icon').addClass("active");
+           });
         }
     }
 });
-
-//TODO: Fix animations.

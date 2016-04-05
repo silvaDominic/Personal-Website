@@ -2,9 +2,14 @@
     border: 1px solid black;
 }
 
+.content{
+    overflow: hidden;
+}
+
 .paragraph{
     position: relative;
     margin: auto auto;
+    overflow-y: scroll;
 }
 
 body{
@@ -12,15 +17,27 @@ body{
     width: 100%;
 }
 
+#person-icon{
+    display: inline-block;
+    position: fixed;
+    bottom: -100px;
+    left: 50%;
+    transform: translate(-50%);
+    height: 50%;
+    width: 25%;
+    border: 1px solid black;
+}
+
 #aboutme-section{
     display: block;
-    position: absolute;
-    bottom: 0;
-    height: 450px;
-    width: 65%;
+    position: fixed;
+    bottom: -15px;
+    height: 0;
+    width: 0;
     left: 50%;
     transform: translateX(-50%);
     border-radius: 20px;
+    z-index: -1;
 }
 
 #aboutme-content{
@@ -44,50 +61,40 @@ body{
     display: inline-block;
     position: relative;
     float: left;
-    left: 7%;
+    left: 5%;
     margin: 25px auto;
     height: 80%;
     width: 25%;
-}
-
-#person-icon{
-    display: inline-block;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%);
-    height: 100%;
-    width: 35%;
-    border: 1px solid black;
-    overflow: hidden;
 }
 
 #right-description{
     display: inline-block;
     position: relative;
     float: right;
-    right: 7%;
+    right: 5%;
     margin: 10px auto;
     height: 80%;
     width: 25%;
 }
 
 #games-tab{
-    position: absolute;
+    position: fixed;
     top: 20%;
+    left: -15px;
     height: 250px;
-    width: 40%;
+    width: 200px;
     border-radius: 20px;
 }
 
 #games-description{
     display: inline-block;
     position: relative;
+    float: left;
     top: 50%;
     transform: translateY(-50%);
     left: 5%;
     height: 70%;
-    width: 50%;
+    width: 60%;
 }
 
 #gamepad-icon{
@@ -97,18 +104,17 @@ body{
     top: 50%;
     transform: translateY(-50%);
     right: 3%;
-    height: 80%;
-    width: 25%;
+    height: 85%;
+    width: 175px;
     border: 1px solid black;
 }
 
 #photography-tab{
-    position: absolute;
-    left: 100%;
-    transform: translateX(-100%);
+    position: fixed;
+    right: -15px;
     top: 20%;
     height: 250px;
-    width: 40%;
+    width: 200px;
     border-radius: 20px;
 }
 
@@ -120,7 +126,7 @@ body{
     transform: translateY(-50%);
     right: 5%;
     height: 70%;
-    width: 50%;
+    width: 60%;
 }
 
 #camera-icon{
@@ -130,7 +136,7 @@ body{
     top: 50%;
     transform: translateY(-50%);
     left: 3%;
-    height: 80%;
-    width: 25%;
+    height: 85%;
+    width: 175px;
     border: 1px solid black;
 }
