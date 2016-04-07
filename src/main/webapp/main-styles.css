@@ -28,6 +28,19 @@ body{
     border: 1px solid black;
 }
 
+#name{
+    display: block;
+    position: fixed;
+    bottom: -240px;
+    left: 50%;
+    height: 120px;
+    width: auto;
+    font-size: 100px;
+    transform: translateX(-50%);
+    border: 1px solid black;
+
+}
+
 #aboutme-section{
     display: block;
     position: fixed;
@@ -47,14 +60,6 @@ body{
     transform: translateY(-50%);
     height: 85%;
     width: 95%;
-}
-
-#name{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    font-size: 125px;
-    transform: translate(-50%, -50%);
 }
 
 #left-description{
