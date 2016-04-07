@@ -7,18 +7,25 @@ $(document).ready(function() {
                           selector: '#person-icon', get Selector() {return this.selector;},
                           origWidth: $('#aboutme-section').css('width'), get OrigWidth() {return this.origWidth;},
                           origLeft: $('#aboutme-section').css('left'), get OrigLeft() {return this.origLeft;},
+                          origRight: 'auto', get OrigRight() {return this.origRight;},
                           origHeight: $('#aboutme-section').css('height'), get OrigHeight() {return this.origHeight;},
                           origTop: $('#aboutme-section').css('top'), get OrigTop() {return this.origTop;},
                           origBottom: $('#aboutme-section').css('bottom'), get OrigBottom() {return this.origBottom;},
                           expandedWidth: '65%', get ExpandedWidth() {return this.expandedWidth;},
+                          expandedLeft: $('#aboutme-section').css('left'), get ExpandedLeft() {return this.expandedLef;},
+                          expandedRight: $('#aboutme-section').css('right'), get ExpandedRight() {return this.expandedRight;},
                           expandedHeight: '450px', get ExpandedHeight() {return this.expandedHeight;},
-                          expandedTop: '65%', get ExpandedTop() {return this.expandedTop;}};
+                          expandedTop: '65%', get ExpandedTop() {return this.expandedTop;},
+                          expandedBottom: $('#aboutme-section').css('bottom'), get ExpandedBottom() {return this.expandedBottom;}};
 
     var photographySection = {id: '#photography-tab', get ID() {return this.id;},
                                selector: '#camera-icon', get Selector() {return this.selector;},
                                origWidth: $('#photography-tab').css('width'), get OrigWidth() {return this.origWidth;},
+                               origLeft: 'auto', get OrigLeft() {return this.origLeft;},
                                origRight: $('#photography-tab').css('right'), get OrigRight() {return this.origRight;},
-                               expandedWidth: '40%', get ExpandedWidth() {return this.expandedWidth;}};
+                               expandedWidth: '40%', get ExpandedWidth() {return this.expandedWidth;},
+                               expandedLeft: 'auto', get ExpandedLeft() {return this.expandedLeft;},
+                               expandedRight: $('#photography-tab').css('right'), get ExpandedRight() {return this.expandedRight;}};
 
     var gamesSection = {id: '#games-tab', get ID() {return this.id;},
                               selector: '#gamepad-icon', get Selector() {return this.selector;},
@@ -30,39 +37,34 @@ $(document).ready(function() {
 // Handlers ---------------------------------------------------------------------------------------------------------
 
     // Handles aboutme section functionality
-    function handleAboutMeSection(elemToAnimate, selectedElem, active){
+    function handleAboutMeSection(elemToAnimate, selectedElem, active, animateDuration=500, fadeInDuration=500, fadeOutDuration=250){
         // First click
         if (active){
             // Animate vertically first
-            animateVertically(elemToAnimate.ID,
-                              elemToAnimate.ExpandedHeight,
-                              elemToAnimate.ExpandedTop,
-                              elemToAnimate.OrigBottom);
+            $(elemToAnimate.ID).animate({height: elemToAnimate.ExpandedHeight,
+                                     top: elemToAnimate.ExpandedTop,
+                                     bottom: elemToAnimate.OrigBottom}, animateDuration);
             // Animate horizontally second
-            animateHorizontally(elemToAnimate.ID,
-                                 elemToAnimate.ExpandedWidth,
-                                 elemToAnimate.OrigLeft,
-                                 'auto',
-                                 500);
+            $(elemToAnimate.ID).animate({width: elemToAnimate.ExpandedWidth,
+                                 left: elemToAnimate.ExpandedLeft,
+                                 right: elemToAnimate.ExpandedRight}, animateDuration)
+
 
             // Fade in content and remove active class
-            $(elemToAnimate.ID).find(".content").fadeIn(1250);
+            $(elemToAnimate.ID).find(".content").fadeIn(fadeInDuration);
             $(selectedElem).removeClass('active');
         // Second click
         } else {
             // Fade out content
-            $(elemToAnimate.ID).find(".content").fadeOut(250, function(){
+            $(elemToAnimate.ID).find(".content").fadeOut(fadeOutDuration, function(){
                 // Animate horizontally first
-                animateHorizontally(elemToAnimate.ID,
-                                     elemToAnimate.OrigWidth,
-                                     elemToAnimate.OrigLeft,
-                                     'auto',
-                                     250);
+                $(elemToAnimate.ID).animate({width: elemToAnimate.OrigWidth,
+                                         left: elemToAnimate.OrigLeft,
+                                         right: elemToAnimate.OrigRight}, animateDuration);
                 // Animate vertically second
-                animateVertically(elemToAnimate.ID,
-                                  elemToAnimate.OrigHeight,
-                                  elemToAnimate.OrigTop,
-                                  elemToAnimate.OrigBottom);
+                $(elemToAnimate.ID).animate({height: elemToAnimate.OrigHeight,
+                                          top: elemToAnimate.OrigTop,
+                                          bottom: elemToAnimate.OrigBottom}, animateDuration)
             });
             // Add active class back in
             $(selectedElem).addClass('active');
@@ -70,74 +72,28 @@ $(document).ready(function() {
     }
 
     //Handles photography tab functionality
-    function handlePhotographyTab(elemToAnimate, selectedElem, active){
+    function handleTabs(elemToAnimate, selectedElem, active, animateDuration=500, fadeInDuration=500, fadeOutDuration=250){
         // First click
         if (active){
             // Only animate horizontally
-            animateHorizontally(elemToAnimate.ID,
-                                elemToAnimate.ExpandedWidth,
-                                'auto',
-                                elemToAnimate.OrigRight,
-                                500);
+            $(elemToAnimate.ID).animate({width: elemToAnimate.ExpandedWidth,
+                                  left: elemToAnimate.ExpandedLeft,
+                                  right: elemToAnimate.ExpandedRight}, animateDuration)
 
             // Fade in content and remove active class
-            $(elemToAnimate.ID).find(".content").fadeIn(1250);
+            $(elemToAnimate.ID).find(".content").fadeIn(fadeInDuration);
             $(selectedElem).removeClass('active');
         // Second click
         } else {
             // Fade out content and only animate horizontally
-            $(elemToAnimate.ID).find(".content").fadeOut(250, function(){
-                animateHorizontally(elemToAnimate.ID,
-                                    elemToAnimate.OrigWidth,
-                                    'auto',
-                                    elemToAnimate.OrigRight,
-                                    500);
+            $(elemToAnimate.ID).find(".content").fadeOut(fadeOutDuration, function(){
+                $(elemToAnimate.ID).animate({width: elemToAnimate.OrigWidth,
+                                         left: elemToAnimate.OrigLeft,
+                                         right: elemToAnimate.OrigRight}, animateDuration);
             });
             // Add active class back in
             $(selectedElem).addClass('active');
         }
-    }
-
-    //Handles game tab functionality
-    function handleGamesTab(elemToAnimate, selectedElem, active){
-       // First click
-       if (active){
-           // Only animate horizontally
-           animateHorizontally(elemToAnimate.ID,
-                               elemToAnimate.ExpandedWidth,
-                               elemToAnimate.OrigLeft,
-                               'auto',
-                               500);
-           // Fade in content and remove active class
-           $(elemToAnimate.ID).find(".content").fadeIn(1250);
-           $(selectedElem).removeClass('active');
-       // Second click
-       } else {
-           // Fade out content and only animate horizontally
-           $(elemToAnimate.ID).find(".content").fadeOut(250, function(){
-               animateHorizontally(elemToAnimate.ID,
-                                   elemToAnimate.OrigWidth,
-                                   elemToAnimate.OrigLeft,
-                                   'auto',
-                                   500);
-           });
-           // Add active class back in
-           $(selectedElem).addClass('active');
-       }
-    }
-
-// Helper functions --------------------------------------------------------------------------------------------------
-    // Animate element vertically
-    function animateVertically(elemID, duration=0, newHeight='auto', newTop='auto', newBottom='auto'){
-        $(elemID).animate({height: newHeight,
-                            top: newTop,
-                            bottom: newBottom}, duration);
-    }
-    // Animate horizontally
-    function animateHorizontally(elemID, duration=0, newWidth='auto', newLeft='auto', newRight='auto', ){
-        $(elemID).animate({width: newWidth,
-                            left: newLeft,
-                            right: newRight}, duration);
     }
 
 // Main --------------------------------------------------------------------------------------------------------------
@@ -154,11 +110,11 @@ $(document).ready(function() {
                 break;
 
                 case 'gamepad-icon':
-                handleGamesTab(gamesSection, gamesSection.Selector, true);
+                handleTabs(gamesSection, gamesSection.Selector, true);
                 break;
 
                 case 'camera-icon':
-                handlePhotographyTab(photographySection, photographySection.Selector, true);
+                handleTabs(photographySection, photographySection.Selector, true);
                 break;
 
                 default:
@@ -172,11 +128,11 @@ $(document).ready(function() {
                 break;
 
                 case 'gamepad-icon':
-                handleGamesTab(gamesSection, gamesSection.Selector, false);
+                handleTabs(gamesSection, gamesSection.Selector, false);
                 break;
 
                 case 'camera-icon':
-                handlePhotographyTab(photographySection, photographySection.Selector, false);
+                handleTabs(photographySection, photographySection.Selector, false);
                 break;
 
                 default:
