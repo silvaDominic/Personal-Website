@@ -12,6 +12,11 @@
     overflow-y: scroll;
 }
 
+html{
+    height: 100%;
+    width: 100%;
+}
+
 body{
     height: 100%;
     width: 100%;
@@ -25,7 +30,7 @@ body{
     transform: translate(-50%);
     height: 50%;
     width: 25%;
-    border: 1px solid black;
+    cursor: pointer;
 }
 
 #name{
@@ -37,7 +42,7 @@ body{
     width: auto;
     font-size: 100px;
     transform: translateX(-50%);
-    border: 1px solid black;
+    z-index: -1;
 
 }
 
@@ -51,6 +56,7 @@ body{
     transform: translateX(-50%);
     border-radius: 20px;
     z-index: -1;
+    background-color:
 }
 
 #aboutme-content{
@@ -89,6 +95,7 @@ body{
     height: 250px;
     width: 200px;
     border-radius: 20px;
+
 }
 
 #games-description{
@@ -111,7 +118,7 @@ body{
     right: 3%;
     height: 85%;
     width: 175px;
-    border: 1px solid black;
+    cursor: pointer;
 }
 
 #photography-tab{
@@ -143,5 +150,5 @@ body{
     left: 3%;
     height: 85%;
     width: 175px;
-    border: 1px solid black;
+    cursor: pointer;
 }

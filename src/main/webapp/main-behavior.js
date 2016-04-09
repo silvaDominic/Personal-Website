@@ -2,7 +2,7 @@ $(document).ready(function() {
 
 // Definitions -------------------------------------------------------------------------------------------------------
 
-    //Define object literals
+    // Define object literals
     var aboutmeSection = {id: '#aboutme-section', get ID() {return this.id;},
                           selector: '#person-icon', get Selector() {return this.selector;},
                           origWidth: $('#aboutme-section').css('width'), get OrigWidth() {return this.origWidth;},
@@ -37,7 +37,8 @@ $(document).ready(function() {
 // Handlers ---------------------------------------------------------------------------------------------------------
 
     // Handles aboutme section functionality
-    function handleAboutMeSection(elemToAnimate, selectedElem, active, animateDuration=500, fadeInDuration=500, fadeOutDuration=250){
+    function handleAboutMeSection(elemToAnimate, selectedElem, active,
+                                  animateDuration=500, fadeInDuration=500, fadeOutDuration=250) {
         // First click
         if (active){
             // Animate vertically first
@@ -48,6 +49,9 @@ $(document).ready(function() {
             $(elemToAnimate.ID).animate({width: elemToAnimate.ExpandedWidth,
                                  left: elemToAnimate.ExpandedLeft,
                                  right: elemToAnimate.ExpandedRight}, animateDuration)
+
+            //Animate Name
+            $('#name').animate({bottom: '80%'}, animateDuration);
 
 
             // Fade in content and remove active class
@@ -64,21 +68,24 @@ $(document).ready(function() {
                 // Animate vertically second
                 $(elemToAnimate.ID).animate({height: elemToAnimate.OrigHeight,
                                           top: elemToAnimate.OrigTop,
-                                          bottom: elemToAnimate.OrigBottom}, animateDuration)
+                                          bottom: elemToAnimate.OrigBottom}, animateDuration);
+
+                // Animate Name
+                $('#name').animate({bottom: '-240px'}, animateDuration);
             });
             // Add active class back in
             $(selectedElem).addClass('active');
         }
     }
 
-    //Handles photography tab functionality
+    // Handles photography tab functionality
     function handleTabs(elemToAnimate, selectedElem, active, animateDuration=500, fadeInDuration=500, fadeOutDuration=250){
         // First click
         if (active){
             // Only animate horizontally
             $(elemToAnimate.ID).animate({width: elemToAnimate.ExpandedWidth,
                                   left: elemToAnimate.ExpandedLeft,
-                                  right: elemToAnimate.ExpandedRight}, animateDuration)
+                                  right: elemToAnimate.ExpandedRight}, animateDuration);
 
             // Fade in content and remove active class
             $(elemToAnimate.ID).find(".content").fadeIn(fadeInDuration);
@@ -98,7 +105,7 @@ $(document).ready(function() {
 
 // Main --------------------------------------------------------------------------------------------------------------
 
-    //Hide content initially
+    // Hide content initially
     $(".content").hide();
     //Handle click events
     $(".image").click(function() {
