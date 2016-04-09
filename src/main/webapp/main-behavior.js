@@ -1,5 +1,11 @@
 $(document).ready(function() {
 
+    $('body').hide();
+    $('body').fadeIn(2500, function() {
+    handleAboutMeSection(aboutmeSection, aboutmeSection.Selector, true);
+    });
+
+
 // Definitions -------------------------------------------------------------------------------------------------------
 
     // Define object literals
@@ -53,9 +59,10 @@ $(document).ready(function() {
             //Animate Name
             $('#name').animate({bottom: '80%'}, animateDuration);
 
-
             // Fade in content and remove active class
-            $(elemToAnimate.ID).find(".content").fadeIn(fadeInDuration);
+            $(elemToAnimate.ID).promise().done(function() {
+                $(elemToAnimate.ID).find(".content").fadeIn(fadeInDuration);
+            });
             $(selectedElem).removeClass('active');
         // Second click
         } else {
@@ -88,7 +95,9 @@ $(document).ready(function() {
                                   right: elemToAnimate.ExpandedRight}, animateDuration);
 
             // Fade in content and remove active class
-            $(elemToAnimate.ID).find(".content").fadeIn(fadeInDuration);
+            $(elemToAnimate.ID).promise().done(function() {
+                $(elemToAnimate.ID).find(".content").fadeIn(fadeInDuration);
+            });
             $(selectedElem).removeClass('active');
         // Second click
         } else {
@@ -113,7 +122,7 @@ $(document).ready(function() {
         if ($(this).hasClass("active")) {
             switch($(this).attr('id')) {
                 case 'person-icon':
-                handleAboutMeSection(aboutmeSection, aboutmeSection.Selector, true);
+                /*handleAboutMeSection(aboutmeSection, aboutmeSection.Selector, true);*/
                 break;
 
                 case 'gamepad-icon':
@@ -131,14 +140,20 @@ $(document).ready(function() {
         } else {
             switch($(this).attr('id')) {
                 case 'person-icon':
-                handleAboutMeSection(aboutmeSection, aboutmeSection.Selector, false);
+                // Don't retract section if currently expanding
+                /*if($(aboutmeSection.ID).is(':animated')) {return false;}
+                handleAboutMeSection(aboutmeSection, aboutmeSection.Selector, false);*/
                 break;
 
                 case 'gamepad-icon':
+                // Don't retract section if currently expanding
+                if($(gamesSection.ID).is(':animated')) {return false;}
                 handleTabs(gamesSection, gamesSection.Selector, false);
                 break;
 
                 case 'camera-icon':
+                // Don't retract section if currently expanding
+                if($(photographySection.ID).is(':animated')) {return false;}
                 handleTabs(photographySection, photographySection.Selector, false);
                 break;
 

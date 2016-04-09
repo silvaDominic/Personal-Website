@@ -1,5 +1,5 @@
 .container, .content, .paragraph{
-    border: 1px solid black;
+/*    border: 1px solid black;*/
 }
 
 .content{
@@ -12,14 +12,11 @@
     overflow-y: scroll;
 }
 
-html{
-    height: 100%;
-    width: 100%;
-}
 
 body{
-    height: 100%;
-    width: 100%;
+    background: -moz-linear-gradient(to bottom, #00B2FF, #4CC9FF);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 #person-icon{
@@ -43,7 +40,7 @@ body{
     font-size: 100px;
     transform: translateX(-50%);
     z-index: -1;
-
+    color: white;
 }
 
 #aboutme-section{
@@ -56,7 +53,7 @@ body{
     transform: translateX(-50%);
     border-radius: 20px;
     z-index: -1;
-    background-color:
+    background-color: white;
 }
 
 #aboutme-content{
@@ -95,6 +92,7 @@ body{
     height: 250px;
     width: 200px;
     border-radius: 20px;
+    background-color: white;
 
 }
 

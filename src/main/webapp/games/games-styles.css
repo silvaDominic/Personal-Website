@@ -1,3 +1,5 @@
+
+
 table{
     position: fixed;
     left: 50%;
@@ -14,8 +16,14 @@ table{
     position: relative;
     height: 85%;
     width: 85%;
-    border: 1px solid black;
     float: left;
+    transition: all 0.3s;
+    background-color: white;
+    z-index: 1;
+}
+
+.image:hover{
+    transform: translateY(-14%);
 }
 
 .dummy{
@@ -23,18 +31,27 @@ table{
     position: relative;
     height: 100%;
     width: 100%;
-    border: 1px solid black;
     float: left;
 }
 
 .title{
     position: absolute;
-    top: 100%;
-    height: 15%;
-    width: 85%;
-    display: none;
+    top: 83%;
+    height: 20%;
+    width: 86%;
     text-align: center;
-    border: 1px solid black;
+    border-radius: 8px;
 }
 
-//TODO: Make Coming Soon place holder image
+#asteroids-image{
+    border: 3px solid #BE1E2D
+}
+
+#asteroids-title{
+    background-color: #BE1E2D;
+    border: 3px solid #BE1E2D;
+    background: -moz-linear-gradient(#00B2FF, 4CC9FF);
+}
+
+/*TODO: Find out why image and title divs are not lining up*/
+/*TODO: Fix text scaling problem with 2048 and Pong svgs*/

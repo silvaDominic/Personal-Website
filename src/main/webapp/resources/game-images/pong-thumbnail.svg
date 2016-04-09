@@ -17,19 +17,21 @@
 ]]>
 </style>
 <g id="paddles">
-	<rect x="9.833" y="15.491" class="st4" width="5.145" height="45.338"/>
-	<rect x="129.122" y="81.164" class="st4" width="5.145" height="45.338"/>
 </g>
 <g id="score">
-	<rect x="29.708" y="94.025" class="st5" width="20.833" height="31.396"/>
-	<text transform="matrix(1 0 0 1 29.7085 122.501)" class="st0 st1 st7">4</text>
-	<rect x="97.188" y="21.196" class="st5" width="20.834" height="31.396"/>
-	<text transform="matrix(1 0 0 1 97.1875 49.6709)" class="st0 st1 st7">3</text>
-	<line class="st3" x1="72" y1="14.606" x2="72" y2="127.628"/>
 </g>
 <g id="ball">
-	<circle class="st6" cx="54.36" cy="54.041" r="3.818"/>
-	<circle class="st2" cx="61.196" cy="57.859" r="5.104"/>
-	<circle class="st8" cx="69.581" cy="62.964" r="6.673"/>
+	<g>
+		<rect x="9.833" y="15.491" class="st4" width="5.145" height="45.338"/>
+		<rect x="129.122" y="81.164" class="st4" width="5.145" height="45.338"/>
+		<rect x="29.708" y="94.025" class="st5" width="20.833" height="31.396"/>
+		<text transform="matrix(1 0 0 1 29.7085 122.501)" class="st0 st1 st7">4</text>
+		<rect x="97.188" y="21.196" class="st5" width="20.834" height="31.396"/>
+		<text transform="matrix(1 0 0 1 97.1875 49.6709)" class="st0 st1 st7">3</text>
+		<line class="st3" x1="72" y1="14.606" x2="72" y2="127.628"/>
+		<circle class="st6" cx="54.36" cy="54.041" r="3.818"/>
+		<circle class="st2" cx="61.196" cy="57.859" r="5.104"/>
+		<circle class="st8" cx="69.581" cy="62.964" r="6.673"/>
+	</g>
 </g>
 </svg>

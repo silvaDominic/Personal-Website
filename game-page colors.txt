@@ -1,0 +1,21 @@
+2048:
+#ECC33D yellow
+#F15C3B light red
+#F39464 salmon
+
+Asteroids:
+#F7931D orange
+#BE1E2D red
+#FFDD17 yellow
+
+Pong:
+#8CC63E
+
+Blackjack:
+#D21F26 red
+#7F1416 dark red
+
+Tic-Tac-Toe:
+#1B75BB blue
+#ED1C24
+#38B449
