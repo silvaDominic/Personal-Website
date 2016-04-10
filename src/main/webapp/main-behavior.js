@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
     $('body').hide();
-    $('body').fadeIn(2500, function() {
+    $('body').fadeIn(2200, function() {
     handleAboutMeSection(aboutmeSection, aboutmeSection.Selector, true);
     });
 
@@ -21,7 +21,7 @@ $(document).ready(function() {
                           expandedLeft: $('#aboutme-section').css('left'), get ExpandedLeft() {return this.expandedLef;},
                           expandedRight: $('#aboutme-section').css('right'), get ExpandedRight() {return this.expandedRight;},
                           expandedHeight: '450px', get ExpandedHeight() {return this.expandedHeight;},
-                          expandedTop: '65%', get ExpandedTop() {return this.expandedTop;},
+                          expandedTop: '50%', get ExpandedTop() {return this.expandedTop;},
                           expandedBottom: $('#aboutme-section').css('bottom'), get ExpandedBottom() {return this.expandedBottom;}};
 
     var photographySection = {id: '#photography-tab', get ID() {return this.id;},

@@ -9,26 +9,26 @@
 .paragraph{
     position: relative;
     margin: auto auto;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 
 body{
-    background: -moz-linear-gradient(to bottom, #00B2FF, #4CC9FF);
+    background: -moz-linear-gradient(to bottom, #0590CC, #4CC9FF);
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
 
-#person-icon{
+/*#person-icon{
     display: inline-block;
     position: fixed;
-    bottom: -100px;
+
     left: 50%;
     transform: translate(-50%);
     height: 50%;
     width: 25%;
     cursor: pointer;
-}
+}*/
 
 #name{
     display: block;
@@ -46,11 +46,11 @@ body{
 #aboutme-section{
     display: block;
     position: fixed;
-    bottom: -15px;
+    bottom: 60%;
     height: 0;
     width: 0;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
     border-radius: 20px;
     z-index: -1;
     background-color: white;
@@ -87,7 +87,7 @@ body{
 
 #games-tab{
     position: fixed;
-    top: 20%;
+    top: 75%;
     left: -15px;
     height: 250px;
     width: 200px;
@@ -122,10 +122,11 @@ body{
 #photography-tab{
     position: fixed;
     right: -15px;
-    top: 20%;
+    top: 75%;
     height: 250px;
     width: 200px;
     border-radius: 20px;
+    background-color: white;
 }
 
 #photography-description{
