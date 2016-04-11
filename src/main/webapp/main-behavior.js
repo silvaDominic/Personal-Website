@@ -1,7 +1,70 @@
 $(document).ready(function() {
 
+    var state = {expanded: false, get isExpanded() {return this.expanded;},
+                                  set isExpanded(newState) {
+                                        if (newState == true || newState == false){
+                                            this.expanded = newState;
+                                        } else {
+                                            console.log("Invalid state. Must be boolean.");
+                                        }
+                                  },
+                 previousElem: '', get PreviousElem() {return this.previousElem;},
+                                   set PreviousElem(newElem) {
+                                        console.log(newElem);
+                                        if (newElem == 'person-icon' ||
+                                            newElem =='camera-icon' ||
+                                            newElem == 'toolbox-icon' ||
+                                            newElem == 'gamepad-icon'){
+                                                this.previousElem = '#' + newElem;
+                                            } else {
+                                                console.log("Invalid state. Must be a valid element.");
+                                            }
+                                   }
+                };
+
+
+    $('.content').hide();
+    $('.image').click(function() {
+        if ($(this).hasClass('active')){
+            if (!state.isExpanded){
+                $('.image').animate({height: '10%', width: '10%'}, 500);
+                $('#button-container').animate({height: '100%', width: '100%'}, 500);
+
+                $(this).removeClass('active');
+                state.isExpanded = true;
+                state.previousElem = $(this);
+            } else if (state.isExpanded) {
+
+                //switch content
+                console.log("State is already expanded. Switching content instead.");
+                $(this).removeClass('active');
+                $(state.PreviousElem).addClass('active');
+                state.PreviousElem = $(this).attr('id');
+            } else {
+                console.log("Invalid state.");
+            }
+        } else {
+            $('.image').animate({height: '47%', width: '47%'}, 500);
+            $('#button-container').animate({height: '600px', width: '600px'}, 500);
+            state.isExpanded = false;
+            $(this).addClass('active');
+        }
+    });
+
+    function handleContent(elem){
+        switch($(elem).attr('id')){
+            case 'person-icon':
+
+        }
+    }
+});
+
+
+
+/*
+$(document).ready(function() {
     $('body').hide();
-    $('body').fadeIn(2200, function() {
+    $('body').fadeIn(2000, function() {
     handleAboutMeSection(aboutmeSection, aboutmeSection.Selector, true);
     });
 
@@ -21,7 +84,7 @@ $(document).ready(function() {
                           expandedLeft: $('#aboutme-section').css('left'), get ExpandedLeft() {return this.expandedLef;},
                           expandedRight: $('#aboutme-section').css('right'), get ExpandedRight() {return this.expandedRight;},
                           expandedHeight: '450px', get ExpandedHeight() {return this.expandedHeight;},
-                          expandedTop: '50%', get ExpandedTop() {return this.expandedTop;},
+                          expandedTop: '85%', get ExpandedTop() {return this.expandedTop;},
                           expandedBottom: $('#aboutme-section').css('bottom'), get ExpandedBottom() {return this.expandedBottom;}};
 
     var photographySection = {id: '#photography-tab', get ID() {return this.id;},
@@ -29,7 +92,7 @@ $(document).ready(function() {
                                origWidth: $('#photography-tab').css('width'), get OrigWidth() {return this.origWidth;},
                                origLeft: 'auto', get OrigLeft() {return this.origLeft;},
                                origRight: $('#photography-tab').css('right'), get OrigRight() {return this.origRight;},
-                               expandedWidth: '40%', get ExpandedWidth() {return this.expandedWidth;},
+                               expandedWidth: '45%', get ExpandedWidth() {return this.expandedWidth;},
                                expandedLeft: 'auto', get ExpandedLeft() {return this.expandedLeft;},
                                expandedRight: $('#photography-tab').css('right'), get ExpandedRight() {return this.expandedRight;}};
 
@@ -37,7 +100,7 @@ $(document).ready(function() {
                               selector: '#gamepad-icon', get Selector() {return this.selector;},
                               origWidth: $('#games-tab').css('width'), get OrigWidth() {return this.origWidth;},
                               origLeft: $('#games-tab').css('left'), get OrigLeft() {return this.origLeft;},
-                              expandedWidth: '40%', get ExpandedWidth() {return this.expandedWidth;}};
+                              expandedWidth: '45%', get ExpandedWidth() {return this.expandedWidth;}};
 
 
 // Handlers ---------------------------------------------------------------------------------------------------------
@@ -122,7 +185,9 @@ $(document).ready(function() {
         if ($(this).hasClass("active")) {
             switch($(this).attr('id')) {
                 case 'person-icon':
-                /*handleAboutMeSection(aboutmeSection, aboutmeSection.Selector, true);*/
+                */
+/*handleAboutMeSection(aboutmeSection, aboutmeSection.Selector, true);*//*
+
                 break;
 
                 case 'gamepad-icon':
@@ -141,8 +206,10 @@ $(document).ready(function() {
             switch($(this).attr('id')) {
                 case 'person-icon':
                 // Don't retract section if currently expanding
-                /*if($(aboutmeSection.ID).is(':animated')) {return false;}
-                handleAboutMeSection(aboutmeSection, aboutmeSection.Selector, false);*/
+                */
+/*if($(aboutmeSection.ID).is(':animated')) {return false;}
+                handleAboutMeSection(aboutmeSection, aboutmeSection.Selector, false);*//*
+
                 break;
 
                 case 'gamepad-icon':
@@ -163,4 +230,4 @@ $(document).ready(function() {
         }
     });
 
-});
+});*/

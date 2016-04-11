@@ -1,5 +1,59 @@
-.container, .content, .paragraph{
-/*    border: 1px solid black;*/
+html{
+    height: 100%;
+    width: 100%;
+}
+
+.container{
+    border: 1px solid black;
+}
+
+.image{
+    display: block;
+    position: absolute;
+    height: 47%;
+    width: 47%;
+    padding: 1%;
+}
+
+#button-container{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 600px;
+    width: 600px;
+}
+
+#person-icon{
+    top: 0;
+    left: 0;
+}
+
+#toolbox-icon{
+    top: 0;
+    left: 100%;
+    transform: translateX(-100%);
+}
+
+#gamepad-icon{
+    bottom: 0;
+    left: 0;
+}
+
+#camera-icon{
+    bottom: 0;
+    left: 100%;
+    transform: translateX(-100%);
+}
+
+
+
+
+
+/*.container, .content, .paragraph{
+*/
+/*    border: 1px solid black;*//*
+
 }
 
 .content{
@@ -12,23 +66,22 @@
     overflow-y: auto;
 }
 
-
 body{
     background: -moz-linear-gradient(to bottom, #0590CC, #4CC9FF);
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
 
-/*#person-icon{
+#person-icon{
     display: inline-block;
     position: fixed;
-
+    bottom: -100px;
     left: 50%;
     transform: translate(-50%);
     height: 50%;
     width: 25%;
     cursor: pointer;
-}*/
+}
 
 #name{
     display: block;
@@ -46,15 +99,16 @@ body{
 #aboutme-section{
     display: block;
     position: fixed;
-    bottom: 60%;
+    bottom: -15px;
     height: 0;
     width: 0;
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 20px;
-    z-index: -1;
     background-color: white;
+    z-index: -1;
 }
+
 
 #aboutme-content{
     position: relative;
@@ -87,11 +141,12 @@ body{
 
 #games-tab{
     position: fixed;
-    top: 75%;
+    top: 35%;
     left: -15px;
-    height: 250px;
+    height: 18%;
     width: 200px;
-    border-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
     background-color: white;
 
 }
@@ -122,10 +177,11 @@ body{
 #photography-tab{
     position: fixed;
     right: -15px;
-    top: 75%;
-    height: 250px;
+    top: 35%;
+    height: 18%;
     width: 200px;
-    border-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
     background-color: white;
 }
 
@@ -151,3 +207,4 @@ body{
     width: 175px;
     cursor: pointer;
 }
+*/
