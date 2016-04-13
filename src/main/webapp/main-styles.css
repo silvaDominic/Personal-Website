@@ -14,8 +14,19 @@ html{
     height: 47%;
     width: 47%;
     padding: 1%;
+    border-radius: 50%;
+    border: 1px solid black;
 }
 
+.buttons{
+    z-index: 1;
+}
+
+.buttons:hover{
+    cursor: pointer;
+}
+
+/*Fix border-radius for buttons*/
 /*Start-Section ----------------------------------------------------------------------------------------------------*/
 #button-container{
     position: fixed;
@@ -65,9 +76,9 @@ html{
     z-index: -1;
 }
 
-td{
+/*td{
     border: 1px solid black;
-}
+}*/
 
 /*Games-Section-----------------------------------------------------------------------------------------------------*/
 #games-table{
@@ -178,7 +189,6 @@ td{
     height: 60%;
     width: 80%;
     text-align: center;
-    z-index: -1;
 }
 
 .door{

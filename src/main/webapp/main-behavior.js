@@ -1,5 +1,60 @@
 $(document).ready(function() {
 
+    var aboutMeSection = {id: '#aboutme-section', get ID() {return this.id;}};
+    var toolsSection = {id: '#tools-section', get ID() {return this.id;}};
+    var gamesSection = {id: '#games-section', get ID() {return this.id;}};
+    var photographySection = {id: '#photography-section', get ID() {return this.id;}};
+
+    function showSection(elem, duration) {
+        var elemID = $(elem).attr('id');
+        console.log(elemID);
+        switch(elemID){
+            case 'person-icon':
+            $(aboutMeSection.ID).find('.content').fadeIn(duration);
+            break;
+
+            case 'toolbox-icon':
+            $(toolsSection.ID).find('.content').fadeIn(duration);
+            break;
+
+            case 'gamepad-icon':
+            $(gamesSection.ID).find('.content').fadeIn(duration);
+            break;
+
+            case 'camera-icon':
+            $(photographySection.ID).find('.content').fadeIn(duration);
+            break;
+
+            default:
+            break;
+        }
+    }
+
+    function hideSection(elem, duration) {
+        var elemID = $(elem).attr('id');
+        console.log(elemID);
+        switch(elemID){
+            case 'person-icon':
+            $(aboutMeSection.ID).find('.content').fadeOut(duration);
+            break;
+
+            case 'toolbox-icon':
+            $(toolsSection.ID).find('.content').fadeOut(duration);
+            break;
+
+            case 'gamepad-icon':
+            $(gamesSection.ID).find('.content').fadeOut(duration);
+            break;
+
+            case 'camera-icon':
+            $(photographySection.ID).find('.content').fadeOut(duration);
+            break;
+
+            default:
+            break;
+        }
+    }
+
     var state = {expanded: false, get isExpanded() {return this.expanded;},
                                   set isExpanded(newState) {
                                         if (newState == true || newState == false){
@@ -10,7 +65,6 @@ $(document).ready(function() {
                                   },
                  previousElem: '', get PreviousElem() {return this.previousElem;},
                                    set PreviousElem(newElem) {
-                                        console.log(newElem);
                                         if (newElem == 'person-icon' ||
                                             newElem =='camera-icon' ||
                                             newElem == 'toolbox-icon' ||
@@ -29,14 +83,16 @@ $(document).ready(function() {
             if (!state.isExpanded){
                 $('.image').animate({height: '10%', width: '10%'}, 500);
                 $('#button-container').animate({height: '100%', width: '100%'}, 500);
+                showSection($(this), 1000);
+
 
                 $(this).removeClass('active');
                 state.isExpanded = true;
-                state.previousElem = $(this);
+                state.PreviousElem = $(this).attr('id');
             } else if (state.isExpanded) {
-
-                //switch content
-                console.log("State is already expanded. Switching content instead.");
+                //swap content
+                hideSection($(state.previousElem), 250);
+                showSection($(this), 1000);
                 $(this).removeClass('active');
                 $(state.PreviousElem).addClass('active');
                 state.PreviousElem = $(this).attr('id');
@@ -44,190 +100,13 @@ $(document).ready(function() {
                 console.log("Invalid state.");
             }
         } else {
+            hideSection($(this), 250);
             $('.image').animate({height: '47%', width: '47%'}, 500);
             $('#button-container').animate({height: '600px', width: '600px'}, 500);
             state.isExpanded = false;
             $(this).addClass('active');
         }
     });
-
-    function handleContent(elem){
-        switch($(elem).attr('id')){
-            case 'person-icon':
-
-        }
-    }
 });
 
-
-
-/*
-$(document).ready(function() {
-    $('body').hide();
-    $('body').fadeIn(2000, function() {
-    handleAboutMeSection(aboutmeSection, aboutmeSection.Selector, true);
-    });
-
-
-// Definitions -------------------------------------------------------------------------------------------------------
-
-    // Define object literals
-    var aboutmeSection = {id: '#aboutme-section', get ID() {return this.id;},
-                          selector: '#person-icon', get Selector() {return this.selector;},
-                          origWidth: $('#aboutme-section').css('width'), get OrigWidth() {return this.origWidth;},
-                          origLeft: $('#aboutme-section').css('left'), get OrigLeft() {return this.origLeft;},
-                          origRight: 'auto', get OrigRight() {return this.origRight;},
-                          origHeight: $('#aboutme-section').css('height'), get OrigHeight() {return this.origHeight;},
-                          origTop: $('#aboutme-section').css('top'), get OrigTop() {return this.origTop;},
-                          origBottom: $('#aboutme-section').css('bottom'), get OrigBottom() {return this.origBottom;},
-                          expandedWidth: '65%', get ExpandedWidth() {return this.expandedWidth;},
-                          expandedLeft: $('#aboutme-section').css('left'), get ExpandedLeft() {return this.expandedLef;},
-                          expandedRight: $('#aboutme-section').css('right'), get ExpandedRight() {return this.expandedRight;},
-                          expandedHeight: '450px', get ExpandedHeight() {return this.expandedHeight;},
-                          expandedTop: '85%', get ExpandedTop() {return this.expandedTop;},
-                          expandedBottom: $('#aboutme-section').css('bottom'), get ExpandedBottom() {return this.expandedBottom;}};
-
-    var photographySection = {id: '#photography-tab', get ID() {return this.id;},
-                               selector: '#camera-icon', get Selector() {return this.selector;},
-                               origWidth: $('#photography-tab').css('width'), get OrigWidth() {return this.origWidth;},
-                               origLeft: 'auto', get OrigLeft() {return this.origLeft;},
-                               origRight: $('#photography-tab').css('right'), get OrigRight() {return this.origRight;},
-                               expandedWidth: '45%', get ExpandedWidth() {return this.expandedWidth;},
-                               expandedLeft: 'auto', get ExpandedLeft() {return this.expandedLeft;},
-                               expandedRight: $('#photography-tab').css('right'), get ExpandedRight() {return this.expandedRight;}};
-
-    var gamesSection = {id: '#games-tab', get ID() {return this.id;},
-                              selector: '#gamepad-icon', get Selector() {return this.selector;},
-                              origWidth: $('#games-tab').css('width'), get OrigWidth() {return this.origWidth;},
-                              origLeft: $('#games-tab').css('left'), get OrigLeft() {return this.origLeft;},
-                              expandedWidth: '45%', get ExpandedWidth() {return this.expandedWidth;}};
-
-
-// Handlers ---------------------------------------------------------------------------------------------------------
-
-    // Handles aboutme section functionality
-    function handleAboutMeSection(elemToAnimate, selectedElem, active,
-                                  animateDuration=500, fadeInDuration=500, fadeOutDuration=250) {
-        // First click
-        if (active){
-            // Animate vertically first
-            $(elemToAnimate.ID).animate({height: elemToAnimate.ExpandedHeight,
-                                     top: elemToAnimate.ExpandedTop,
-                                     bottom: elemToAnimate.OrigBottom}, animateDuration);
-            // Animate horizontally second
-            $(elemToAnimate.ID).animate({width: elemToAnimate.ExpandedWidth,
-                                 left: elemToAnimate.ExpandedLeft,
-                                 right: elemToAnimate.ExpandedRight}, animateDuration)
-
-            //Animate Name
-            $('#name').animate({bottom: '80%'}, animateDuration);
-
-            // Fade in content and remove active class
-            $(elemToAnimate.ID).promise().done(function() {
-                $(elemToAnimate.ID).find(".content").fadeIn(fadeInDuration);
-            });
-            $(selectedElem).removeClass('active');
-        // Second click
-        } else {
-            // Fade out content
-            $(elemToAnimate.ID).find(".content").fadeOut(fadeOutDuration, function(){
-                // Animate horizontally first
-                $(elemToAnimate.ID).animate({width: elemToAnimate.OrigWidth,
-                                         left: elemToAnimate.OrigLeft,
-                                         right: elemToAnimate.OrigRight}, animateDuration);
-                // Animate vertically second
-                $(elemToAnimate.ID).animate({height: elemToAnimate.OrigHeight,
-                                          top: elemToAnimate.OrigTop,
-                                          bottom: elemToAnimate.OrigBottom}, animateDuration);
-
-                // Animate Name
-                $('#name').animate({bottom: '-240px'}, animateDuration);
-            });
-            // Add active class back in
-            $(selectedElem).addClass('active');
-        }
-    }
-
-    // Handles photography tab functionality
-    function handleTabs(elemToAnimate, selectedElem, active, animateDuration=500, fadeInDuration=500, fadeOutDuration=250){
-        // First click
-        if (active){
-            // Only animate horizontally
-            $(elemToAnimate.ID).animate({width: elemToAnimate.ExpandedWidth,
-                                  left: elemToAnimate.ExpandedLeft,
-                                  right: elemToAnimate.ExpandedRight}, animateDuration);
-
-            // Fade in content and remove active class
-            $(elemToAnimate.ID).promise().done(function() {
-                $(elemToAnimate.ID).find(".content").fadeIn(fadeInDuration);
-            });
-            $(selectedElem).removeClass('active');
-        // Second click
-        } else {
-            // Fade out content and only animate horizontally
-            $(elemToAnimate.ID).find(".content").fadeOut(fadeOutDuration, function(){
-                $(elemToAnimate.ID).animate({width: elemToAnimate.OrigWidth,
-                                         left: elemToAnimate.OrigLeft,
-                                         right: elemToAnimate.OrigRight}, animateDuration);
-            });
-            // Add active class back in
-            $(selectedElem).addClass('active');
-        }
-    }
-
-// Main --------------------------------------------------------------------------------------------------------------
-
-    // Hide content initially
-    $(".content").hide();
-    //Handle click events
-    $(".image").click(function() {
-        //On first click
-        if ($(this).hasClass("active")) {
-            switch($(this).attr('id')) {
-                case 'person-icon':
-                */
-/*handleAboutMeSection(aboutmeSection, aboutmeSection.Selector, true);*//*
-
-                break;
-
-                case 'gamepad-icon':
-                handleTabs(gamesSection, gamesSection.Selector, true);
-                break;
-
-                case 'camera-icon':
-                handleTabs(photographySection, photographySection.Selector, true);
-                break;
-
-                default:
-                break;
-            }
-        // On second click
-        } else {
-            switch($(this).attr('id')) {
-                case 'person-icon':
-                // Don't retract section if currently expanding
-                */
-/*if($(aboutmeSection.ID).is(':animated')) {return false;}
-                handleAboutMeSection(aboutmeSection, aboutmeSection.Selector, false);*//*
-
-                break;
-
-                case 'gamepad-icon':
-                // Don't retract section if currently expanding
-                if($(gamesSection.ID).is(':animated')) {return false;}
-                handleTabs(gamesSection, gamesSection.Selector, false);
-                break;
-
-                case 'camera-icon':
-                // Don't retract section if currently expanding
-                if($(photographySection.ID).is(':animated')) {return false;}
-                handleTabs(photographySection, photographySection.Selector, false);
-                break;
-
-                default:
-                break;
-            }
-        }
-    });
-
-});*/
+//TODO: Figure out how to load/unload content, animate fades sequentially
