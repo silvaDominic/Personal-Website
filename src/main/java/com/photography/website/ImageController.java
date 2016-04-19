@@ -9,7 +9,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import javax.servlet.ServletContext;
 import java.io.File;
 import java.io.IOException;
@@ -50,12 +49,13 @@ public class ImageController {
      * @return a JSON string
      */
 
+    @CrossOrigin(origins = "http://localhost:9000")
     @RequestMapping("/nature-album")
     @ResponseBody
     String getNatureImages() {
 
         // Set resource path and create Image list
-        String imgDirectory = "/media/reclaimer/shared/software-development/photography-website/src/main/webapp/resources/images/nature-album";
+        String imgDirectory = "/media/reclaimer/shared/software-development/photography-website/src/main/webapp/resources/images/nature-album/big";
         ArrayList<Image> files = listImageFiles(imgDirectory);
         //System.out.println(imgDirectory);
 
@@ -108,10 +108,10 @@ public class ImageController {
 
         return new ResponseEntity<byte[]>(org.apache.commons.io.IOUtils.toByteArray(in), headers, HttpStatus.CREATED);
     }
-
-    @RequestMapping("/nature-album/{id}")
+    @CrossOrigin(origins = "http://localhost:9000")
+    @RequestMapping("/nature-album/big/{id}")
     ResponseEntity<byte[]> getNatureImages(@PathVariable String id) throws IOException {
-        InputStream in = servletContext.getResourceAsStream("/resources/images/nature-album/" + id + ".JPG");
+        InputStream in = servletContext.getResourceAsStream("/resources/images/nature-album/big" + id + ".JPG");
 
         final HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.IMAGE_JPEG);

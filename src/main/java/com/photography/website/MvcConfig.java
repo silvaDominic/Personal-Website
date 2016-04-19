@@ -9,14 +9,4 @@ import org.springframework.web.servlet.config.annotation.*;
  */
 @Configuration
 @EnableWebMvc
-public class MvcConfig extends WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter {
-    //@Override
-    /*public void addResourceHandlers(ResourceHandlerRegistry registry){
-        registry
-                .addResourceHandler("/**")
-                .addResourceLocations("file:/media/reclaimer/shared/software-development/photography-website/src/main/webapp/");
-        registry
-                .addResourceHandler("/church_album/**")
-                .addResourceLocations("file:/media/reclaimer/shared/software-development/photography-website/src/main/resources/images/church_album/");
-    }*/
-}
+public class MvcConfig extends WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter {}

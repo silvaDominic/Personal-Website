@@ -7,7 +7,6 @@ $(document).ready(function() {
 
     function showSection(elem, duration) {
         var elemID = $(elem).attr('id');
-        console.log(elemID);
         switch(elemID){
             case 'person-icon':
             $(aboutMeSection.ID).find('.content').fadeIn(duration);
@@ -32,7 +31,6 @@ $(document).ready(function() {
 
     function hideSection(elem, duration) {
         var elemID = $(elem).attr('id');
-        console.log(elemID);
         switch(elemID){
             case 'person-icon':
             $(aboutMeSection.ID).find('.content').fadeOut(duration);
@@ -76,15 +74,13 @@ $(document).ready(function() {
                                    }
                 };
 
-
     $('.content').hide();
-    $('.image').click(function() {
+    $('.button').click(function() {
         if ($(this).hasClass('active')){
             if (!state.isExpanded){
-                $('.image').animate({height: '10%', width: '10%'}, 500);
+                $('.button').animate({height: '5vw', width: '5%'}, 500);
                 $('#button-container').animate({height: '100%', width: '100%'}, 500);
-                showSection($(this), 1000);
-
+                showSection($(this), 1500);
 
                 $(this).removeClass('active');
                 state.isExpanded = true;
@@ -92,7 +88,7 @@ $(document).ready(function() {
             } else if (state.isExpanded) {
                 //swap content
                 hideSection($(state.previousElem), 250);
-                showSection($(this), 1000);
+                showSection($(this), 1500);
                 $(this).removeClass('active');
                 $(state.PreviousElem).addClass('active');
                 state.PreviousElem = $(this).attr('id');
@@ -101,12 +97,10 @@ $(document).ready(function() {
             }
         } else {
             hideSection($(this), 250);
-            $('.image').animate({height: '47%', width: '47%'}, 500);
+            $('.button').animate({height: '47%', width: '47%'}, 500);
             $('#button-container').animate({height: '600px', width: '600px'}, 500);
             state.isExpanded = false;
             $(this).addClass('active');
         }
     });
 });
-
-//TODO: Figure out how to load/unload content, animate fades sequentially

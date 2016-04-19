@@ -20,7 +20,7 @@ public class App {
         return new WebMvcConfigurerAdapter() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("/church_album").allowedOrigins("http://localhost:9000");
+                registry.addMapping("*").allowedOrigins("http://localhost:9000");
             }
         };
     }
