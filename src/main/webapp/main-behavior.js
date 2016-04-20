@@ -97,7 +97,7 @@ $(document).ready(function() {
             }
         } else {
             hideSection($(this), 250);
-            $('.button').animate({height: '47%', width: '47%'}, 500);
+            $('.button').animate({height: '45%', width: '45%'}, 500);
             $('#button-container').animate({height: '600px', width: '600px'}, 500);
             state.isExpanded = false;
             $(this).addClass('active');

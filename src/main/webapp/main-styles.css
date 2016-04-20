@@ -2,11 +2,8 @@
 html{
     height: 100%;
     width: 100%;
+    font-family: 'geometria_lightlight', Helvetica, Arial, sans-serif;
 }
-
-/*.container{
-    border: 1px solid black;
-}*/
 
 .content{
     display: none;
@@ -17,8 +14,8 @@ html{
 .button{
     display: block;
     position: fixed;
-    height: 52%;
-    width: 52%;
+    height: 45%;
+    width: 45%;
     border-radius: 50%;
     z-index: 1;
 }
@@ -60,47 +57,114 @@ html{
 }
 
 /*AboutMe-Section ---------------------------------------------------------------------------------------------------*/
+#aboutme-section{
+    position: relative;
+    margin: 0 auto;
+    width: 80%;
+}
+
 #aboutme-content{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 65%;
-    height: 70%;
-    z-index: -1;
-    background: red;
-}
-
-.paragraph{
     display: block;
-    font-family: 'nexa_lightregular', Helvetica, Arial, sans-serif;
+    position: relative;
+    top: -20px;
+    margin: 0 auto;
+    padding: 5%;
+    width: 65%;
+    z-index: -1;
+    background: #f3f3f3;
+    border-left-style: solid;
+    border-right-style: solid;
+    border-color: #7392ff;
+    border-width: 0.25vw;
 }
 
+.paragraph, #header{
+    display: block;
+    position: relative;
+    top: 10%;
+    font-size: 1.2em;
+    color: grey;
+}
+
+#header{
+    color: #7392ff;
+    font-size: 2vw;
+}
+
+#contact-bar{
+    display: block;
+    position: relative;
+    top: 0;
+    left: -4vw;
+    height: 50%;
+    width: 100%;
+    border-left-style: solid;
+    border-right-style: solid;
+    border-color: #7392ff;
+    border-width: 4vw;
+    background: #7392ff;
+}
+
+#contact-table{
+    position: relative;
+    margin: 0 auto;
+    border-spacing: 5vw;
+    text-align: center;
+}
+
+.contact-icon{
+    display: table-cell;
+    position: relative;
+    float: left;
+    margin: 0 auto;
+    width: 25%;
+    height: 25%;
+}
+
+#contact-header{
+    height: 8vw;
+    font-size: 5vw;
+    color: #f3f3f3;
+}
+
+/*TODO: Figure out what element is overtop of everything. Add bottom padding to main-section. Style spans.*/
 
 /*Tools-Section -----------------------------------------------------------------------------------------------------*/
-
 #tools-table{
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    border-spacing: 100px;
-    border: 1px solid black;
+    border-spacing: 3vw;
     height: 100%;
     width: 90%;
     text-align: center;
-    z-index: -1;
+    z-index: -2;
 }
-
 
 .badge{
+    display: table-cell;
     position: relative;
-    max-height: 85%;
-    max-width: 85%;
+    margin: 0 auto;
+    max-height: 80%;
+    max-width: 80%;
 }
 
-/*#tools-table td{
-    border: 1px solid black;
-}*/
+.tools-header{
+    height: 5vw;
+    font-size: 8vw;
+}
+
+#software-header{
+    color: #f63361;
+}
+
+#languages-header{
+    color: #fe802d;
+}
+
+#fr-lib-header{
+    color: #2279ac;
+}
 
 /*Games-Section -----------------------------------------------------------------------------------------------------*/
 #games-table{
@@ -110,11 +174,11 @@ html{
     transform: translate(-50%, -50%);
     height: 90%;
     width: 90%;
-    z-index: -1;
-    border-spacing: 10%;
+    z-index: -2;
+    overflow: hidden;
 }
 
-td{
+#games-table td{
     position: relative;
 }
 
@@ -145,9 +209,8 @@ td{
     line-height: 20vw;
     text-align: center;
     opacity: 0;
-    background: rgba(255, 255, 255, 0.7);
     color: white;
-    font-size: 2em;
+    font-size: 3.5vw;
     z-index: 1;
     transition: all 0.35s ease;
 }
