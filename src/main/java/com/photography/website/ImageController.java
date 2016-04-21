@@ -27,56 +27,12 @@ public class ImageController {
      *
      * @return a JSON string
      */
-    @RequestMapping("/port-jeff-album")
+    @RequestMapping("/images/{path}")
     @ResponseBody
-    String getPortJeffImages() {
+    String getAlbumImages(@PathVariable String path) {
 
         // Set resource path and create Image list
-        String imgDirectory = "/media/reclaimer/shared/software-development/photography-website/src/main/webapp/resources/images/port-jeff-album";
-        ArrayList<Image> files = listImageFiles(imgDirectory);
-        //System.out.println(imgDirectory);
-
-        JSONObject JsonObj = new JSONObject(); // Initialize and instantiate JSON object
-        JsonObj.put("images", convertToJSON(files)); // Convert Image files to JSON object and add to JSON object as 'images'
-        //System.out.println(JsonObj);
-
-        return JsonObj.toString();
-    }
-
-     /**
-     * Processes a request to specific url sub-directory
-     *
-     * @return a JSON string
-     */
-
-    @CrossOrigin(origins = "http://localhost:9000")
-    @RequestMapping("/nature-album")
-    @ResponseBody
-    String getNatureImages() {
-
-        // Set resource path and create Image list
-        String imgDirectory = "/media/reclaimer/shared/software-development/photography-website/src/main/webapp/resources/images/nature-album/big";
-        ArrayList<Image> files = listImageFiles(imgDirectory);
-        //System.out.println(imgDirectory);
-
-        JSONObject JsonObj = new JSONObject(); // Initialize and instantiate JSON object
-        JsonObj.put("images", convertToJSON(files)); // Convert Image files to JSON object and add to JSON object as 'images'
-        //System.out.println(JsonObj);
-
-        return JsonObj.toString();
-    }
-
-    /**
-     * Processes a request to specific url sub-directory
-     *
-     * @return a JSON string
-     */
-    @RequestMapping("/restaurant-album")
-    @ResponseBody
-    String getRestaurantImages() {
-
-        // Set resource path and create Image list
-        String imgDirectory = "/media/reclaimer/shared/software-development/photography-website/src/main/webapp/resources/images/restaurant-album";
+        String imgDirectory = "/media/reclaimer/shared/software-development/photography-website/src/main/webapp/resources/images/" + path;
         ArrayList<Image> files = listImageFiles(imgDirectory);
         //System.out.println(imgDirectory);
 
@@ -90,39 +46,20 @@ public class ImageController {
     // Request Mapping for specific images ---------------------------------------------------------------------------
 
     /**
-     * Handles particular image request for church album
+     * Handles particular image request for album
      *
      * @param id The requested image
      * @return byte code representation of Image object
      * @throws IOException if resource is of invalid type
      */
     //@CrossOrigin(origins = "http://localhost:9000")
-    @RequestMapping("/port-jeff-album/{id}")
-    ResponseEntity<byte[]> getPortJeffImages(@PathVariable String id) throws IOException {
+    @RequestMapping("/images/{path}/{id}")
+    ResponseEntity<byte[]> getAlbumImageByID(@PathVariable String path, @PathVariable String id) throws IOException {
         // Set requested image as InputStream
-        InputStream in = servletContext.getResourceAsStream("/resources/images/port-jeff-album/" + id + ".JPG");
+        System.out.println(path);
+        InputStream in = servletContext.getResourceAsStream("/resources/images/" + path + "/" + id + ".jpg");
 
         // Initialize and instantiate HttpHeader object and set content type as JPEG
-        final HttpHeaders headers = new HttpHeaders();
-        headers.setContentType(MediaType.IMAGE_JPEG);
-
-        return new ResponseEntity<byte[]>(org.apache.commons.io.IOUtils.toByteArray(in), headers, HttpStatus.CREATED);
-    }
-    @CrossOrigin(origins = "http://localhost:9000")
-    @RequestMapping("/nature-album/big/{id}")
-    ResponseEntity<byte[]> getNatureImages(@PathVariable String id) throws IOException {
-        InputStream in = servletContext.getResourceAsStream("/resources/images/nature-album/big" + id + ".JPG");
-
-        final HttpHeaders headers = new HttpHeaders();
-        headers.setContentType(MediaType.IMAGE_JPEG);
-
-        return new ResponseEntity<byte[]>(org.apache.commons.io.IOUtils.toByteArray(in), headers, HttpStatus.CREATED);
-    }
-
-    @RequestMapping("/restaurant-album/{id}")
-    ResponseEntity<byte[]> getRestaurantImages(@PathVariable String id) throws IOException {
-        InputStream in = servletContext.getResourceAsStream("/resources/images/restaurant-album/" + id + ".JPG");
-
         final HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.IMAGE_JPEG);
 

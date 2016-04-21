@@ -10,14 +10,13 @@ html{
 }
 
 /*Fix border-radius for buttons*/
-/*Intro-Section -----------------------------------------------------------------------------------------------------*/
+/*Main-Menu -----------------------------------------------------------------------------------------------------*/
 .button{
     display: block;
     position: fixed;
     height: 45%;
     width: 45%;
     border-radius: 50%;
-    z-index: 1;
 }
 
 .button:hover{
@@ -31,7 +30,6 @@ html{
     transform: translate(-50%, -50%);
     height: 600px;
     width: 600px;
-    z-index: -1;
 }
 
 #person-icon{
@@ -57,20 +55,13 @@ html{
 }
 
 /*AboutMe-Section ---------------------------------------------------------------------------------------------------*/
-#aboutme-section{
-    position: relative;
-    margin: 0 auto;
-    width: 80%;
-}
 
 #aboutme-content{
     display: block;
     position: relative;
-    top: -20px;
+    top: -5vh;
     margin: 0 auto;
-    padding: 5%;
-    width: 65%;
-    z-index: -1;
+    width: 75%;
     background: #f3f3f3;
     border-left-style: solid;
     border-right-style: solid;
@@ -78,10 +69,19 @@ html{
     border-width: 0.25vw;
 }
 
+#main-content{
+    display: block;
+    position: relative;
+    top: 10vh;
+    margin: auto auto;
+    height: 105vh;
+    width: 90%;
+}
+
 .paragraph, #header{
     display: block;
     position: relative;
-    top: 10%;
+    top: 12.5vh;
     font-size: 1.2em;
     color: grey;
 }
@@ -94,14 +94,10 @@ html{
 #contact-bar{
     display: block;
     position: relative;
-    top: 0;
-    left: -4vw;
-    height: 50%;
+    margin-top: 20vh;
+    margin: 0 auto;
     width: 100%;
-    border-left-style: solid;
-    border-right-style: solid;
-    border-color: #7392ff;
-    border-width: 4vw;
+    height: auto;
     background: #7392ff;
 }
 
@@ -122,12 +118,12 @@ html{
 }
 
 #contact-header{
-    height: 8vw;
+    height: 5vh;
     font-size: 5vw;
     color: #f3f3f3;
 }
 
-/*TODO: Figure out what element is overtop of everything. Add bottom padding to main-section. Style spans.*/
+/*TODO: Style spans.*/
 
 /*Tools-Section -----------------------------------------------------------------------------------------------------*/
 #tools-table{
@@ -150,7 +146,7 @@ html{
 }
 
 .tools-header{
-    height: 5vw;
+    height: 5vh;
     font-size: 8vw;
 }
 
@@ -174,7 +170,6 @@ html{
     transform: translate(-50%, -50%);
     height: 90%;
     width: 90%;
-    z-index: -2;
     overflow: hidden;
 }
 
@@ -184,7 +179,7 @@ html{
 
 .tile{
     position: absolute;
-    top: 2vw;
+    top: 2vh;
     left: 5vw;
     height: 20vw;
     width: 20vw;
@@ -287,6 +282,10 @@ html{
 .door{
     width: 90%;
     transition: all 0.5s ease;
+}
+
+#dock{
+    width: 110%;
 }
 
 .door:hover{
