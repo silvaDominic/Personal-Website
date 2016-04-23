@@ -32,7 +32,7 @@ public class ImageController {
     String getAlbumImages(@PathVariable String path) {
 
         // Set resource path and create Image list
-        String imgDirectory = "/media/reclaimer/shared/software-development/photography-website/src/main/webapp/resources/images/" + path;
+        String imgDirectory = "/media/reclaimer/shared/software-development/photography-website/src/main/webapp/resources/images/" + path + "/big";
         ArrayList<Image> files = listImageFiles(imgDirectory);
         //System.out.println(imgDirectory);
 
@@ -56,8 +56,7 @@ public class ImageController {
     @RequestMapping("/images/{path}/{id}")
     ResponseEntity<byte[]> getAlbumImageByID(@PathVariable String path, @PathVariable String id) throws IOException {
         // Set requested image as InputStream
-        System.out.println(path);
-        InputStream in = servletContext.getResourceAsStream("/resources/images/" + path + "/" + id + ".jpg");
+        InputStream in = servletContext.getResourceAsStream("/resources/images/" + path + "/big/" + id + ".jpg");
 
         // Initialize and instantiate HttpHeader object and set content type as JPEG
         final HttpHeaders headers = new HttpHeaders();

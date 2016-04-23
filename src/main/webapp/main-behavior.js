@@ -1,6 +1,7 @@
 $(document).ready(function() {
 
-    var aboutMeSection = {id: '#aboutme-section', get ID() {return this.id;}};
+    var aboutMeSection = {id: '#aboutme-section', get ID() {return this.id;},
+                          color: '#1549ff', get Color() {return this.color;}};
     var toolsSection = {id: '#tools-section', get ID() {return this.id;}};
     var gamesSection = {id: '#games-section', get ID() {return this.id;}};
     var photographySection = {id: '#photography-section', get ID() {return this.id;}};
@@ -29,23 +30,23 @@ $(document).ready(function() {
         }
     }
 
-    function hideSection(elem, duration) {
+    function hideSection(elem, duration, callback) {
         var elemID = $(elem).attr('id');
         switch(elemID){
             case 'person-icon':
-            $(aboutMeSection.ID).find('.content').fadeOut(duration);
+            $(aboutMeSection.ID).find('.content').fadeOut(duration, callback);
             break;
 
             case 'toolbox-icon':
-            $(toolsSection.ID).find('.content').fadeOut(duration);
+            $(toolsSection.ID).find('.content').fadeOut(duration, callback);
             break;
 
             case 'gamepad-icon':
-            $(gamesSection.ID).find('.content').fadeOut(duration);
+            $(gamesSection.ID).find('.content').fadeOut(duration, callback);
             break;
 
             case 'camera-icon':
-            $(photographySection.ID).find('.content').fadeOut(duration);
+            $(photographySection.ID).find('.content').fadeOut(duration, callback);
             break;
 
             default:
@@ -75,12 +76,14 @@ $(document).ready(function() {
                 };
 
     $('.content').hide();
-    $('.button').click(function() {
-        if ($(this).hasClass('active')){
+    $('.container').on('click', '.button', function() {
+        var $elem = $(this);
+        if ($elem.hasClass('active')){
             if (!state.isExpanded){
-                $('.button').animate({height: '5vw', width: '5%'}, 500);
                 $('#button-container').animate({height: '100%', width: '100%'}, 500);
-                showSection($(this), 1500);
+                $('.button').animate({height: '5vw', width: '5vw'}, 500, function() {
+                showSection($elem, 500);
+                });
 
                 $(this).removeClass('active');
                 state.isExpanded = true;
@@ -88,7 +91,7 @@ $(document).ready(function() {
             } else if (state.isExpanded) {
                 //swap content
                 hideSection($(state.previousElem), 250);
-                showSection($(this), 1500);
+                showSection($(this), 500);
                 $(this).removeClass('active');
                 $(state.PreviousElem).addClass('active');
                 state.PreviousElem = $(this).attr('id');
@@ -96,11 +99,13 @@ $(document).ready(function() {
                 console.log("Invalid state.");
             }
         } else {
-            hideSection($(this), 250);
-            $('.button').animate({height: '45%', width: '45%'}, 500);
-            $('#button-container').animate({height: '600px', width: '600px'}, 500);
+            hideSection($(this), 250, function(){
+                $('.button').animate({height: '15vw', width: '15vw'}, 500);
+                $('#button-container').animate({height: '600px', width: '600px'}, 500);
+                });
             state.isExpanded = false;
             $(this).addClass('active');
-        }
-    });
+            }
+
+        });
 });

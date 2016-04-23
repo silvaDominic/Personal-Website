@@ -1,6 +1,6 @@
 $(document).ready(function() {
     document.domain = "localhost";
-    var url = "http://localhost:8080/nature-album/";
+    var url = "http://localhost:8080/images/nature-album/";
     console.log($.ajax());
 
     $.getJSON(url, function(data){
@@ -26,7 +26,12 @@ $(document).ready(function() {
             trueFullscreen: true,
             });
 
-
+        Galleria.ready(function() {
+            this.attachKeyboard({
+            left: this.prev,
+            right: this.next
+            });
+        });
 
     } else {
         console.log("The Galleria App could not be found.");

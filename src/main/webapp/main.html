@@ -13,23 +13,33 @@
  </head>
 
 <body class = "body">
-    <!--<h1 id = "name">DominicSilva</h1>-->
 
     <div class = "container buttons" id = "button-container">
-        <img class = "button active" id = "person-icon" src = "resources/main-page-icons/person-icon.svg"/>
-        <img class = "button active" id = "toolbox-icon" src = "resources/main-page-icons/toolbox-icon.svg"/>
-        <img class = "button active" id = "gamepad-icon" src = "resources/main-page-icons/gamepad-icon.svg"/>
-        <img class = "button active" id = "camera-icon" src = "resources/main-page-icons/camera-icon.svg"/>
+        <div class = "button active" id = "person-icon">
+            <img src = "resources/main-page-icons/person-icon.svg"/>
+        </div>
+        <div>
+            <img class = "button active" id = "toolbox-icon" src = "resources/main-page-icons/toolbox-icon.svg"/>
+        </div>
+        <div>
+            <img class = "button active" id = "gamepad-icon" src = "resources/main-page-icons/gamepad-icon.svg"/>
+        </div>
+        <div>
+            <img class = "button active" id = "camera-icon" src = "resources/main-page-icons/camera-icon.svg"/>
+        </div>
     </div>
 
     <div class = "container" id = "aboutme-section">
-        <div class = "content" id = "aboutme-content">
+        <div class = "content">
+            <section id = "aboutme-description">
+                <div id = "name">
+                    <span class = "name" id = "first-name">Dominic</span><span class = "name" id = "last-name">Silva</span>
+                </div>
 
-            <section id = "main-content">
                 <header>
-                    <h2 id = "header">I'm sort of new at this...</h2>
+                    <h2 id = "aboutme-header">I'm sort of new at this...</h2>
                 </header>
-                <p class = "paragraph" id = "para-1">
+                <p class = "paragraph" id = "aboutme-description-1">
                     So right before I graduated college I told myself that by 2016 I'd be calling Australia home,
                     working for some renewable energy company on the weekdays, enjoying the Gold Coast on the weekends,
                     and melting to the the distinct sound of Aussie accents......<span>HA!</span> Considering that I'm typing this from
@@ -40,7 +50,7 @@
                     "Oye, I don't think Australia is ready for you mate." Maybe I had been hyping things up a bit.
                     "...You might want to reconsider your career too." Oh come on!
                 </p>
-                <p class = "paragraph" id = "para-2">
+                <p class = "paragraph" id = "aboutme-description-2">
                     I think that change of direction stemmed from a gut feeling I got when I considered my future as a
                     person rather than a worker. Life in Australia as an engineer certainly sounds appealing
                     (I'll travel there at some point, I'm sure), but I think there was a deep desire to express myself
@@ -55,7 +65,7 @@
                     (I'm talking to the parents out there), it's also because of these things that video games have the
                     ability to be wholesome projects that require more than just quick reflexes and a sharp memory.
                 </p>
-                <p class = "paragraph" id = "para-3">
+                <p class = "paragraph" id = "aboutme-description-3">
                     It's been nearly a year and half since I made that decision and I've gotta say,
                     I feel much more confident about the switch now than I did then. My conceptual 'physique' is still slim
                     however and it's at this point that I think moving into, what do they call it? The “real world”,
@@ -65,37 +75,38 @@
                 </p>
             </section>
 
-            <div id = "contact-bar">
+            <section id = "contact-bar">
                 <table class = "table" id = "contact-table">
                     <tr><th id = "contact-header" colspan = "2">Contact</th></tr>
                     <tr id = contact-row-1>
                         <td id = "item-1">
                             <object class = "contact-icon" id = "email-icon" data = "resources/main-page-icons/gmail-icon.svg"></object>
-                            <a>silva.d.dominic@Gmail.com</a>
+                            <a href = "mailto:silva.d.dominic@Gmail.com">silva.d.dominic@Gmail.com</a>
                         </td>
                         <td id = "item-2">
                             <object class = "contact-icon" id = "linkedin-icon" data = "resources/main-page-icons/alt-linkedin-icon.svg"></object>
-                            <a href = "www.linkedin.com/in/silvaDominic">www.linkedin.com/in/silvaDominic</a>
+                            <a href = "https://www.linkedin.com/in/silvaDominic">www.linkedin.com/in/silvaDominic</a>
                         </td>
                     </tr>
                     <tr id = contact-row-2>
                         <td id = "item-3">
                             <object class = "contact-icon" id = "github-icon" data = "resources/main-page-icons/alt-github-icon.svg"></object>
-                            <a href = "wwww.github.com/silvaDominic">www.github.com/silvaDominic</a>
+                            <a href = "https://github.com/silvaDominic">www.github.com/silvaDominic</a>
                         </td>
                         <td id = "item-4">
-                            <object class = "contact-icon" id = "resume-icon" data = "resources/main-page-icons/gmail-icon.svg"></object>
-                            <a>resume</a>
+                            <a class = "contact-icon" id = "resume-icon" href = "../resources/Software-Resume-Dominic-Silva.pdf"> Resume
+                                <object></object>
+                            </a>
                         </td>
                     </tr>
                 </table>
-            </div>
+            </section>
         </div>
     </div>
 
 <!--Tools-Section--------------------------------------------------------------------------------------------------->
     <div class = "container" id = "tools-section">
-        <div class = "content" id = "tools-content">
+        <div class = "content">
             <table class = "table" id = "tools-table">
                 <tr id = "software-header"><th class = "tools-header" colspan="3">Software</th></tr>
                 <tr id = "tools-row-1">
@@ -174,11 +185,20 @@
 
 <!--Games-Section---------------------------------------------------------------------------------------------------->
     <div class = "container" id = "games-section">
-        <div class = "content" id = "games-content">
+        <div class = "content">
+
+<!--            <section id = "games-content">
+                <p class = "paragraph" id = "games-description">Below you'll find some arcade games that I made while learning how to program.
+                    While short and sweet, they demonstrate some core programming & game mechanic principles and were fun to make.
+                    Over the next couple of weeks I'll be sprucing them up to make them a little more presentable
+                    (they're sort of...not too pretty right now). After that though I plan to take what I've learned
+                    and create a more comprehensive game on my own.</p>
+            </section>-->
+
             <table class = "table" id = "games-table">
                 <tr id = "games-row-1">
                     <td>
-                        <div class = "tile">
+                        <div class = "games-button">
                             <a href = "http://www.codeskulptor.org/#user40_uKcyALyvAZ_14.py">
                                 <span class = "title" id = "asteroids-title">Asteroids</span>
                                 <img id= "asteroids-image" src = "resources/game-images/asteroids-thumbnail.svg"/>
@@ -186,7 +206,7 @@
                         </div>
                     </td>
                     <td>
-                        <div class = "tile">
+                        <div class = "games-button">
                             <a href = "http://www.codeskulptor.org/#user40_30Mp5i9GN9_8.py">
                                 <span class = "title" id = "a2048-title">2048</span>
                                 <img id = "a2048-image" src = "resources/game-images/2048-thumbnail.svg"/>
@@ -194,7 +214,7 @@
                         </div>
                     </td>
                     <td>
-                        <div class = "tile">
+                        <div class = "games-button">
                             <a href = "http://www.codeskulptor.org/#user40_4P4Uni7AGF_17.py">
                                 <span class = "title" id = "pong-title">Pong</span>
                                 <img id = "pong-image" src = "resources/game-images/pong-thumbnail.svg"/>
@@ -205,19 +225,19 @@
 
                 <tr id = "games-row-2">
                     <td>
-                        <a class = "tile" href = "http://www.codeskulptor.org/#user40_0gyQ29A3ib_3.py">
+                        <a class = "games-button" href = "http://www.codeskulptor.org/#user40_0gyQ29A3ib_3.py">
                             <span class = "title" id = "blackjack-title">Blackjack</span>
                             <img id = "blackjack-image" src = "resources/game-images/blackjack-thumbnail.svg"/>
                         </a>
                     </td>
                     <td>
-                        <a class = "tile" href = "#">
+                        <a class = "games-button" href = "#">
                             <span class = "title" id = "tictactoe-title">Tic-Tac-Toe</span>
                             <img id = "tictactoe-image" src = "resources/game-images/tictactoe-thumbnail.svg"/>
                         </a>
                     </td>
                     <td>
-                        <a class = "tile" href = "#">
+                        <a class = "games-button" href = "#">
                             <span class = "title" id = "coming-soon-title">Coming Soon</span>
                             <img id = "coming-soon-image" src = "resources/game-images/coming-soon-thumbnail.svg"/>
                         </a>
@@ -229,7 +249,14 @@
 
 <!--Photography-Section---------------------------------------------------------------------------------------------->
     <div class = "container" id = "photography-section">
-        <div class = "content" id = "photography-content">
+        <div class = "content">
+
+<!--            <section id = "photography-content">
+                <p id = "photography-description"> Believe it or not, some of my first photographs were taken in Halo 3's Theater mode.
+                    Here you'll find albums of my recently accumulated work ranging from intimate nature shots
+                    to candid views of a bustling port town.</p>
+            </section>-->
+
             <table class = "table" id = "photography-table">
                 <tr>
                     <td class = "photo-links">
