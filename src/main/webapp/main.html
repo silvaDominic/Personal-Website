@@ -15,8 +15,8 @@
 <body class = "body">
 
     <div class = "container buttons" id = "button-container">
-        <div class = "button active" id = "person-icon">
-            <img src = "resources/main-page-icons/person-icon.svg"/>
+        <div>
+            <img class = "button active" id = "person-icon" src = "resources/main-page-icons/person-icon.svg"/>
         </div>
         <div>
             <img class = "button active" id = "toolbox-icon" src = "resources/main-page-icons/toolbox-icon.svg"/>
@@ -40,13 +40,14 @@
                     <h2 id = "aboutme-header">I'm sort of new at this...</h2>
                 </header>
                 <p class = "paragraph" id = "aboutme-description-1">
-                    So right before I graduated college I told myself that by 2016 I'd be calling Australia home,
+                    So right before I graduated college I told myself that by 2016 I'd be calling Australia my home,
                     working for some renewable energy company on the weekdays, enjoying the Gold Coast on the weekends,
-                    and melting to the the distinct sound of Aussie accents......<span>HA!</span> Considering that I'm typing this from
-                    the bedroom I grew up in, I think that I may have really screwed up somewhere. Well actually, that's
-                    what <span>you</span> would be thinking. Rather than compare my current situation to that ambitious *cough* and silly
-                    *cough* 'promise' I made to myself a couple of years ago, instead I think of it as if nature took my hand,
-                    gave me a shake, and whispered into my soul in a not so sweet Australian voice
+                    and melting to the the distinct sound of those Aussie accents......<span id = "HA">HA!</span>
+                    Considering that I'm typing this from the bedroom I grew up in, I think that I may have really
+                    screwed up somewhere. Well actually, that's what <span id = "you">you</span> would be thinking.
+                    Rather than compare my current situation to that ambitious *cough* silly *cough* 'promise' I made
+                    to myself a couple of years ago, instead I think of it as if nature took my hand,
+                    gave me a smack, and whispered into my soul in a not so sweet Australian voice
                     "Oye, I don't think Australia is ready for you mate." Maybe I had been hyping things up a bit.
                     "...You might want to reconsider your career too." Oh come on!
                 </p>
@@ -54,48 +55,48 @@
                     I think that change of direction stemmed from a gut feeling I got when I considered my future as a
                     person rather than a worker. Life in Australia as an engineer certainly sounds appealing
                     (I'll travel there at some point, I'm sure), but I think there was a deep desire to express myself
-                    through other means and I didn't see how becoming that kind of engineer would allow for such a thing
-                    (I also had a secret desire to develop my own video games). After a summer of couch hopping,
+                    through other means and I didn't see how taking that path would allow for such a thing
+                    (I also had this desire to develop my own video games). After a summer of couch hopping,
                     working at a restaurant, conversations with friends and family, and self reflecting I decided that I
                     wanted to learn software development and design in order to [ultimately] become a game developer.
-                    And what made game development an easy choice didn't so much have to do with me growing up with
+                    What made game development an easy choice didn't so much have to do with me growing up with
                     video games, but that creating them incorporated a lot of other disciplines that I'm interested in:
                     design, digital art, photography, music, and story telling. It was these things that I could really
-                    open myself up to and while there is a stigma among the older generations
+                    open myself up to. And while there is a video game stigma among the older generations
                     (I'm talking to the parents out there), it's also because of these things that video games have the
                     ability to be wholesome projects that require more than just quick reflexes and a sharp memory.
                 </p>
                 <p class = "paragraph" id = "aboutme-description-3">
                     It's been nearly a year and half since I made that decision and I've gotta say,
                     I feel much more confident about the switch now than I did then. My conceptual 'physique' is still slim
-                    however and it's at this point that I think moving into, what do they call it? The “real world”,
-                    is necessary to solidify the core computer science and programming principles that I've learned and
-                    to start becoming familiar with the more nuanced concepts, whether that be for a
-                    game company or anywhere else.
+                    however and it's at this point that I think moving into, what do they call it? the “real world”,
+                    is necessary to solidify the core computer science and programming principles I've learned and
+                    to start becoming familiar with the more nuanced concepts. With this website finally up and running,
+                    I think I'm one step closer to achieving that.
                 </p>
             </section>
 
             <section id = "contact-bar">
                 <table class = "table" id = "contact-table">
-                    <tr><th id = "contact-header" colspan = "2">Contact</th></tr>
                     <tr id = contact-row-1>
                         <td id = "item-1">
-                            <object class = "contact-icon" id = "email-icon" data = "resources/main-page-icons/gmail-icon.svg"></object>
-                            <a href = "mailto:silva.d.dominic@Gmail.com">silva.d.dominic@Gmail.com</a>
+                            <a href = "mailto:silva.d.dominic@Gmail.com">
+                                <img class = "contact-icon" id = "email-icon" src = "resources/main-page-icons/gmail-icon.svg"/>
+                            </a>
                         </td>
                         <td id = "item-2">
-                            <object class = "contact-icon" id = "linkedin-icon" data = "resources/main-page-icons/alt-linkedin-icon.svg"></object>
-                            <a href = "https://www.linkedin.com/in/silvaDominic">www.linkedin.com/in/silvaDominic</a>
+                            <a href = "https://www.linkedin.com/in/silvaDominic">
+                                <img class = "contact-icon" id = "linkedin-icon" src = "resources/main-page-icons/alt-linkedin-icon.svg"/>
+                            </a>
                         </td>
-                    </tr>
-                    <tr id = contact-row-2>
                         <td id = "item-3">
-                            <object class = "contact-icon" id = "github-icon" data = "resources/main-page-icons/alt-github-icon.svg"></object>
-                            <a href = "https://github.com/silvaDominic">www.github.com/silvaDominic</a>
+                            <a href = "https://github.com/silvaDominic">
+                                <img class = "contact-icon" id = "github-icon" src = "resources/main-page-icons/alt-github-icon.svg"/>
+                            </a>
                         </td>
                         <td id = "item-4">
-                            <a class = "contact-icon" id = "resume-icon" href = "../resources/Software-Resume-Dominic-Silva.pdf"> Resume
-                                <object></object>
+                            <a href = "../resources/Software-Resume-Dominic-Silva.pdf">
+                                <img class = "contact-icon" id = "resume-icon" src = "resources/main-page-icons/resume-icon.svg"/>
                             </a>
                         </td>
                     </tr>
@@ -238,7 +239,7 @@
                     </td>
                     <td>
                         <a class = "games-button" href = "#">
-                            <span class = "title" id = "coming-soon-title">Coming Soon</span>
+                            <span class = "title" id = "coming-soon-title">2D Shooter</span>
                             <img id = "coming-soon-image" src = "resources/game-images/coming-soon-thumbnail.svg"/>
                         </a>
                     </td>
