@@ -1,0 +1,291 @@
+ <!DOCTYPE HTML>
+
+ <html lang = "en">
+
+ <head>
+     <meta charset="utf-8">
+     <title>Main Page</title>
+
+     <script src="http://code.jquery.com/jquery-1.12.1.min.js"></script>
+     <script type = "text/javascript" src = "index.js"></script>
+     <link rel = "stylesheet" type = "text/css" href = "index.css"/>
+     <link rel = "stylesheet" type = "text/css" href = "../fonts/stylesheet.css"/>
+ </head>
+
+<body class = "body">
+
+    <div class = "container buttons" id = "button-container">
+        <div>
+            <img class = "button active" id = "person-icon" src = "../..resources/main-page-icons/person-icon.svg"/>
+        </div>
+        <div>
+            <img class = "button active" id = "toolbox-icon" src = "../..resources/main-page-icons/toolbox-icon.svg"/>
+        </div>
+        <div>
+            <img class = "button active" id = "gamepad-icon" src = "../..resources/main-page-icons/gamepad-icon.svg"/>
+        </div>
+        <div>
+            <img class = "button active" id = "camera-icon" src = "../..resources/main-page-icons/camera-icon.svg"/>
+        </div>
+    </div>
+
+    <div class = "container" id = "aboutme-section">
+        <div class = "content">
+            <section id = "aboutme-description">
+                <div id = "name">
+                    <span class = "name" id = "first-name">Dominic</span><span class = "name" id = "last-name">Silva</span>
+                </div>
+
+                <header>
+                    <h2 id = "aboutme-header">I'm sort of new at this...</h2>
+                </header>
+                <p class = "paragraph" id = "aboutme-description-1">
+                    So right before I graduated college I told myself that by 2016 I'd be calling Australia my home,
+                    working for some renewable energy company on the weekdays, enjoying the Gold Coast on the weekends,
+                    and melting to the the distinct sound of those Aussie accents......<span id = "HA">HA!</span>
+                    Considering that I'm typing this from the bedroom I grew up in, I think that I may have really
+                    screwed up somewhere. Well actually, that's what <span id = "you">you</span> would be thinking.
+                    Rather than compare my current situation to that ambitious *cough* silly *cough* 'promise' I made
+                    to myself a couple of years ago, instead I think of it as if nature took my hand,
+                    gave me a smack, and whispered into my soul in a not so sweet Australian voice
+                    "Oye, I don't think Australia is ready for you mate." Maybe I had been hyping things up a bit.
+                    "...You might want to reconsider your career too." Oh come on!
+                </p>
+                <p class = "paragraph" id = "aboutme-description-2">
+                    I think that change of direction stemmed from a gut feeling I got when I considered my future as a
+                    person rather than a worker. Life in Australia as an engineer certainly sounds appealing
+                    (I'll travel there at some point, I'm sure), but I think there was a deep desire to express myself
+                    through other means and I didn't see how taking that path would allow for such a thing
+                    (I also had this desire to develop my own video games). After a summer of couch hopping,
+                    working at a restaurant, conversations with friends and family, and self reflecting I decided that I
+                    wanted to learn software development and design in order to [ultimately] become a game developer.
+                    What made game development an easy choice didn't so much have to do with me growing up with
+                    video games, but that creating them incorporated a lot of other disciplines that I'm interested in:
+                    design, digital art, photography, music, and story telling. It was these things that I could really
+                    open myself up to. And while there is a video game stigma among the older generations
+                    (I'm talking to the parents out there), it's also because of these things that video games have the
+                    ability to be wholesome projects that require more than just quick reflexes and a sharp memory.
+                </p>
+                <p class = "paragraph" id = "aboutme-description-3">
+                    It's been nearly a year and half since I made that decision and I've gotta say,
+                    I feel much more confident about the switch now than I did then. My conceptual 'physique' is still slim
+                    however and it's at this point that I think moving into, what do they call it? the “real world”,
+                    is necessary to solidify the core computer science and programming principles I've learned and
+                    to start becoming familiar with the more nuanced concepts. With this website finally up and running,
+                    I think I'm one step closer to achieving that.
+                </p>
+            </section>
+
+            <section id = "contact-bar">
+                <table class = "table" id = "contact-table">
+                    <tr id = contact-row-1>
+                        <td id = "item-1">
+                            <a href = "mailto:silva.d.dominic@Gmail.com">
+                                <img class = "contact-icon" id = "email-icon" src = "..resources/main-page-icons/gmail-icon.svg"/>
+                            </a>
+                        </td>
+                        <td id = "item-2">
+                            <a href = "https://www.linkedin.com/in/silvaDominic">
+                                <img class = "contact-icon" id = "linkedin-icon" src = "..resources/main-page-icons/alt-linkedin-icon.svg"/>
+                            </a>
+                        </td>
+                        <td id = "item-3">
+                            <a href = "https://github.com/silvaDominic">
+                                <img class = "contact-icon" id = "github-icon" src = "..resources/main-page-icons/alt-github-icon.svg"/>
+                            </a>
+                        </td>
+                        <td id = "item-4">
+                            <a href = "../resources/Software-Resume-Dominic-Silva.pdf">
+                                <img class = "contact-icon" id = "resume-icon" src = "..resources/main-page-icons/resume-icon.svg"/>
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+        </div>
+    </div>
+
+<!--Tools-Section--------------------------------------------------------------------------------------------------->
+    <div class = "container" id = "tools-section">
+        <div class = "content">
+            <table class = "table" id = "tools-table">
+                <tr id = "software-header"><th class = "tools-header" colspan="3">Software</th></tr>
+                <tr id = "tools-row-1">
+                    <td>
+                        <object class = "badge" id = "pycharm-icon" data = "../..resources/tools-icons/pycharm-icon.svg" type = "image/svg+xml"></object>
+                    </td>
+                    <td>
+                       <object class = "badge" id = "intellij-icon" data = "../..resources/tools-icons/intellij-icon.svg" type = "image/svg+xml"></object>
+                    </td>
+                    <td>
+                        <object class = "badge" id = "vs-icon" data = "../..resources/tools-icons/visual-studio-icon.svg" type = "image/svg+xml"></object>
+                    </td>
+                </tr>
+
+                <tr id = "tools-row-2">
+                    <td>
+                        <object class = "badge" id = "git-icon" data = "../..resources/tools-icons/git-icon.svg" type = "image/svg+xml"></object>
+                    </td>
+                    <td>
+                        <object class = "badge" id = "photoshop-icon" data = "../..resources/tools-icons/photoshop-icon.svg" type = "image/svg+xml"></object>
+                    </td>
+
+                    <td>
+                        <object class = "badge" id = "illustrator-icon" data = "../..resources/tools-icons/illustrator-icon.svg" type = "image/svg+xml"></object>
+                    </td>
+
+                </tr>
+
+                <tr id = "languages-header"><th class = "tools-header" colspan="3">Languages</th></tr>
+                <tr id = "tools-row-3">
+                    <td>
+                        <object class = "badge" id = "python-icon" data = "../..resources/tools-icons/python-icon.svg" type = "image/svg+xml"></object>
+                    </td>
+                    <td>
+                        <object class = "badge" id = "java-icon" data = "../..resources/tools-icons/java-icon.svg" type = "image/svg+xml"></object>
+                    </td>
+                    <td>
+                        <object class = "badge" id = "c-sharp-icon" data = "../..resources/tools-icons/c-sharp-icon.svg" type = "image/svg+xml"></object>
+                    </td>
+                </tr>
+
+                <tr id = "tools-row-4">
+                    <td>
+                        <object class = "badge" id = "html-icon" data = "../..resources/tools-icons/html-icon.svg" type = "image/svg+xml"></object>
+                    </td>
+                    <td>
+                        <object class = "badge" id = "css-icon" data = "../..resources/tools-icons/css-icon.svg" type = "image/svg+xml"></object>
+                    </td>
+                    <td>
+                        <object class = "badge" id = "js-icon" data = "../..resources/tools-icons/js-icon.svg" type = "image/svg+xml"></object>
+                    </td>
+                </tr>
+
+                <tr id = "fr-lib-header"><th class = "tools-header" colspan="3">Frameworks|Libraries</th></tr>
+                <tr id = "tools-row-5">
+                    <td>
+                        <object class = "badge" id = "spring-icon" data = "../..resources/tools-icons/spring-icon.svg" type = "image/svg+xml"></object>
+                    </td>
+                    <td>
+                        <object class = "badge" id = "jquery-icon" data = "../..resources/tools-icons/jquery-icon.svg" type = "image/svg+xml"></object>
+                    </td>
+                    <td>
+                        <object class = "badge" id = "apache-icon" data = "../..resources/tools-icons/apache-icon.svg" type = "image/svg+xml"></object>
+                    </td>
+                </tr>
+
+                <tr id = "tools-row-6">
+                    <td></td>
+                    <td>
+                        <object class = "badge" id = "mysql-icon" data = "../..resources/tools-icons/mysql-icon.svg" type = "image/svg+xml"></object>
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+
+<!--Games-Section---------------------------------------------------------------------------------------------------->
+    <div class = "container" id = "games-section">
+        <div class = "content">
+
+<!--            <section id = "games-content">
+                <p class = "paragraph" id = "games-description">Below you'll find some arcade games that I made while learning how to program.
+                    While short and sweet, they demonstrate some core programming & game mechanic principles and were fun to make.
+                    Over the next couple of weeks I'll be sprucing them up to make them a little more presentable
+                    (they're sort of...not too pretty right now). After that though I plan to take what I've learned
+                    and create a more comprehensive game on my own.</p>
+            </section>-->
+
+            <table class = "table" id = "games-table">
+                <tr id = "games-row-1">
+                    <td>
+                        <div class = "games-button">
+                            <a href = "http://www.codeskulptor.org/#user40_uKcyALyvAZ_14.py">
+                                <span class = "title" id = "asteroids-title">Asteroids</span>
+                                <img id= "asteroids-image" src = "resources/game-images/asteroids-thumbnail.svg"/>
+                            </a>
+                        </div>
+                    </td>
+                    <td>
+                        <div class = "games-button">
+                            <a href = "http://www.codeskulptor.org/#user40_30Mp5i9GN9_8.py">
+                                <span class = "title" id = "a2048-title">2048</span>
+                                <img id = "a2048-image" src = "resources/game-images/2048-thumbnail.svg"/>
+                            </a>
+                        </div>
+                    </td>
+                    <td>
+                        <div class = "games-button">
+                            <a href = "http://www.codeskulptor.org/#user40_4P4Uni7AGF_17.py">
+                                <span class = "title" id = "pong-title">Pong</span>
+                                <img id = "pong-image" src = "resources/game-images/pong-thumbnail.svg"/>
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr id = "games-row-2">
+                    <td>
+                        <a class = "games-button" href = "http://www.codeskulptor.org/#user40_0gyQ29A3ib_3.py">
+                            <span class = "title" id = "blackjack-title">Blackjack</span>
+                            <img id = "blackjack-image" src = "resources/game-images/blackjack-thumbnail.svg"/>
+                        </a>
+                    </td>
+                    <td>
+                        <a class = "games-button" href = "#">
+                            <span class = "title" id = "tictactoe-title">Tic-Tac-Toe</span>
+                            <img id = "tictactoe-image" src = "resources/game-images/tictactoe-thumbnail.svg"/>
+                        </a>
+                    </td>
+                    <td>
+                        <a class = "games-button" href = "#">
+                            <span class = "title" id = "coming-soon-title">2D Shooter</span>
+                            <img id = "coming-soon-image" src = "resources/game-images/coming-soon-thumbnail.svg"/>
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+<!--Photography-Section---------------------------------------------------------------------------------------------->
+    <div class = "container" id = "photography-section">
+        <div class = "content">
+
+<!--            <section id = "photography-content">
+                <p id = "photography-description"> My interest in photography and photo editing developed after
+                    the release of Halo 3 in 2007. The game featured a 'Theater Mode' that allowed players to rewatch
+                    their gameplay experiences and snap pictures if they liked. After about a year I had reached the
+                    photo limit for my account. From there I moved to my mom's digital camera, then to my friend's DSLR
+                    in college, and eventually to my DSLR last year.
+
+                    I've taken thousands of pictures since my time playing Halo 3 back in 2007 and have selected a
+                    few of my favorite albums to share. Here you'll find albums of my recently accumulated work ranging from intimate nature shots
+                    to candid views of a bustling port town.</p>
+            </section>-->
+
+            <table class = "table" id = "photography-table">
+                <tr>
+                    <td class = "photo-links">
+                        <a   href = "port-jeff/port-jeff-album.html">
+                            <img class = "door" id = "dock" src = "../..resources/photography-links/dock.png"/>
+                        </a>
+                    </td>
+                    <td class = "photo-links">
+                        <a  href = "nature/nature-album.html">
+                            <img class = "door" id = "nature-door" src = "../..resources/photography-links/nature-door.png"/>
+                        </a>
+                    </td>
+                    <td class = "photo-links">
+                        <a  href = "restaurant/restaurant-album.html">
+                            <img class = "door" id = "kitchen-door" src = "../..resources/photography-links/kitchen-door.png"/>
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+ </body>
+
+ </html>

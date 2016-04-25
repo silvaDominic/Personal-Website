@@ -1,6 +1,6 @@
 $(document).ready(function() {
-    document.domain = "localhost";
-    var url = "http://localhost:8080/images/restaurant-album/";
+    document.domain = "domsilva.com";
+    var url = "http://domsilva.com/images/restaurant-album/";
     console.log($.ajax());
 
     //Retrieve JSON from specified url and create JSON object

@@ -32,7 +32,8 @@ public class ImageController {
     String getAlbumImages(@PathVariable String path) {
 
         // Set resource path and create Image list
-        String imgDirectory = "/media/reclaimer/shared/software-development/personal-website/src/main/webapp/resources/images/" + path + "/big";
+        //"/media/reclaimer/shared/software-development/personal-website/src/main/webapp/resources/images/" + path + "/big" <-- for local use
+        String imgDirectory = "../../webapp/resources/images/" + path + "/big";
         ArrayList<Image> files = listImageFiles(imgDirectory);
         //System.out.println(imgDirectory);
 
