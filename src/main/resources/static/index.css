@@ -131,12 +131,6 @@ html{
     color: grey;
 }
 
-#HA{
-    font-family: 'nexa_boldregular', Helvetica, Arial, sans-serif;;
-    font-weight: bold;
-    font-size: 1.2em;
-}
-
 #you{
     font-style: italic;
 }
@@ -191,6 +185,7 @@ html{
     width: 90%;
     border-spacing: 3vw;
     text-align: center;
+    z-index: -1;
 }
 
 .badge{

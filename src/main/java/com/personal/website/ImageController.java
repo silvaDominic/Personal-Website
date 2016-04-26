@@ -11,6 +11,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import javax.servlet.ServletContext;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -32,14 +33,14 @@ public class ImageController {
     String getAlbumImages(@PathVariable String path) {
 
         // Set resource path and create Image list
-        //"/media/reclaimer/shared/software-development/personal-website/src/main/webapp/resources/images/" + path + "/big" <-- for local use
-        String imgDirectory = "../../webapp/resources/images/" + path + "/big";
+/*        String imgDirectory = "/media/reclaimer/shared/software-development/personal-website/src/main/webapp/resources/images/" + path + "/big";*/
+        String imgDirectory = "/home/eeop-44/webapp/images/" + path + "/big";
         ArrayList<Image> files = listImageFiles(imgDirectory);
-        //System.out.println(imgDirectory);
+        //System.out.println(imgDirectory); <-- For debugging
 
         JSONObject JsonObj = new JSONObject(); // Initialize and instantiate JSON object
         JsonObj.put("images", convertToJSON(files)); // Convert Image files to JSON object and add to JSON object as 'images'
-        //System.out.println(JsonObj);
+        //System.out.println(JsonObj); <-- For debugging
 
         return JsonObj.toString();
     }
@@ -53,11 +54,11 @@ public class ImageController {
      * @return byte code representation of Image object
      * @throws IOException if resource is of invalid type
      */
-    //@CrossOrigin(origins = "http://localhost:9000")
+    @CrossOrigin(origins = "http://domsilva.com:8080/")
     @RequestMapping("/images/{path}/{id}")
     ResponseEntity<byte[]> getAlbumImageByID(@PathVariable String path, @PathVariable String id) throws IOException {
         // Set requested image as InputStream
-        InputStream in = servletContext.getResourceAsStream("/resources/images/" + path + "/big/" + id + ".jpg");
+        InputStream in = new FileInputStream("/home/eeop-44/webapp/images/" + path + "/big/" + id + ".jpg");
 
         // Initialize and instantiate HttpHeader object and set content type as JPEG
         final HttpHeaders headers = new HttpHeaders();

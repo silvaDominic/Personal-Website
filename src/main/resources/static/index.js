@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
-    //Fade in body on initial load
     //Hide all content initially
+    //Fade in body on initial load
     $('.content').hide();
     $('body').hide();
     $('body').fadeIn(2000);

@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    document.domain = "domsilva.com";
+    document.domain = "domsilva";
     var url = "http://domsilva.com/images/restaurant-album/";
     console.log($.ajax());
 
