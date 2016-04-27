@@ -33,7 +33,7 @@ public class ImageController {
     String getAlbumImages(@PathVariable String path) {
 
         // Set resource path and create Image list
-/*        String imgDirectory = "/media/reclaimer/shared/software-development/personal-website/src/main/webapp/resources/images/" + path + "/big";*/
+/*        String imgDirectory = "/media/reclaimer/shared/software-development/personal-website/src/main/webapp/webapp_resources/images/" + path + "/big";*/
         String imgDirectory = "/home/eeop-44/webapp/images/" + path + "/big";
         ArrayList<Image> files = listImageFiles(imgDirectory);
         //System.out.println(imgDirectory); <-- For debugging
