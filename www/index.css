@@ -250,70 +250,74 @@ html{
 }
 
 /*Games-Section -----------------------------------------------------------------------------------------------------*/
-#games-content{
+#games-description{
     display: block;
     position: relative;
+    padding-bottom: 3%;
     margin: 0 auto;
     font-size: 1.2em;
-    height: auto;
+    height: 50vh;
     width: 75%;
 }
 
-#games-table{
+#games-description-body{
+    display: block;
     position: absolute;
-    left: 50%;
     top: 50%;
+    left: 50%;
+    padding: 3%;
     -moz-transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    height: 90%;
-    width: 90%;
-    overflow: hidden;
+    width: 60%;
+    border-radius: 2vw;
+    font-size: 1.2em;
+    color: white;
+    opacity: 0.7;
+    background-color: #4CA015;
 }
 
-#games-table td{
+#games-table{
+    display: table;
+    position: relative;
+    margin: 0 auto;
+    border-spacing: 4vw;
+    height: 90%;
+    width: 90%;
+}
+
+#games-table tr{
+    display: block;
     position: relative;
 }
 
-.games-button{
-    position: absolute;
-    top: 2vh;
-    left: 5vw;
-    height: 20vw;
-    width: 20vw;
-    -moz-transition: all 0.35s ease;
-    -webkit-transition: all 0.35s ease;
-    -o-transition: all 0.35s ease;
-    -ms-transition: all 0.35s ease;
-    transition: all 0.35s ease;
-    border-radius: 50%;
-}
 
-.games-button:hover{
-    -moz-transform: scale(0.85, 0.85);
-    -webkit-transform: scale(0.85, 0.85);
-    -o-transform: scale(0.85, 0.85);
-    -ms-transform: scale(0.85, 0.85);
-    transform: scale(0.85, 0.85);
+.games-button{
+    display: block;
+    position: relative;
+    text-align: center;
+    height: 18vw;
+    width: 18vw;
 }
 
 .games-button img{
-    position: absolute;
+    position: relative;
+    margin: auto auto;
     height: 100%;
     width: 100%;
 }
 
-.title{
+#games-table .title{
+    display: block;
     position: absolute;
     height: 100%;
     width: 100%;
-    line-height: 20vw;
-    text-align: center;
-    opacity: 0;
+    opacity: 0.7;
     color: white;
-    font-size: 3.5vw;
+    font-size: 2.0vw;
+    line-height: 18vw;
     z-index: 1;
     -moz-transition: all 0.35s ease;
     -webkit-transition: all 0.35s ease;
@@ -322,8 +326,8 @@ html{
     transition: all 0.35s ease;
 }
 
-.title:hover{
-    opacity: 0.7;
+#games-table .title:hover{
+    opacity: 0;
 }
 
 #asteroids-title, #asteroids-image{
@@ -381,6 +385,34 @@ html{
 }
 
 /*Photography-Section -----------------------------------------------------------------------------------------------*/
+#photography-description{
+    display: block;
+    position: relative;
+    padding-bottom: 5%;
+    margin: 0 auto;
+    font-size: 1.2em;
+    height: 50vh;
+    width: 75%;
+}
+
+#photography-description-body{
+    display: block;
+    position: absolute;
+    width: 80%;
+    top: 50%;
+    left: 50%;
+    padding: 3%;
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    border-radius: 2vw;
+    font-size: 1.2em;
+    color: white;
+    opacity: 0.7;
+    background-color: #BE1E2D;
+}
 
 #photography-content{
     display: block;
@@ -392,28 +424,54 @@ html{
     background-color: #edebeb;
 }
 
-/*#photography-description{
-       position: relative;
-       top: 50%;
-       padding: 5vh;
-       font-size: 1.2em;
-       color: grey;
-       border: 1px solid black;
-   }*/
-
 #photography-table{
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    -moz-transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    display: table;
+    position: relative;
+    margin: auto auto;
+    text-align: center;
+    border-spacing: 3vw;
     height: 60%;
     width: 90%;
-    text-align: center;
 }
+
+.photo-button{
+    display: block;
+    position: relative;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+}
+
+.photo-links img{
+    position: relative;
+    margin: auto auto;
+    width: 100%;
+}
+
+#photography-table .title{
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0.6;
+    color: #666666;
+    font-size: 2.0vw;
+    text-align: center;
+    line-height: 20vw;
+    z-index: 1;
+    -moz-transition: all 0.35s ease;
+    -webkit-transition: all 0.35s ease;
+    -o-transition: all 0.35s ease;
+    -ms-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+    background-color: white;
+    border-radius: 2vw;
+}
+
+#photography-table .title:hover{
+    opacity: 0;
+}
+
 .door{
     width: 90%;
     -moz-transition: all 0.5s ease;
@@ -423,21 +481,12 @@ html{
     transition: all 0.5s ease;
 }
 
-#dock{
-    width: 110%;
+#nature-door{
+    width: 85%;
 }
 
 #kitchen-door{
     width: 85%;
-}
-
-.door:hover{
-    opacity: 0.8;
-    -moz-transition: transform: scale(1.1, 1.1);
-    -webkit-transition: transform: scale(1.1, 1.1);
-    -o-transition: transform: scale(1.1, 1.1);
-    -ms-transition: transform: scale(1.1, 1.1);
-    transform: scale(1.1, 1.1);
 }
 
 .photo-links{

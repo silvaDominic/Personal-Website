@@ -1,6 +1,6 @@
 $(document).ready(function() {
     document.domain = "domsilva.com";
-    var url = "http://domsilva.com:8080/images/nature-album/";
+    var url = "http://domsilva.com:8080/images/nature-album/"; //tomcat serves on port 8080
     console.log($.ajax());
 
     //Retrieve JSON from specified url and create JSON object

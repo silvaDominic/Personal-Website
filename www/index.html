@@ -40,7 +40,7 @@
                     <h2 id = "aboutme-header">I'm sort of new at this...</h2>
                 </header>
                 <p class = "paragraph" id = "aboutme-description-1">
-                    So right before I graduated college I told myself that by 2016 I'd be calling Australia my home,
+                    So right before I graduated college in 2014 I told myself that by 2016 I'd be calling Australia my home,
                     working for some renewable energy company on the weekdays, enjoying the Gold Coast on the weekends,
                     and melting to the the distinct sound of those Aussie accents......HA!
                     Considering that I'm typing this from the bedroom I grew up in, I think that I may have really
@@ -71,7 +71,7 @@
                     I feel much more confident about the switch now than I did then. My conceptual 'physique' is still slim
                     however, and it's at this point that I think moving into, what do they call it? the “real world”,
                     is necessary to solidify the core computer science and programming principles I've learned and
-                    to start becoming familiar with the more nuanced concepts. With this website finally up and running,
+                    to start becoming familiar with the more nuanced ones. With this website finally up and running,
                     I think I'm one step closer to achieving that.
                 </p>
             </section>
@@ -188,7 +188,7 @@
                     </td>
                 </tr>
                 <tr id = "tools-row-6">
-                    <td></td>
+                    <td></td> <!--Empty <td> to center mysql-icon-->
                     <td>
                         <object class = "badge" id = "mysql-icon" data = "resources/tools-icons/mysql-icon.svg" type = "image/svg+xml"></object>
                         <span class = "label fr-lib">MySQL</span>
@@ -203,23 +203,21 @@
     <div class = "container" id = "games-section">
         <div class = "content">
 
-<!--            <section id = "games-content">
-                <p class = "paragraph" id = "games-description">Below you'll find some arcade games that I made while learning how to program.
+            <section id = "games-description">
+                <p class = "paragraph" id = "games-description-body">Below you'll find some arcade games that I made while learning how to program.
                     While short and sweet, they demonstrate some core programming & game mechanic principles and were fun to make.
                     Over the next couple of weeks I'll be sprucing them up to make them a little more presentable
-                    (they're sort of...not too pretty right now). After that though I plan to take what I've learned
+                    (they're sort of bare bones right now). After that though I plan to take what I've learned
                     and create a more comprehensive game on my own.</p>
-            </section>-->
+            </section>
 
             <table class = "table" id = "games-table">
-                <tr id = "games-row-1">
+                <tr id = "games-row-1" align="center">
                     <td>
-                        <div class = "games-button">
-                            <a href = "http://www.codeskulptor.org/#user40_uKcyALyvAZ_14.py">
-                                <span class = "title" id = "asteroids-title">Asteroids</span>
-                                <img id= "asteroids-image" src = "resources/game-images/asteroids-thumbnail.svg"/>
-                            </a>
-                        </div>
+                        <a class = games-button href = "http://www.codeskulptor.org/#user40_uKcyALyvAZ_14.py">
+                            <span class = "title" id = "asteroids-title">Asteroids</span>
+                            <img id= "asteroids-image" src = "resources/game-images/asteroids-thumbnail.svg" />
+                        </a>
                     </td>
                     <td>
                         <div class = "games-button">
@@ -233,13 +231,13 @@
                         <div class = "games-button">
                             <a href = "http://www.codeskulptor.org/#user40_4P4Uni7AGF_17.py">
                                 <span class = "title" id = "pong-title">Pong</span>
-                                <img id = "pong-image" src = "resources/game-images/pong-thumbnail.svg"/>
+                                <img id = "pong-image" src = "resources/game-images/pong-thumbnail.svg" />
                             </a>
                         </div>
                     </td>
                 </tr>
 
-                <tr id = "games-row-2">
+                <tr id = "games-row-2" align="center">
                     <td>
                         <a class = "games-button" href = "http://www.codeskulptor.org/#user40_0gyQ29A3ib_3.py">
                             <span class = "title" id = "blackjack-title">Blackjack</span>
@@ -267,32 +265,35 @@
     <div class = "container" id = "photography-section">
         <div class = "content">
 
-<!--            <section id = "photography-content">
-                <p id = "photography-description"> My interest in photography and photo editing developed after
+            <section id = "photography-description">
+                <p id = "photography-description-body"> My interest in photography and photo editing developed after
                     the release of Halo 3 in 2007. The game featured a 'Theater Mode' that allowed players to rewatch
                     their gameplay experiences and snap pictures if they liked. After about a year I had reached the
                     photo limit for my account. From there I moved to my mom's digital camera, then to my friend's DSLR
-                    in college, and eventually to my DSLR last year.
+                    in college, and eventually to my DSLR recently.
 
-                    I've taken thousands of pictures since my time playing Halo 3 back in 2007 and have selected a
-                    few of my favorite albums to share. Here you'll find albums of my recently accumulated work ranging from intimate nature shots
+                    I've taken thousands of pictures since my initial interest back in 2007 and have selected a
+                    few of my favorite albums to share here. You'll find albums of my recently accumulated work ranging from intimate nature shots
                     to candid views of a bustling port town.</p>
-            </section>-->
+            </section>
 
             <table class = "table" id = "photography-table">
                 <tr>
                     <td class = "photo-links">
-                        <a   href = "port-jeff/port-jeff-album.html">
+                        <a class = "photo-button" href = "port-jeff/port-jeff-album.html">
+                            <span class = "title">Port Jefferson</span>
                             <img class = "door" id = "dock" src = "resources/photography-links/dock.png"/>
                         </a>
                     </td>
                     <td class = "photo-links">
-                        <a  href = "nature/nature-album.html">
+                        <a class = "photo-button"  href = "nature/nature-album.html">
+                            <span class = "title">Nature</span>
                             <img class = "door" id = "nature-door" src = "resources/photography-links/nature-door.png"/>
                         </a>
                     </td>
                     <td class = "photo-links">
-                        <a  href = "restaurant/restaurant-album.html">
+                        <a class = "photo-button" href = "restaurant/restaurant-album.html">
+                            <span class = "title">Restaurant</span>
                             <img class = "door" id = "kitchen-door" src = "resources/photography-links/kitchen-door.png"/>
                         </a>
                     </td>

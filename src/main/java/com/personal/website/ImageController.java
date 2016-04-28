@@ -18,8 +18,6 @@ import java.util.ArrayList;
 
 @RestController
 public class ImageController {
-    @Autowired
-    ServletContext servletContext;
 
     // Request Mapping for albums ------------------------------------------------------------------------------------
 
@@ -54,7 +52,6 @@ public class ImageController {
      * @return byte code representation of Image object
      * @throws IOException if resource is of invalid type
      */
-    @CrossOrigin(origins = "http://domsilva.com:8080/")
     @RequestMapping("/images/{path}/{id}")
     ResponseEntity<byte[]> getAlbumImageByID(@PathVariable String path, @PathVariable String id) throws IOException {
         // Set requested image as InputStream
