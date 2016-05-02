@@ -1,6 +1,6 @@
 $(document).ready(function() {
     document.domain = "domsilva.com";
-    var url = "http://domsilva.com:8080/images/restaurant-album/"; //tomcat serves on port 8080
+    var url = "http://domsilva.com/images/restaurant-album/";
     console.log($.ajax());
 
     //Retrieve JSON from specified url and create JSON object
@@ -21,7 +21,7 @@ $(document).ready(function() {
 
     //If Galleria is detected, loadTheme, run, and configure
     if (Galleria) {
-        Galleria.loadTheme('../galleria/themes/classic/galleria.classic.min.js');
+        Galleria.loadTheme('galleria/themes/classic/galleria.classic.min.js');
         Galleria.run('.galleria');
         Galleria.configure({
             thumbnails: 'lazy', //lazy-loads thumbnails; not implemented yet

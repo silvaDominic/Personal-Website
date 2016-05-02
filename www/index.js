@@ -117,7 +117,7 @@ $(document).ready(function() {
             //Hide section and animate menu
             hideSection($(this), 250, function(){
                 $('.button').animate({height: '15vw', width: '15vw'}, 500);
-                $('#button-container').animate({height: '600px', width: '600px'}, 500);
+                $('#button-container').animate({height: '35vw', width: '35vw'}, 500);
 
                 //Remove class from button, change state
                 //Encapsulating in hideSection call back prevents double click event from happening

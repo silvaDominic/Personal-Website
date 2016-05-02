@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<title>Nature Album</title>
+	<meta charset="utf-8"/>
+
+	<!-- Load Resource Libraries (JQuery and Galleria)-->
+	<script src="http://code.jquery.com/jquery-1.12.1.min.js"></script>
+	<script src = "/media/reclaimer/shared/software-development/www/nature/nature-album.html"></script>
+
+	<!-- Load JS and CSS -->
+	<script type = "text/javascript" src = "nature-behavior.js"></script>
+	<link rel = "stylesheet" type = "text/css" href = "nature-styles.css"/>
+</head>
+
+<body>
+</body>
+
+</html>

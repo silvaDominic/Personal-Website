@@ -3,13 +3,11 @@ package com.personal.website;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.json.JSONObject;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import javax.servlet.ServletContext;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -26,13 +24,14 @@ public class ImageController {
      *
      * @return a JSON string
      */
+    //@CrossOrigin(origins = "http://www.domsilva.com:8080")
     @RequestMapping("/images/{path}")
     @ResponseBody
     String getAlbumImages(@PathVariable String path) {
 
         // Set resource path and create Image list
 /*        String imgDirectory = "/media/reclaimer/shared/software-development/personal-website/src/main/webapp/webapp_resources/images/" + path + "/big";*/
-        String imgDirectory = "/home/eeop-44/webapp/images/" + path + "/big";
+        String imgDirectory = "/var/www/personal-website/images/" + path + "/big";
         ArrayList<Image> files = listImageFiles(imgDirectory);
         //System.out.println(imgDirectory); <-- For debugging
 
@@ -52,10 +51,11 @@ public class ImageController {
      * @return byte code representation of Image object
      * @throws IOException if resource is of invalid type
      */
+    //@CrossOrigin(origins = "http://www.domsilva.com:8080")
     @RequestMapping("/images/{path}/{id}")
     ResponseEntity<byte[]> getAlbumImageByID(@PathVariable String path, @PathVariable String id) throws IOException {
         // Set requested image as InputStream
-        InputStream in = new FileInputStream("/home/eeop-44/webapp/images/" + path + "/big/" + id + ".jpg");
+        InputStream in = new FileInputStream("/var/www/personal-website/images/" + path + "/big/" + id + ".jpg");
 
         // Initialize and instantiate HttpHeader object and set content type as JPEG
         final HttpHeaders headers = new HttpHeaders();

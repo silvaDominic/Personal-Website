@@ -20,13 +20,13 @@ public class App{
         SpringApplication.run(App.class, args);
     }
 
-/*    @Bean
+    @Bean
     public WebMvcConfigurer corsConfigurer() {
         return new WebMvcConfigurerAdapter() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("/").allowedOrigins("http://domsilva.com");
+                registry.addMapping("/").allowedOrigins("http://www.domsilva.com:8080");
             }
         };
-    }*/
+    }
 }

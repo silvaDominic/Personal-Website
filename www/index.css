@@ -11,6 +11,19 @@ html{
 }
 
 /*Main-Menu ---------------------------------------------------------------------------------------------------------*/
+#button-container{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    height: 35vw;
+    width: 35vw;
+}
+
 .button{
     display: block;
     position: fixed;
@@ -35,19 +48,6 @@ html{
 .button:hover{
     cursor: pointer;
     opacity: 0.6;
-}
-
-#button-container{
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    -moz-transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    height: 600px;
-    width: 600px;
 }
 
 #person-icon{
@@ -385,6 +385,21 @@ html{
 }
 
 /*Photography-Section -----------------------------------------------------------------------------------------------*/
+/*#photography-section{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    -moz-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 85%;
+    height: auto;
+    border: 1px solid black;
+}*/
+
 #photography-description{
     display: block;
     position: relative;
@@ -413,15 +428,14 @@ html{
     opacity: 0.7;
     background-color: #BE1E2D;
 }
-
-#photography-content{
+#photography-section .content{
     display: block;
     position: relative;
-    top: -5vh;
+    top: 0;
     margin: 0 auto;
-    height: 105vh;
+    max-height: 100%;
     width: 75%;
-    background-color: #edebeb;
+    overflow: hidden;
 }
 
 #photography-table{
@@ -465,7 +479,7 @@ html{
     -ms-transition: all 0.35s ease;
     transition: all 0.35s ease;
     background-color: white;
-    border-radius: 2vw;
+    border-radius: 1.5vw;
 }
 
 #photography-table .title:hover{
