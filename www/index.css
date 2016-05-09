@@ -27,7 +27,6 @@ html{
 .button{
     display: block;
     position: fixed;
-    padding: 0.5vw;
     height: 15vw;
     width: 15vw;
     -moz-transition: background 0.3s, opacity 0.3s;
@@ -37,6 +36,28 @@ html{
     transition: background 0.3s, opacity 0.3s;
     border-radius: 50%;
 }
+
+/*TODO*/
+/*#aboutme-label{
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    font-size: 2.0vw;
+    line-height: 18vw;
+    background-color: red;
+    z-index: 1;
+    -moz-transition: all 0.35s ease;
+    -webkit-transition: all 0.35s ease;
+    -o-transition: all 0.35s ease;
+    -ms-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+}
+
+#aboutme-label:hover{
+    opacity: 0.7;
+}*/
 
 .button img{
     position: absolute;
@@ -51,50 +72,38 @@ html{
 }
 
 #person-icon{
-    top: 0;
-    left: 0;
+    top: 0.5vw;
+    left: 0.5vw;
 }
 
 #toolbox-icon{
-    top: 0;
-    left: 100%;
-    -moz-transform: translateX(-100%);
-    -webkit-transform: translateX(-100%);
-    -o-transform: translateX(-100%);
-    -ms-transform: translateX(-100%);
-    transform: translateX(-100%);
+    top: 0.5vw;
+    right: 0.5vw;
+    float: right;
 }
 
 #gamepad-icon{
-    bottom: 0;
-    left: 0;
+    bottom: 0.5vw;
+    left: 0.5vw;
 }
 
 #camera-icon{
-    bottom: 0;
-    left: 100%;
-    -moz-transform: translateX(-100%);
-    -webkit-transform: translateX(-100%);
-    -o-transform: translateX(-100%);
-    -ms-transform: translateX(-100%);
-    transform: translateX(-100%);
+    bottom: 0.5vw;
+    right: 0.5vw;
+    float: right;
+
 }
 
 /*AboutMe-Section ---------------------------------------------------------------------------------------------------*/
 #aboutme-section .content{
     display: block;
-    position: absolute;
-    top: -1vh;
-    left: 50%;
-    -moz-transform: translateX(-50%);
-    -webkit-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    transform: translateX(-50%);
+    position: relative;
     margin: 0 auto;
     width: 75vw;
     height: auto;
+    overflow: hidden;
     background-color: #edebeb;
+    border-radius: 2vw;
 }
 
 #name{
@@ -131,7 +140,7 @@ html{
     z-index: 1;
 }
 
-#aboutme-description > .paragraph, #aboutme-header{
+#aboutme-description > .paragraph{
     display: block;
     position: relative;
     font-size: 1.2em;
@@ -144,7 +153,7 @@ html{
 
 #aboutme-header{
     color: #7392ff;
-    font-size: 2vw;
+    font-size: 1.5em;
 }
 
 #contact-bar{
@@ -152,7 +161,7 @@ html{
     position: relative;
     margin: 0 auto;
     width: 100%;
-    height: 100%;
+    height: auto;
     background-color: #7392ff;
 }
 
@@ -187,15 +196,15 @@ html{
 }
 
 /*Tools-Section -----------------------------------------------------------------------------------------------------*/
-#tools-table{
-    position: absolute;
+table{
+    display: table;
+    position: relative;
+    width: 100%;
+    margin: auto;
+}
+
+#toolbox-table{
     top: 0;
-    left: 50%;
-    -moz-transform: translateX(-50%);
-    -webkit-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    transform: translateX(-50%);
     height: 100%;
     width: 90%;
     border-spacing: 3vw;
@@ -220,7 +229,12 @@ html{
     max-width: 80%;
 }
 
-.tools-header{
+#toolbox-row-6 td, #toolbox-row-7 td{
+    max-height: 40%;
+    max-width: 40%;
+}
+
+#toolbox-table .header{
     height: 5vh;
     font-size: 8vw;
 }
@@ -233,11 +247,11 @@ html{
     color: #fe802d;
 }
 
-#software-header{
+#tools-header{
     color: #f63361;
 }
 
-.software{
+.tools{
    color: #f63361;
 }
 
@@ -249,33 +263,40 @@ html{
     color: #2279ac;
 }
 
+/*TODO: Fix scaling for subtables*/
+
 /*Games-Section -----------------------------------------------------------------------------------------------------*/
+#games-section .content{
+    display: block;
+    position: relative;
+    top: 5vh;
+    margin: 0 auto;
+    max-height: 100%;
+    width: 75%;
+    overflow: hidden;
+
+}
+
 #games-description{
     display: block;
     position: relative;
-    padding-bottom: 3%;
+    padding-bottom: 5%;
     margin: 0 auto;
     font-size: 1.2em;
-    height: 50vh;
-    width: 75%;
+    height: auto;
+    width: 95%;
 }
 
 #games-description-body{
     display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    padding: 3%;
-    -moz-transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    width: 60%;
-    border-radius: 2vw;
+    position: relative;
+    padding: 5%;
+    margin: 0 auto;
+    width: 75%;
     font-size: 1.2em;
     color: white;
     opacity: 0.7;
+    border-radius: 2vw;
     background-color: #4CA015;
 }
 
@@ -287,12 +308,6 @@ html{
     height: 90%;
     width: 90%;
 }
-
-#games-table tr{
-    display: block;
-    position: relative;
-}
-
 
 .games-button{
     display: block;
@@ -385,20 +400,15 @@ html{
 }
 
 /*Photography-Section -----------------------------------------------------------------------------------------------*/
-/*#photography-section{
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    -moz-transform: translateX(-50%);
-    -webkit-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    transform: translateX(-50%);
-    width: 85%;
-    height: auto;
-    border: 1px solid black;
-}*/
+#photography-section .content{
+    display: block;
+    position: relative;
+    top: 5vh;
+    margin: 0 auto;
+    max-height: 100%;
+    width: 75%;
+    overflow: hidden;
+}
 
 #photography-description{
     display: block;
@@ -406,42 +416,27 @@ html{
     padding-bottom: 5%;
     margin: 0 auto;
     font-size: 1.2em;
-    height: 50vh;
+    height: auto;
     width: 75%;
 }
 
 #photography-description-body{
     display: block;
-    position: absolute;
+    position: relative;
     width: 80%;
-    top: 50%;
-    left: 50%;
-    padding: 3%;
-    -moz-transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    margin: auto;
+    padding: 5%;
     border-radius: 2vw;
     font-size: 1.2em;
     color: white;
     opacity: 0.7;
     background-color: #BE1E2D;
 }
-#photography-section .content{
-    display: block;
-    position: relative;
-    top: 0;
-    margin: 0 auto;
-    max-height: 100%;
-    width: 75%;
-    overflow: hidden;
-}
 
 #photography-table{
     display: table;
     position: relative;
-    margin: auto auto;
+    margin: 0 auto;
     text-align: center;
     border-spacing: 3vw;
     height: 60%;

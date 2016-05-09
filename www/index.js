@@ -8,7 +8,7 @@ $(document).ready(function() {
 
     //Define object literals for respective sections
     var aboutMeSection = {id: '#aboutme-section', get ID() {return this.id;}};
-    var toolsSection = {id: '#tools-section', get ID() {return this.id;}};
+    var toolsSection = {id: '#toolbox-section', get ID() {return this.id;}};
     var gamesSection = {id: '#games-section', get ID() {return this.id;}};
     var photographySection = {id: '#photography-section', get ID() {return this.id;}};
 
@@ -92,13 +92,14 @@ $(document).ready(function() {
             if (!state.isExpanded){
                 $('#button-container').animate({height: '100%', width: '100%'}, 500); //Grows button container
                 $('.button').animate({height: '5vw', width: '5vw'}, 500, function() { //Reduces size of buttons and fades in content
-                showSection($elem, 500); /*<---- Fix this; executed 4 times*/
+                showSection($elem, 500); /*<---- Fix this; executes 4 times*/
                 });
 
                 //Remove class from button, change state, and set previous element
                 $(this).removeClass('active');
                 state.isExpanded = true;
                 state.PreviousElem = $(this).attr('id');
+
                 //If menu is expanded and other button is clicked, hide current section and fade in new section
             } else if (state.isExpanded) {
                 //swap content

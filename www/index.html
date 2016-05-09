@@ -4,7 +4,7 @@
 
  <head>
      <meta charset="utf-8">
-     <title>Installation-01A</title>
+     <title>Installation-01a</title>
 
      <script src="http://code.jquery.com/jquery-1.12.1.min.js"></script>
      <script type = "text/javascript" src = "index.js"></script>
@@ -107,101 +107,115 @@
     </div>
 
 <!--Tools-Section--------------------------------------------------------------------------------------------------->
-    <div class = "container" id = "tools-section">
+    <div class = "container" id = "toolbox-section">
         <div class = "content">
-            <table class = "table" id = "tools-table">
-                <tr id = "languages-header"><th class = "tools-header" colspan="3">Languages</th></tr>
-                <tr id = "tools-row-1">
+            <table class = "table" id = "toolbox-table">
+                <tr>
                     <td>
-                        <object class = "badge" id = "python-icon" data = "resources/tools-icons/python-icon.svg" type = "image/svg+xml"></object>
-                        <span class = "label languages">Python</span>
-                    </td>
+                        <table class = "subtable">
+                            <tr id = "languages-header"><th class = "header" colspan="3">Languages</th></tr>
+                            <tr id = "toolbox-row-1">
+                                <td>
+                                    <object class = "badge" id = "python-icon" data = "resources/toolbox-icons/python-icon.svg" type = "image/svg+xml"></object>
+                                    <span class = "label languages">Python</span>
+                                </td>
+                                <td>
+                                    <object class = "badge" id = "java-icon" data = "resources/toolbox-icons/java-icon.svg" type = "image/svg+xml"></object>
+                                    <span class = "label languages">Java</span>
+                                </td>
+                                <td>
+                                    <object class = "badge" id = "c-sharp-icon" data = "resources/toolbox-icons/c-sharp-icon.svg" type = "image/svg+xml"></object>
+                                    <span class = "label languages">C-Sharp</span>
+                                </td>
+                            </tr>
+                            <tr id = "toolbox-row-2">
+                                <td>
+                                    <object class = "badge" id = "html-icon" data = "resources/toolbox-icons/html-icon.svg" type = "image/svg+xml"></object>
+                                    <span class = "label languages">HTML5</span>
+                                </td>
+                                <td>
+                                    <object class = "badge" id = "css-icon" data = "resources/toolbox-icons/css-icon.svg" type = "image/svg+xml"></object>
+                                    <span class = "label languages">CSS3</span>
+                                </td>
+                                <td>
+                                    <object class = "badge" id = "js-icon" data = "resources/toolbox-icons/js-icon.svg" type = "image/svg+xml"></object>
+                                    <span class = "label languages">JavaScript</span>
+                                </td>
+                            </tr>
+                            <tr id = "toolbox-row-3">
+                                <td></td> <!--Empty <td> to center mysql-icon-->
+                                <td>
+                                    <object class = "badge" id = "mysql-icon" data = "resources/toolbox-icons/mysql-icon.svg" type = "image/svg+xml"></object>
+                                    <span class = "label languages">MySQL</span>
+                                </td>
+                            </tr>
+
+                            <tr id = "tools-header"><th class = "header" colspan="3">Tools</th></tr>
+                            <tr id = "toolbox-row-4">
+                                <td>
+                                    <object class = "badge" id = "pycharm-icon" data = "resources/toolbox-icons/pycharm-icon.svg" type = "image/svg+xml"></object>
+                                    <span class = "label tools">Pycharm</span>
+                                </td>
+                                <td>
+                                    <object class = "badge" id = "intellij-icon" data = "resources/toolbox-icons/intellij-icon.svg" type = "image/svg+xml"></object>
+                                    <span class = "label tools">Intellij</span>
+                                </td>
+                                <td>
+                                    <object class = "badge" id = "vs-icon" data = "resources/toolbox-icons/visual-studio-icon.svg" type = "image/svg+xml"></object>
+                                    <span class = "label tools">Visual Studios</span>
+                                </td>
+                            </tr>
+                            <tr id = "toolbox-row-5">
+                                <td>
+                                    <object class = "badge" id = "git-icon" data = "resources/toolbox-icons/git-icon.svg" type = "image/svg+xml"></object>
+                                    <span class = "label tools">Git</span>
+                                </td>
+                                <td>
+                                    <object class = "badge" id = "apache-icon" data = "resources/toolbox-icons/apache-icon.svg" type = "image/svg+xml"></object>
+                                    <span class = "label tools">Apache</span>
+                                </td>
+                                <td>
+                                    <object class = "badge" id = "tomcat-icon" data = "resources/toolbox-icons/tomcat-icon.svg" type = "image/svg+xml"></object>
+                                    <span class = "label tools">Tomcat</span>
+                            </tr>
+
+                        </table>
                     <td>
-                        <object class = "badge" id = "java-icon" data = "resources/tools-icons/java-icon.svg" type = "image/svg+xml"></object>
-                        <span class = "label languages">Java</span>
-                    </td>
-                    <td>
-                        <object class = "badge" id = "c-sharp-icon" data = "resources/tools-icons/c-sharp-icon.svg" type = "image/svg+xml"></object>
-                        <span class = "label languages">C-Sharp</span>
-                    </td>
                 </tr>
-                <tr id = "tools-row-2">
+                <tr>
                     <td>
-                        <object class = "badge" id = "html-icon" data = "resources/tools-icons/html-icon.svg" type = "image/svg+xml"></object>
-                        <span class = "label languages">HTML5</span>
-                    </td>
-                    <td>
-                        <object class = "badge" id = "css-icon" data = "resources/tools-icons/css-icon.svg" type = "image/svg+xml"></object>
-                        <span class = "label languages">CSS3</span>
-                    </td>
-                    <td>
-                        <object class = "badge" id = "js-icon" data = "resources/tools-icons/js-icon.svg" type = "image/svg+xml"></object>
-                        <span class = "label languages">JavaScript</span>
-                    </td>
-                </tr>
-                <tr id = "tools-row-3">
-                    <td></td> <!--Empty <td> to center mysql-icon-->
-                    <td>
-                        <object class = "badge" id = "mysql-icon" data = "resources/tools-icons/mysql-icon.svg" type = "image/svg+xml"></object>
-                        <span class = "label languages">MySQL</span>
+                        <table class = "subtable">
+                            <tr id = "toolbox-row-6">
+                                <td>
+                                    <object class = "badge" id = "photoshop-icon" data = "resources/toolbox-icons/photoshop-icon.svg" type = "image/svg+xml"></object>
+                                    <span class = "label tools">Photoshop</span>
+                                </td>
+                                <td>
+                                    <object class = "badge" id = "illustrator-icon" data = "resources/toolbox-icons/illustrator-icon.svg" type = "image/svg+xml"></object>
+                                    <span class = "label tools">Illustrator</span>
+                                </td>
+                            </tr>
+                        </table>
                     </td>
                 </tr>
 
-                <tr id = "software-header"><th class = "tools-header" colspan="3">Software</th></tr>
-                <tr id = "tools-row-4">
+                <tr id = "toolbox-row-7">
                     <td>
-                        <object class = "badge" id = "pycharm-icon" data = "resources/tools-icons/pycharm-icon.svg" type = "image/svg+xml"></object>
-                        <span class = "label software">Pycharm</span>
-                    </td>
-                    <td>
-                        <object class = "badge" id = "intellij-icon" data = "resources/tools-icons/intellij-icon.svg" type = "image/svg+xml"></object>
-                        <span class = "label software">Intellij</span>
-                    </td>
-                    <td>
-                        <object class = "badge" id = "vs-icon" data = "resources/tools-icons/visual-studio-icon.svg" type = "image/svg+xml"></object>
-                        <span class = "label software">Visual Studios</span>
-                    </td>
-                </tr>
-                <tr id = "tools-row-5">
-                    <td>
-                        <object class = "badge" id = "git-icon" data = "resources/tools-icons/git-icon.svg" type = "image/svg+xml"></object>
-                        <span class = "label software">Git</span>
-                    </td>
-                    <td>
-                        <object class = "badge" id = "photoshop-icon" data = "resources/tools-icons/photoshop-icon.svg" type = "image/svg+xml"></object>
-                        <span class = "label software">Photoshop</span>
-                    </td>
-
-                    <td>
-                        <object class = "badge" id = "illustrator-icon" data = "resources/tools-icons/illustrator-icon.svg" type = "image/svg+xml"></object>
-                        <span class = "label software">Illustrator</span>
-                    </td>
-
-                </tr>
-
-                <tr id = "fr-lib-header"><th class = "tools-header" colspan="3">Frameworks|Libraries</th></tr>
-                <tr id = "tools-row-6">
-                    <td>
-                        <object class = "badge" id = "spring-icon" data = "resources/tools-icons/spring-icon.svg" type = "image/svg+xml"></object>
-                        <span class = "label fr-lib">Spring</span>
-                    </td>
-                    <td>
-                        <object class = "badge" id = "jquery-icon" data = "resources/tools-icons/jquery-icon.svg" type = "image/svg+xml"></object>
-                        <span class = "label fr-lib">JQuery</span>
-                    </td>
-                    <td>
-                        <object class = "badge" id = "apache-icon" data = "resources/tools-icons/apache-icon.svg" type = "image/svg+xml"></object>
-                        <span class = "label fr-lib">Apache</span>
+                        <table class = "subtable">
+                            <tr id = "fr-lib-header"><th class = "header" colspan="3">Frameworks|Libraries</th></tr>
+                            <tr>
+                                <td>
+                                    <object class = "badge" id = "spring-icon" data = "resources/toolbox-icons/spring-icon.svg" type = "image/svg+xml"></object>
+                                    <span class = "label fr-lib">Spring</span>
+                                </td>
+                                <td>
+                                    <object class = "badge" id = "jquery-icon" data = "resources/toolbox-icons/jquery-icon.svg" type = "image/svg+xml"></object>
+                                    <span class = "label fr-lib">JQuery</span>
+                                </td>
+                            </tr>
+                        </table>
                     </td>
                 </tr>
-                <tr id = "tools-row-7">
-                    <td></td> <!--Empty <td> to center tomcat-icon-->
-                    <td>
-                        <object class = "badge" id = "tomcat-icon" data = "resources/tools-icons/tomcat-icon.svg" type = "image/svg+xml"></object>
-                        <span class = "label fr-lib">Tomcat</span>
-                    </td>
-                </tr>
-
             </table>
         </div>
     </div>
@@ -214,8 +228,8 @@
                 <p class = "paragraph" id = "games-description-body">Below you'll find some arcade games that I made while learning how to program.
                     While short and sweet, they demonstrate some core programming & game mechanic principles and were fun to make.
                     Over the next couple of weeks I'll be sprucing them up to make them a little more presentable
-                    (they're sort of bare bones right now). After that though I plan to take what I've learned
-                    and create a more comprehensive game on my own.</p>
+                    (they're sort of bare bones right now). After that though, I plan to take what I've learned
+                    and create a more comprehensive game of my own.</p>
             </section>
 
             <table class = "table" id = "games-table">
@@ -277,10 +291,10 @@
                     the release of Halo 3 in 2007. The game featured a 'Theater Mode' that allowed players to rewatch
                     their gameplay experiences and snap pictures if they liked. After about a year I had reached the
                     photo limit for my account. From there I moved to my mom's digital camera, then to my friend's DSLR
-                    in college, and eventually to my DSLR recently.
+                    in college, and eventually to my own DSLR recently.
 
                     I've taken thousands of pictures since my initial interest back in 2007 and have selected a
-                    few of my favorite albums to share here. You'll find albums of my recently accumulated work ranging from intimate nature shots
+                    few of my favorite albums to share here. You'll find my recently accumulated work ranging from intimate nature shots
                     to candid views of a bustling port town.</p>
             </section>
 
