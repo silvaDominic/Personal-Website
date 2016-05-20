@@ -1,11 +1,11 @@
 package com.personal.website;
 
 /**
- * Created by reclaimer on 3/4/16.
+ * Image object
  */
 public class Image {
 
-    public String filename;
+    private String filename;
 
     public Image(String filename){
         this.filename = filename;
@@ -14,5 +14,4 @@ public class Image {
     public String getFilename(){
         return filename;
     }
-
 }

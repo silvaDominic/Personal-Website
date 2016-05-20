@@ -24,7 +24,7 @@ $(document).ready(function() {
         Galleria.loadTheme('galleria/themes/classic/galleria.classic.min.js');
         Galleria.run('.galleria');
         Galleria.configure({
-            thumbnails: 'lazy', //lazy-loads thumbnails; not implemented yet
+            //thumbnails: 'lazy', //lazy-loads thumbnails; not implemented yet
             responsive: true, //Dynamically resizes Galleria stage
             trueFullscreen: true, //Enables fullscreen
             });

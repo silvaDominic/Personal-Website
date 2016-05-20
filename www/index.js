@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
     //Hide all content initially
-    //Fade in body on initial load
+    //Fade in body
     $('.content').hide();
     $('body').hide();
     $('body').fadeIn(2000);
@@ -100,7 +100,7 @@ $(document).ready(function() {
                 state.isExpanded = true;
                 state.PreviousElem = $(this).attr('id');
 
-                //If menu is expanded and other button is clicked, hide current section and fade in new section
+              //If menu is expanded and other button is clicked, hide current section and fade in new section
             } else if (state.isExpanded) {
                 //swap content
                 hideSection($(state.previousElem), 250);
@@ -110,10 +110,11 @@ $(document).ready(function() {
                 $(this).removeClass('active');
                 $(state.PreviousElem).addClass('active');
                 state.PreviousElem = $(this).attr('id');
+              //Invalid state entered
             } else {
                 console.log("Invalid state.");
             }
-            //If menu is expanded and current button is clicked again, fade out content and retract menu to default state
+          //If menu is expanded and current button is clicked again, fade out content and retract menu to default state
         } else {
             //Hide section and animate menu
             hideSection($(this), 250, function(){

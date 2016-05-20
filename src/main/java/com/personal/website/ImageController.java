@@ -24,13 +24,12 @@ public class ImageController {
      *
      * @return a JSON string
      */
-    //@CrossOrigin(origins = "http://www.domsilva.com:8080")
     @RequestMapping("/images/{path}")
     @ResponseBody
     String getAlbumImages(@PathVariable String path) {
 
         // Set resource path and create Image list
-/*        String imgDirectory = "/media/reclaimer/shared/software-development/personal-website/src/main/webapp/webapp_resources/images/" + path + "/big";*/
+/*        String imgDirectory = "/media/reclaimer/shared/software-development/personal-website/www/resources/images/" + path + "/big";*/
         String imgDirectory = "/var/www/personal-website/images/" + path + "/big";
         ArrayList<Image> files = listImageFiles(imgDirectory);
         //System.out.println(imgDirectory); <-- For debugging
@@ -51,7 +50,6 @@ public class ImageController {
      * @return byte code representation of Image object
      * @throws IOException if resource is of invalid type
      */
-    //@CrossOrigin(origins = "http://www.domsilva.com:8080")
     @RequestMapping("/images/{path}/{id}")
     ResponseEntity<byte[]> getAlbumImageByID(@PathVariable String path, @PathVariable String id) throws IOException {
         // Set requested image as InputStream

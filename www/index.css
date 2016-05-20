@@ -37,7 +37,7 @@ html{
     border-radius: 50%;
 }
 
-/*TODO*/
+/*TODO* Add button text on hover/
 /*#aboutme-label{
     display: block;
     position: absolute;
@@ -98,7 +98,7 @@ html{
 #aboutme-section .content{
     display: block;
     position: relative;
-    margin: 0 auto;
+    margin: auto auto;
     width: 75vw;
     height: auto;
     overflow: hidden;
@@ -133,7 +133,7 @@ html{
     display: block;
     position: relative;
     top: 3.5vh;
-    margin: 0 auto;
+    margin: auto auto;
     height: auto;
     width: 90%;
     padding-bottom: 3vh;
@@ -195,7 +195,7 @@ html{
     border-radius: 50%;
 }
 
-/*Tools-Section -----------------------------------------------------------------------------------------------------*/
+/*Toolbox-Section -----------------------------------------------------------------------------------------------------*/
 table{
     display: table;
     position: relative;
@@ -262,8 +262,6 @@ table{
 .fr-lib{
     color: #2279ac;
 }
-
-/*TODO: Fix scaling for subtables*/
 
 /*Games-Section -----------------------------------------------------------------------------------------------------*/
 #games-section .content{
