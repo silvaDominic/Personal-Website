@@ -1,3 +1,108 @@
+//Define object literals
+
+function Container(id, contentId){
+    this.id = id;
+    this.contentId = contentId;
+    this.origDim = {};
+    this.currDim = {};
+    this.altDim = {};
+    this.isExpanded = false;
+
+    this.is_set: function(prop){
+        return (typeof prop != 'undefined')
+    }
+    this.getDimensions: function() {
+        var dimensions = {
+            height: $(this.id).height() + 'vw',
+            width: $(this.id).width() + 'vw'
+        }
+    }
+    this.setAltDimensions: function(newDim) {
+        if (!(this.is_set(newDim))){
+            console.log("A set of new dimensions must be provided.");
+        } else {
+            this.altDim = {
+                height: (this.is_set(newDim.height) ? newDim.height:this.CurrDim.height),
+                width: (this.is_set(newDim.width) ? newDim.width:this.CurrDim.width)
+            };
+        }
+        return this;
+    }
+    this.expand: function(newDim, duration) {
+        $(this.ID).animate(newDim, duration);
+
+        return this;
+    }
+    this.retract: function(newDim, duration) {
+        $(this.ID).animate(newDim, duration);
+
+        return this;
+    }
+}
+
+ = function(id, backgroundColor){
+    this.backgroundColor;
+}
+
+var button = {
+    id: null, get ID() {return this.id;},
+    container: null, get Container() {return this.id;},
+    origDim: {}, get OrigDim() {return this.origDim;},
+    currDim: {}, get CurrDim() {return this.currDim;},
+    altDim: {}, get AltDim() {return this.altDim;},
+    backgroundColor: null,
+    isClicked: false, get IsClicked() {return this.isClicked;},
+    cstr: function (properties) {
+        var self = this;
+        if (!(self.is_set(properties) ||
+              self.is_set(properties.id) ||
+              self.is_set(properties.backgroundColor)
+              )
+           ){
+            console.log("Button needs at least an id and a background color to be instantiated");
+        } else {
+            self.id = properties.id;
+            self.backgroundColor = properties.backgroundColor;
+            self.origDim = self.getDimensions()
+        }
+        return self;
+    },
+    is_set: function(prop){
+        return (typeof prop != 'undefined')
+    },
+    getDimensions: function() {
+        var self = this;
+        var dimensions = {
+            height: $(self.id).height() + 'vw',
+            width: $(self.id).width() + 'vw'
+        }
+    },
+    setAltDimensions: function(newDim) {
+        var self = this;
+        if (!(self.is_set(newDim))){
+            console.log("A set of new dimensions must be provided.");
+        } else {
+            self.altDim = {
+                height: (self.is_set(newDim.height) ? newDim.height:self.CurrDim.height),
+                width: (self.is_set(newDim.width) ? newDim.width:self.CurrDim.width)
+            };
+        }
+        return self;
+    },
+    expand: function(newDim, duration) {
+        var self = this;
+        $(self.ID).animate(newDim, duration);
+
+        return self;
+    },
+    retract: function(newDim, duration) {
+        var self = this;
+        $(self.ID).animate(newDim, duration);
+
+        return self;
+    }
+}
+
 $(document).ready(function() {
 
     //Hide all content initially
@@ -6,13 +111,31 @@ $(document).ready(function() {
     $('body').hide();
     $('body').fadeIn(2000);
 
-    //Define object literals for respective sections
-    var aboutMeSection = {id: '#aboutme-section', get ID() {return this.id;}};
-    var toolsSection = {id: '#toolbox-section', get ID() {return this.id;}};
-    var gamesSection = {id: '#games-section', get ID() {return this.id;}};
-    var photographySection = {id: '#photography-section', get ID() {return this.id;}};
+    var aboutme_button = button;
+    aboutme_button.cstr({
+    id:'#person-icon',
+    background: 'blue'
+    }).setAltDimensions({
+    height: '5vw',
+    width: '5vw'
+    });
 
-    //Define object literal for states of section
+    $('.button').click(function() {
+        switch($(this).attr('id')){
+            case 'person-icon':
+            button_container.expand(button_container.AltDim, 500);
+            aboutme_button.expand(aboutme_button.AltDim, 500);
+            break;
+
+            default:
+            break;
+        }
+    });
+
+});
+
+
+/*
     var state = {expanded: false, get isExpanded() {return this.expanded;},
                                   set isExpanded(newState) {
                                         if (newState == true || newState == false){ //Check if state is boolean
@@ -20,14 +143,16 @@ $(document).ready(function() {
                                         } else {
                                             console.log("Invalid state. Must be boolean.");
                                         }
-                                  },
-                 //Used to keep track of previously selected element
-                 previousElem: '', get PreviousElem() {return this.previousElem;},
-                                   set PreviousElem(newElem) {
-                                        if ($('#' + newElem).hasClass('button')){ //Check if element is a button
-                                                this.previousElem = '#' + newElem; //Set state if valid
+                                  }
+                 };
+     var
+                 //Used to keep track of previously selected button
+                 previousButton: '', get PreviousButton() {return this.previousButton;},
+                                   set PreviousButton(newButton) {
+                                        if ($('#' + newButton).hasClass('button')){ //Check if element is a button
+                                                this.previousButton = '#' + newButton; //Set state if valid
                                             } else {
-                                                console.log("Invalid state. Must be a valid element.");
+                                                console.log("Invalid element. Must be a button.");
                                             }
                                    }
                 };
@@ -41,7 +166,7 @@ $(document).ready(function() {
             break;
 
             case 'toolbox-icon':
-            $(toolsSection.ID).find('.content').fadeIn(duration);
+            $(toolboxSection.ID).find('.content').fadeIn(duration);
             break;
 
             case 'gamepad-icon':
@@ -82,17 +207,21 @@ $(document).ready(function() {
         }
     }
 
+
     //Handle click events for home-page buttons
     $('.button').click(function(e) {
         var $elem = $(this);
-        //Check whether element is still animating, return false if it is
+        //Check whether element is still animating, return false if it is; prevents double clicking
         if ($elem.is(":animated")) {return false;}
-        //If button is active and main menu is NOT expanded, expand buttons and fade in content
+        //If button is active and main menu is NOT expanded, expand buttons and fade in respective content
         if ($elem.hasClass('active')){
             if (!state.isExpanded){
-                $('#button-container').animate({height: '100%', width: '100%'}, 500); //Grows button container
-                $('.button').animate({height: '5vw', width: '5vw'}, 500, function() { //Reduces size of buttons and fades in content
-                showSection($elem, 500); /*<---- Fix this; executes 4 times*/
+                //Grows button container
+                $('#button-container').animate({height: '100%', width: '100%'}, 500);
+
+                //Reduces size of buttons and fades in content
+                $('.button').animate({height: '5vw', width: '5vw'}, 500).promise().done(function() {
+                showSection($elem, 500);
                 });
 
                 //Remove class from button, change state, and set previous element
@@ -122,10 +251,11 @@ $(document).ready(function() {
                 $('#button-container').animate({height: '35vw', width: '35vw'}, 500);
 
                 //Remove class from button, change state
-                //Encapsulating in hideSection call back prevents double click event from happening
-                $($elem).addClass('active');
+                //Encapsulating in hideSection callback prevents double click event from happening
+                $($elem).addClass('active');sectionID
                 state.isExpanded = false;
                 });
             }
         });
 });
+//----------------------------------------------------------------------------------------------------------------------
