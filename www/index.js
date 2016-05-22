@@ -1,108 +1,99 @@
-//Define object literals
-
-function Container(id, contentId){
+// ----------------------------------------- CONTAINER DEFINITION ------------------------------------------------------
+function Container(id){
+    // Ensures an id is passed in
+    if (!(this.is_set(id))){
+        console.log("Container needs at least an id to be instantiated");
+    } else {
+    // Sets initial properties
     this.id = id;
-    this.contentId = contentId;
-    this.origDim = {};
+    this.origDim = this.getDimensions();
     this.currDim = {};
     this.altDim = {};
-    this.isExpanded = false;
-
-    this.is_set: function(prop){
-        return (typeof prop != 'undefined')
-    }
-    this.getDimensions: function() {
-        var dimensions = {
-            height: $(this.id).height() + 'vw',
-            width: $(this.id).width() + 'vw'
-        }
-    }
-    this.setAltDimensions: function(newDim) {
-        if (!(this.is_set(newDim))){
-            console.log("A set of new dimensions must be provided.");
-        } else {
-            this.altDim = {
-                height: (this.is_set(newDim.height) ? newDim.height:this.CurrDim.height),
-                width: (this.is_set(newDim.width) ? newDim.width:this.CurrDim.width)
-            };
-        }
-        return this;
-    }
-    this.expand: function(newDim, duration) {
-        $(this.ID).animate(newDim, duration);
-
-        return this;
-    }
-    this.retract: function(newDim, duration) {
-        $(this.ID).animate(newDim, duration);
-
-        return this;
+    this.hasChanged = false;
     }
 }
 
- = function(id, backgroundColor){
-    this.backgroundColor;
+// --------------------------------- PROTOTYPE METHODS FOR CONTAINER CLASS ---------------------------------------------
+Container.prototype.is_set = function(prop){
+        return (typeof prop != 'undefined');
 }
 
-var button = {
-    id: null, get ID() {return this.id;},
-    container: null, get Container() {return this.id;},
-    origDim: {}, get OrigDim() {return this.origDim;},
-    currDim: {}, get CurrDim() {return this.currDim;},
-    altDim: {}, get AltDim() {return this.altDim;},
-    backgroundColor: null,
-    isClicked: false, get IsClicked() {return this.isClicked;},
-    cstr: function (properties) {
-        var self = this;
-        if (!(self.is_set(properties) ||
-              self.is_set(properties.id) ||
-              self.is_set(properties.backgroundColor)
-              )
-           ){
-            console.log("Button needs at least an id and a background color to be instantiated");
-        } else {
-            self.id = properties.id;
-            self.backgroundColor = properties.backgroundColor;
-            self.origDim = self.getDimensions()
-        }
-        return self;
-    },
-    is_set: function(prop){
-        return (typeof prop != 'undefined')
-    },
-    getDimensions: function() {
-        var self = this;
-        var dimensions = {
-            height: $(self.id).height() + 'vw',
-            width: $(self.id).width() + 'vw'
-        }
-    },
-    setAltDimensions: function(newDim) {
-        var self = this;
-        if (!(self.is_set(newDim))){
-            console.log("A set of new dimensions must be provided.");
-        } else {
-            self.altDim = {
-                height: (self.is_set(newDim.height) ? newDim.height:self.CurrDim.height),
-                width: (self.is_set(newDim.width) ? newDim.width:self.CurrDim.width)
-            };
-        }
-        return self;
-    },
-    expand: function(newDim, duration) {
-        var self = this;
-        $(self.ID).animate(newDim, duration);
+Container.prototype.getDimensions = function() {
 
-        return self;
-    },
-    retract: function(newDim, duration) {
-        var self = this;
-        $(self.ID).animate(newDim, duration);
+    var dimensions = {
+        height: $(this.id).height() + 'px',
+        width: $(this.id).width() + 'px'
+    }
+    return dimensions;
+}
 
-        return self;
+Container.prototype.setAltDimensions = function(newDim) {
+    if (!(this.is_set(newDim))){
+        console.log("A new set of dimensions must be provided.");
+    } else {
+        this.altDim = {
+            height: (this.is_set(newDim.height) ? newDim.height:this.CurrDim.height),
+            width: (this.is_set(newDim.width) ? newDim.width:this.CurrDim.width)
+        };
+    }
+    return this;
+}
+
+Container.prototype.toggle = function(duration){
+    // If container has not changed then animate to alternate dimensions
+    // Otherwise, animate back to original dimensions
+    if (!this.hasChanged){
+        $(this.id).animate(this.altDim, duration);
+        this.hasChanged = true;
+    } else {
+        $(this.id).animate(this.origDim, duration);
+        this.hasChanged = false;
+    }
+    return this;
+}
+
+// ------------------------------------------ BUTTON DEFINITION --------------------------------------------------------
+
+// Button class
+function Button(id, section){
+    Container.call(this, id);
+    // Ensures an id is passed in
+    if (!(this.is_set(id) ||
+          this.is_set(section))){
+        console.log("Button needs at least a section to be instantiated");
+    } else {
+    // Sets initial properties
+    this.section = section;
+    this.isClicked = false;
+    this.backgroundColor = null;
     }
 }
 
+Button.prototype = Object.create(Container.prototype);
+Button.prototype.constructor = Button;
+
+// ----------------------------------  PROTOTYPE METHODS FOR BUTTON CLASS ----------------------------------------------
+
+Button.prototype.toggle = function(newDim, animateDur, fadeInDur, fadeOutDur){
+    // If button has not been clicked then animate all buttons and fade in respective content
+    // Otherwise, fade out respective content and animate back to original dimensions
+    if (!this.isClicked){
+        $(this.id).css(this.backgroundColor);
+        $('.button').animate(newDim, animateDur).promise().done(function() {
+         $(this.section).find('.content').fadeIn(fadeInDur);
+        });
+        this.isClicked = true;
+    } else {
+        $(this.section).find('.content').fadeOut(fadeOutDur).promise().done(function() {
+            $('.button').animate(this.origDim, animateDur); // All buttons can be reset to dimensions of any button
+            $(this.id).css('background-color', 'transparent');
+        });
+        this.isClicked = false;
+    }
+    return this;
+}
+
+// ------------------------------------------------- MAIN -------------------------------------------------------------
 $(document).ready(function() {
 
     //Hide all content initially
@@ -111,30 +102,67 @@ $(document).ready(function() {
     $('body').hide();
     $('body').fadeIn(2000);
 
-    var aboutme_button = button;
-    aboutme_button.cstr({
-    id:'#person-icon',
-    background: 'blue'
-    }).setAltDimensions({
-    height: '5vw',
-    width: '5vw'
-    });
+    // General button properties
+    var buttonProps = {dimensions : {height: '5vw', width: '5vw'},
+                            duration : 500};
 
+   var buttons = new Set();
+
+    // Setup for button container
+    var buttonContainer = new Container('#button-container');
+    buttonContainer.altDim = {height: '100%', width: '100%'};
+
+    // Setup for buttons
+    var aboutmeButton = new Button('#person-icon', '#aboutme-section');
+    aboutmeButton.setAltDimensions(buttonProps.dimensions);
+    aboutmeButton.backgroundColor = {'background-color' : '#1549FF'};
+    buttons.add(aboutmeButton);
+
+    var toolboxButton = new Button('#toolbox-icon', '#toolbox-section');
+    toolboxButton.setAltDimensions(buttonProps.dimensions);
+    toolboxButton.backgroundColor = {'background-color' : '#FFF314'};
+    buttons.add(toolboxButton);
+
+    var gamesButton = new Button('#gamepad-icon', '#games-section');
+    gamesButton.setAltDimensions(buttonProps.dimensions);
+    gamesButton.backgroundColor = {'background-color' : '#8DC63F'};
+    buttons.add(gamesButton);
+
+    var photographyButton = new Button('#camera-icon', '#photography-section');
+    photographyButton.setAltDimensions(buttonProps.dimensions);
+    photographyButton.backgroundColor = {'background-color' : '#BE4E58'};
+    buttons.add(photographyButton);
+
+    // Handle click behavior for each button and its respective section
     $('.button').click(function() {
+        // Animate container and all buttons
+        buttonContainer.toggle(500);
         switch($(this).attr('id')){
             case 'person-icon':
-            button_container.expand(button_container.AltDim, 500);
-            aboutme_button.expand(aboutme_button.AltDim, 500);
+            aboutmeButton.toggle(buttonProps.dimensions, 500, 500, 250);
+            break;
+
+            case 'toolbox-icon':
+            toolboxButton.toggle(buttonProps.dimensions, 500, 500, 250);
+            break;
+
+            case 'gamepad-icon':
+            gamesButton.toggle(buttonProps.dimensions, 500, 500, 250);
+            break;
+
+            case 'camera-icon':
+            photographyButton.toggle(buttonProps.dimensions, 500, 500, 250);
             break;
 
             default:
             break;
         }
     });
-
 });
 
+//TODO: Find out why section content is not fading in; handle previous element and correct fade in/out behavior
 
+//---------------------------------------------------------------------------------------------------------------------
 /*
     var state = {expanded: false, get isExpanded() {return this.expanded;},
                                   set isExpanded(newState) {
@@ -258,4 +286,4 @@ $(document).ready(function() {
             }
         });
 });
-//----------------------------------------------------------------------------------------------------------------------
+*/
