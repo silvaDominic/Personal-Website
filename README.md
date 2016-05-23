@@ -11,12 +11,12 @@ UPDATES:
 
 - Added to toolbox section
 - Fixed some alignment problems in toolbox and about-me section
+- Added background colors to buttons when hovered over and clicked on
+	- This should make it a clear which section a user is currently on and that one does not need 		  to retract buttons to select another section.
 
 TODOS:
 
 Small Changes
-- Change button background color on hover and maintain on click; hold until alternate section is clicked.
-	- This should make it a clear which section a user is currently on and that one does not need 		  to retract buttons to select another section.
 - Implement lazy loading in photography section
 	- Currently all images are loaded at once (only a problem for Nature album at the moment).
 
