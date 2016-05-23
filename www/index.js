@@ -95,16 +95,18 @@ Button.prototype.toggle = function(newDim, animateDur){
     return this; // Allows chaining
 }
 
-// Fades in content
+// Fades in content and locks button background-color
 Button.prototype.toggleContent = function(fadeInDur, fadeOutDur){
+    // If button is click, then lock button background-color, fade in content, and set flags
+    // Otherwise, fade out content,unlock background-color, and set flags
     if (!this.isClicked){
-        $(this.id).css(this.backgroundColor);
+        $(this.id).addClass('clicked');
         $(this.contentId).find('.content').fadeIn(fadeInDur);
         this.isClicked = true;
         this.contentFaded = true;
     } else {
         $(this.contentId).find('.content').fadeOut(fadeOutDur)
-        $(this.id).css('background-color', 'transparent');
+        $(this.id).removeClass('clicked');
         this.isClicked = false;
         this.contentFaded = false;
     }
@@ -120,7 +122,6 @@ $(document).ready(function() {
     $('body').fadeIn(2000);
 
     // Sets static variables
-    // General button properties
     var button_Props = {dimensions : {height: '5vw', width: '5vw'},
                             animateDur : 500};
     var previous_Button = null;
@@ -134,23 +135,43 @@ $(document).ready(function() {
     // Setup for buttons
     var aboutmeButton = new Button('#person-icon', '#aboutme-section');
     aboutmeButton.setAltDimensions(button_Props.dimensions);
-    aboutmeButton.backgroundColor = {'background-color' : '#7392ff'};
     buttons.add(aboutmeButton);
 
     var toolboxButton = new Button('#toolbox-icon', '#toolbox-section');
     toolboxButton.setAltDimensions(button_Props.dimensions);
-    toolboxButton.backgroundColor = {'background-color' : '#fff872'};
     buttons.add(toolboxButton);
 
     var gamesButton = new Button('#gamepad-icon', '#games-section');
     gamesButton.setAltDimensions(button_Props.dimensions);
-    gamesButton.backgroundColor = {'background-color' : '#8DC63F'};
     buttons.add(gamesButton);
 
     var photographyButton = new Button('#camera-icon', '#photography-section');
     photographyButton.setAltDimensions(button_Props.dimensions);
-    photographyButton.backgroundColor = {'background-color' : '#BE4E58'};
     buttons.add(photographyButton);
+
+    // Handle click behavior for each button and its respective section
+    $('.button').click(function() {
+        switch($(this).attr('id')){
+            case 'person-icon':
+                sectionHandler(aboutmeButton);
+            break;
+
+            case 'toolbox-icon':
+                sectionHandler(toolboxButton);
+            break;
+
+            case 'gamepad-icon':
+                sectionHandler(gamesButton);
+            break;
+
+            case 'camera-icon':
+                sectionHandler(photographyButton);
+            break;
+
+            default:
+            break;
+        }
+    });
 
 // ---------------------------------- PUBLIC METHODS FOR MAIN FUNCTION -------------------------------------------------
     // Toggles main menu
@@ -174,7 +195,7 @@ $(document).ready(function() {
 
     // Handles all behavior for each section
     // If menu has opened, then toggle content appropriately
-    // Otherwise, close menu
+    // Otherwise, toggle content and close menu
     function sectionHandler(currButton){
         if (menuHasChanged) {
             // If current button is clicked again, fade out content and close menu
@@ -187,34 +208,9 @@ $(document).ready(function() {
                 currButton.toggleContent(500, 250);
             }
         } else {
-            toggleMenu();
             currButton.toggleContent(500, 250);
+            toggleMenu();
         }
-        previous_Button = currButton; // Set curr button to previous button after every call
+        previous_Button = currButton; // Sets current button to previous button after every call
     }
-
-    // Handle click behavior for each button and its respective section
-    $('.button').click(function() {
-        // Animate container and all buttons
-        switch($(this).attr('id')){
-            case 'person-icon':
-                sectionHandler(aboutmeButton);
-            break;
-
-            case 'toolbox-icon':
-                sectionHandler(toolboxButton);
-            break;
-
-            case 'gamepad-icon':
-                sectionHandler(gamesButton);
-            break;
-
-            case 'camera-icon':
-                sectionHandler(photographyButton);
-            break;
-
-            default:
-            break;
-        }
-    });
 });

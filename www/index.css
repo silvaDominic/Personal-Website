@@ -56,9 +56,10 @@ html{
 #person-icon{
     top: 0.5vw;
     left: 0.5vw;
+    background-color:'transparent';
 }
 
-#person-icon:hover{
+#person-icon:hover, #person-icon.clicked{
     background-color: #7392ff;
 }
 
@@ -68,8 +69,8 @@ html{
     float: right;
 }
 
-#toolbox-icon:hover{
-    background-color: #FFF314;
+#toolbox-icon:hover, #toolbox-icon.clicked{
+    background-color: #fed93e;
 }
 
 #gamepad-icon{
@@ -77,7 +78,7 @@ html{
     left: 0.5vw;
 }
 
-#gamepad-icon:hover{
+#gamepad-icon:hover, #gamepad-icon.clicked{
     background-color: #8DC63F;
 }
 
@@ -87,7 +88,7 @@ html{
     float: right;
 }
 
-#camera-icon:hover{
+#camera-icon:hover, #camera-icon.clicked{
     background-color: #BE4E58;
 }
 
@@ -95,6 +96,7 @@ html{
 #aboutme-section .content{
     display: block;
     position: relative;
+    padding-top: 5vh;
     margin: auto auto;
     width: 75vw;
     height: auto;
@@ -129,7 +131,6 @@ html{
 #aboutme-description{
     display: block;
     position: relative;
-    top: 3.5vh;
     margin: auto auto;
     height: auto;
     width: 90%;
@@ -264,8 +265,8 @@ table{
 #games-section .content{
     display: block;
     position: relative;
-    top: 5vh;
-    margin: 0 auto;
+    padding-top: 5vh;
+    margin: auto auto;
     max-height: 100%;
     width: 75%;
     overflow: hidden;
@@ -398,8 +399,8 @@ table{
 #photography-section .content{
     display: block;
     position: relative;
-    top: 5vh;
-    margin: 0 auto;
+    padding-top: 5vh;
+    margin: auto auto;
     max-height: 100%;
     width: 75%;
     overflow: hidden;
@@ -496,4 +497,3 @@ table{
 .photo-links{
     width: 30%
 }
-
