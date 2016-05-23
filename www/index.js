@@ -48,6 +48,7 @@ Container.prototype.setAltDimensions = function(newDim) {
     return this; // Allows chaining
 }
 
+// Toggles animation for container
 Container.prototype.toggle = function(animateDur){
     // If container has not animated, then animate to alternate dimensions
     // Otherwise, animate back to original dimensions
@@ -67,10 +68,9 @@ function Button(id, contentId){
     Container.call(this, id, contentId);
     // Ensures an id is passed in
     if (!(this.is_set(contentId))){
-        console.log("Button needs at least a contentId to be instantiated");
+        console.log("Button needs a contentId to be instantiated");
     } else {
     // Sets initial properties
-    this.contentId = contentId;
     this.isClicked = false;
     this.backgroundColor = null;
     }
@@ -81,20 +81,6 @@ Button.prototype = Object.create(Container.prototype);
 Button.prototype.constructor = Button;
 
 // ----------------------------------  PROTOTYPE METHODS FOR BUTTON CLASS ----------------------------------------------
-// Override method for Container toggle method
-Button.prototype.toggle = function(newDim, animateDur){
-    // If button has not been animated, then animate to new dimensions
-    // Otherwise, animate back to original dimensions
-    if (!this.hasChanged){
-        $(this.id).animate(newDim, animateDur)
-        this.hasChanged = true;
-    } else {
-        $(this.id).animate(this.origDim, animateDur)
-        this.hasChanged = false;
-    }
-    return this; // Allows chaining
-}
-
 // Fades in content and locks button background-color
 Button.prototype.toggleContent = function(fadeInDur, fadeOutDur){
     // If button is click, then lock button background-color, fade in content, and set flags
@@ -121,7 +107,7 @@ $(document).ready(function() {
     $('body').hide();
     $('body').fadeIn(2000);
 
-    // Sets static variables
+    // Static variables
     var button_Props = {dimensions : {height: '5vw', width: '5vw'},
                             animateDur : 500};
     var previous_Button = null;
@@ -133,6 +119,7 @@ $(document).ready(function() {
     buttonContainer.setAltDimensions({height: '100%', width: '100%'});
 
     // Setup for buttons
+    // Instantiate button object, set new dimensions, and add to set
     var aboutmeButton = new Button('#person-icon', '#aboutme-section');
     aboutmeButton.setAltDimensions(button_Props.dimensions);
     buttons.add(aboutmeButton);
@@ -181,13 +168,13 @@ $(document).ready(function() {
         if (!buttonContainer.hasChanged){
             buttonContainer.toggle(500); // Toggles container
             for (var button of buttons){ // Toggles buttons
-                button.toggle(button_Props.dimensions, button_Props.animateDur);
+                button.toggle(button_Props.animateDur);
             }
             menuHasChanged = true;
         } else {
             buttonContainer.toggle(500); // Toggles container
             for (var button of buttons){ // Toggles buttons
-                button.toggle(button_Props.dimensions, button_Props.animateDur);
+                button.toggle(button_Props.animateDur);
             }
             menuHasChanged = false;
         }
