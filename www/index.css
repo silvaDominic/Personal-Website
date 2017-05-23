@@ -96,9 +96,8 @@ html{
 #aboutme-section .content{
     display: block;
     position: relative;
-    padding-top: 5vh;
     margin: auto auto;
-    width: 75vw;
+    width: 80%;
     height: auto;
     overflow: hidden;
     background-color: #edebeb;
@@ -106,8 +105,8 @@ html{
 }
 
 #name{
-    display: block;
     position: relative;
+    display: block;
     text-align: center;
     z-index: 1;
 }
@@ -492,6 +491,14 @@ table{
 
 #kitchen-door{
     width: 85%;
+}
+
+#subway-door {
+    width: 55%;
+}
+
+#exploration-door {
+    width: 55%;
 }
 
 .photo-links{
