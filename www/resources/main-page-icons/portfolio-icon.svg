@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="person-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+	 y="0px" width="131.372px" height="131.373px" viewBox="0 0 131.372 131.373" style="enable-background:new 0 0 131.372 131.373;"
+	 xml:space="preserve">
+<style type="text/css">
+<![CDATA[
+	.st0{fill:#ADADAD;}
+	.st1{fill:#1C194F;}
+	.st2{fill:none;stroke:#CCCCCC;stroke-width:5;stroke-miterlimit:10;}
+	.st3{fill:#D43027;}
+]]>
+</style>
+<g id="circle">
+	<circle class="st2" cx="65.686" cy="65.686" r="63.186"/>
+</g>
+<path class="st3" d="M54.901,26.411c-3.97,0-7.191,3.221-7.191,7.191v7.186h7.191v-5.389c0-0.991,0.807-1.797,1.795-1.797h17.978
+	c0.993,0,1.8,0.806,1.8,1.797v5.389h7.188v-7.186c0-3.97-3.229-7.191-7.188-7.191H54.901z"/>
+<polygon class="st1" points="100.053,76.196 95.745,97.774 35.632,97.774 31.315,76.196 "/>
+<polygon class="st1" points="108.827,69.013 22.543,69.013 29.735,104.962 101.639,104.962 "/>
+<polygon class="st1" points="105.233,44.388 105.233,55.171 98.049,55.171 98.049,51.577 33.327,51.577 33.327,55.171 
+	26.138,55.171 26.138,44.388 "/>
+<rect x="26.028" y="57.661" class="st0" width="78.631" height="3.782"/>
+<rect x="26.026" y="63.797" class="st0" width="78.633" height="1.891"/>
+</svg>

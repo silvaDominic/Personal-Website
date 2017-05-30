@@ -1,6 +1,6 @@
 $(document).ready(function() {
-    document.domain = "domsilva.com";
-    var url = "http://domsilva.com:8080/images/nature-album/"; //tomcat serves on port 8080
+    document.domain = "www.domsilva.com";
+    var url = "http://www.domsilva.com/images/kitchen-album/";
     console.log($.ajax());
 
     //Retrieve JSON from specified url and create JSON object
@@ -20,7 +20,8 @@ $(document).ready(function() {
     });
 
     //If Galleria is detected, loadTheme, run, and configure
-        Galleria.loadTheme('/media/reclaimer/shared/software-development/www/nature/nature-album.html');
+    if (Galleria) {
+        Galleria.loadTheme('galleria/themes/classic/galleria.classic.min.js');
         Galleria.run('.galleria');
         Galleria.configure({
             thumbnails: 'lazy', //lazy-loads thumbnails; not implemented yet
@@ -35,4 +36,8 @@ $(document).ready(function() {
             right: this.next
             });
         });
+
+    } else {
+        console.log("The Galleria App could not be found.");
+    }
 });
