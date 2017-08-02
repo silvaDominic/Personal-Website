@@ -1,0 +1,214 @@
+html, body{
+    height: 100%;
+    width: 100%;
+    font-family: 'nexa_lightregular', 'nexa_boldregular', 'geometria_lightlight', 'Helvetica Neue-Light',
+                  'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial, sans-serif' !important;
+	margin: 0;
+	font-size: 1.2rem;
+}
+
+header{
+	text-align: center;
+	width: 100%;
+}
+
+.content {
+    padding-top: 5vh;
+    overflow: hidden;
+}
+
+.back-button {
+	display: block;
+	position: fixed;
+	top: 1.75vw;
+	left: 1.75vw;
+	width: 3vw;
+	height: 3vw;
+    -moz-transition: all 0.35s ease;
+    -webkit-transition: all 0.35s ease;
+    -o-transition: all 0.35s ease;
+    -ms-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+	z-index: 1;
+	opacity: 0.5;
+	border-radius: 50%;
+	min-width: 50px;
+	min-height: 50px;
+	border: 1px solid #CCCCCC;
+	padding: 5px;
+	background: 'transparent';
+}
+
+.back-button a {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.back-button img {
+	width: 100%;
+	height: 100%;
+}
+
+.back-button:hover {
+	opacity: 1.0;
+}
+
+.project-diagram-section {
+	text-align: center;
+}
+
+.comparison span {
+	padding: 3vh 0;
+}
+
+.diagram-description{
+	padding-bottom: 3vw;
+	text-align: center;
+	width: 65%;
+	margin: 0 auto;
+	color: #4b4a4a;
+}
+
+.project-diagram {
+	margin: 8vh;
+}
+
+.project-diagram:last-child {
+	margin-bottom: 0;
+	padding-bottom: 6vh !important;
+}
+
+.project-diagram:nth-child(even) {
+	background-color: #F0F0F0;
+	padding: 3vw 0;
+}
+
+.project-diagram img{
+	margin: 15px;
+}
+
+.project-description-section, .conclusion-section{
+    display: block;
+    position: relative;
+	background-color: gray;
+	padding: 10vh 0;
+	color: white;
+}
+
+.project-description-body, .conclusion-body{
+    display: block;
+    position: relative;
+	margin: 0 auto;
+	padding: 15px 0;
+	text-align: center;
+	width: 65%;
+}
+
+.project-title {
+	position:relative;
+	display: inline-block;
+	font-size: 9vw;
+	color: black;
+	line-height: 0.75;
+	word-break: keep-all;
+	white-space: nowrap;
+}
+
+.diagram-title {
+	font-weight: 700;
+	word-break: keep-all !important
+}
+
+.project-banner img {
+	width: 32vw;
+	padding: 2vw 0;
+}
+
+.project-brief{
+	display: block;
+    position: relative;
+	color:gray;
+	padding: 2vw;
+	padding-bottom: 0;
+}
+
+.tool-label {
+	display: block;
+    text-align: center;
+	font-size: 3vh;
+}
+
+.tool-badge{
+	display: flex;
+	margin: 0 auto;
+    position: relative;
+	padding: 15px 0;
+	width: 16vh;
+	max-width: 300px;
+}
+
+.tools-header h1{
+	text-align: center !important;
+	padding-bottom: 1vh;
+}
+
+.tools-section {
+	padding: 3vw 0;
+}
+
+.tools-section .col {
+	padding: 2vw 0;
+}
+
+.short-row {
+	margin: 0 auto !important;
+	width: 75%;
+}
+
+@media screen and (max-width: 950px) {
+	.diagram-description, .project-description-body, .conclusion-body{
+		width: 85% !important;
+	}
+	
+	.short-row {
+		width: 90% !important;
+	}
+}
+
+
+@media screen and (max-width: 769px) {
+	.project-description-body, .conclusion-body, .project-description-body {
+		width: 95% !important;
+	}
+	
+	.diagram-description{
+		width: 95% !important;
+	}
+	
+	.image-row {
+	width: 90% !important;
+	}
+	
+	.project-diagram img {
+		margin: 15px 0;
+	}
+	
+	.project-brief {
+		padding: 2vw 3vw;
+	}
+	
+	.short-row {
+		width: 100% !important;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.back-button {
+		display: none;
+	}
+	
+	.diagram-description {
+		padding: 0 10px;
+	}
+}

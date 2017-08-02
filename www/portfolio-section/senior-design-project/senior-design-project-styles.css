@@ -1,0 +1,49 @@
+.project-description-section, .conclusion-section{
+	background-color: #32BDBD;
+	color: white;
+}
+
+.project-banner img {
+	width: 32vw;
+}
+
+.tools-section {
+	background-color: #6263AC;
+}
+
+.project-title {
+	font-size: 7vw !important;
+}
+
+.project-brief {
+	padding-bottom: 1.5vw !important;
+}
+
+ul > li {
+	margin-bottom: 1em;
+	margin-left: auto;
+	margin-right: auto;
+	list-style-type: none;
+}
+
+ul {
+	width: 45%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: left;
+}
+
+#co-levels-diagram img{
+	border: 1px solid black;
+}
+
+.back-button:hover {
+	background-color: #32BDBD;
+}
+
+@media screen and (max-width: 769px){
+	ul {
+		width: 95% !important;
+		text-align: center !important;
+	}
+}

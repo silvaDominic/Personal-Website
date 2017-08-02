@@ -1,0 +1,29 @@
+.project-description-section, .conclusion-section{
+	background-color: #F7DD46;
+	color: black !important;
+}
+
+.tools-section {
+	background-color: #78B0F4;
+}
+
+.project-banner img {
+	width: 59vw;
+	padding: 6vh 0;
+}
+
+#mechanical-icon, #electrical-icon {
+	padding: 0 8vw;
+}
+
+.back-button:hover {
+	background-color: #F7DD46;
+}
+
+#team-breakdown .diagram-description {
+	width: 100%;
+}
+
+.split-col .diagram-description{
+	width: 85%;
+}

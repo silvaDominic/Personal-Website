@@ -1,0 +1,30 @@
+.project-description-section, .conclusion-section{
+	background-color: #494849;
+}
+
+#initial-website-design-table , #resume-design-table {
+	width:50%;
+}
+
+.tools-section {
+	padding: 80px 0;
+	background-color: #B881B8;
+	color: black;
+}
+
+.back-button:hover {
+	background-color: #494849;
+}
+
+.jssorb051 .i {position:absolute;cursor:pointer;}
+.jssorb051 .i .b {fill:black;fill-opacity:0.5;stroke:#000;stroke-width:400;stroke-miterlimit:10;stroke-opacity:0.5;}
+.jssorb051 .i:hover .b {fill-opacity:.7;}
+.jssorb051 .iav .b {fill-opacity: 1;}
+.jssorb051 .i.idn {opacity:.3;}
+
+.jssora051 {display:block;position:absolute;cursor:pointer;}
+.jssora051 .a {fill:none;stroke:black;stroke-width:360;stroke-miterlimit:10;}
+.jssora051:hover {opacity:.8;}
+.jssora051.jssora051dn {opacity:.5;}
+.jssora051.jssora051ds {opacity:.3;pointer-events:none;
+}

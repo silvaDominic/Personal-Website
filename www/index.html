@@ -4,375 +4,302 @@
 
  <head>
      <meta charset="utf-8">
-     <title>Installation-01a</title>
+	 <meta name="viewport" content="width=device-width,initial-scale=1">
+     <title>Installation-01</title>
 
-     <script src="http://code.jquery.com/jquery-1.12.1.min.js"></script>
-     <script type = "text/javascript" src = "index.js"></script>
-     <link rel = "stylesheet" type = "text/css" href = "index.css"/>
-     <link rel = "stylesheet" type = "text/css" href = "resources/fonts/stylesheet.css"/>
+	<script src="http://code.jquery.com/jquery-3.2.1.js"></script>
+	<script type = "text/javascript" src = "index.js"></script>
+	<script src="lib/URI.min.js" type="text/javascript"></script>
+	<link rel = "stylesheet" type = "text/css" href = "index.css"/>
+	<link rel = "stylesheet" type = "text/css" href = "resources/fonts/stylesheet.css"/>
+	<link rel = "stylesheet" type = "text/css" href = "lib/bootstrap-4.0.0-alpha.6-dist/css/bootstrap.min.css"/>
+	<link rel = "stylesheet" type = "text/css" href = "lib/bootstrap-4.0.0-alpha.6-dist/css/bootstrap-grid.min.css"/>
  </head>
 
-<body class = "body">
+<body>
 
-<!-------------------------------------------------- BUTTONS ---------------------------------------------------------->
-    <div class = "container buttons" id = "button-container">
-        <div>
-            <img class = "button active" id = "person-icon" src = "resources/main-page-icons/person-icon.svg"/>
+<!-------------------------------------------------- NODES ---------------------------------------------------------->
+    <div class = "nodes" id = "node-container">
+        <div id = "aboutme-icon" class = "node">
+			<div class = "section-title" id = "aboutme-title"><span>About Me</span><span>A</span></div>
+            <img src = "resources/main-page-icons/person-icon.svg"/>
         </div>
-        <div>
-            <img class = "button active" id = "toolbox-icon" src = "resources/main-page-icons/toolbox-icon.svg"/>
+		<div id = "portfolio-icon" class = "node">
+			<div class = "section-title" id = "portfolio-title"><span>Portfolio</span><span>P</span></div>
+            <img src = "resources/main-page-icons/portfolio-icon.svg"/>
         </div>
-        <div>
-            <img class = "button active" id = "portfolio-icon" src = "resources/main-page-icons/portfolio-icon.svg"/>
+		<div id = "photography-icon" class = "node">
+			<div class = "section-title" id = "photography-title"><span>Photography</span><span>Ph</span></div>
+            <img src = "resources/main-page-icons/camera-icon.svg"/>
         </div>
-        <div>
-            <img class = "button active" id = "camera-icon" src = "resources/main-page-icons/camera-icon.svg"/>
+        <div id = "current-project-icon" class = "node">
+			<div class = "section-title" id = "current-projects-title"><span>Current Projects</span><span>CP</span></div>
+            <img  src = "resources/main-page-icons/current-project-icon.svg"/>
         </div>
     </div>
 
 <!---------------------------------------------- ABOUTME-SECTION ------------------------------------------------------>
 
-    <div class = "container" id = "aboutme-section">
+    <div id = "aboutme-section" class="primary-section">
         <div class = "content">
-            <section id = "aboutme-description">
-                <div id = "name">
-                    <span class = "name" id = "first-name">Dominic</span><span class = "name" id = "last-name">Silva</span>
-                </div>
+            <section id = "aboutme-description" class="section-description">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col">
+							<div class="title-name"><span class = "name" id = "first-name">Dominic</span><span class = "name" id = "last-name">Silva</span></div>
 
-                <header>
-                    <h2 id = "aboutme-header">New Game+</h2>
-                </header>
+							<h3 id = "aboutme-header"><strong>New Game+</strong></h3>
 
-
-                <p class = "paragraph" id = "aboutme-description-1">
-                    So right before I graduated college in 2014 I told myself that by 2016 I'd be calling Australia my home,
-                    working for some renewable energy company on the weekdays, enjoying the Gold Coast on the weekends,
-                    and melting to the distinct sound of those Aussie accents everywhere in between......HA!
-                    Considering that I'm typing this from the bedroom I grew up in, I think that I may have really
-                    screwed up somewhere. Well actually, that's what <span id = "you">you</span> would be thinking.
-                    Rather than compare my current situation to that ambitious *cough* silly *cough* 'promise' I made
-                    to myself a couple of years ago, instead I think of it as if nature took my hand,
-                    gave me a smack, and whispered into my soul in a not so sweet Australian voice
-                    "Oye, I don't think Australia is ready for you mate." Maybe I had been hyping things up a bit.
-                    "...You might want to reconsider your career too." Oh come on!
-                </p>
-                <p class = "paragraph" id = "aboutme-description-2">
-                    I think that change of direction stemmed from a gut feeling I got when I considered my future as a
-                    body and soul rather than just another member of society. Life in Australia as an engineer certainly
-                    sounds appealing (I'll travel there at some point), but I think I had a deep desire to express myself
-                    through other means and I didn't see how taking that path would allow for such a thing. For a while I
-                    thought about following up on the dream I had when I was younger and becoming a game developer.
-                    After a summer of couch hopping, working at a restaurant, conversations with friends and family, and
-                    self reflecting, I decided that I would learn how to program in order to do just that. What made game
-                    development an easy choice didn't so much have to do with me growing up with video games, but that
-                    creating them incorporated a lot of other disciplines that I'm interested in: design, digital art,
-                    photography, music, and storytelling. These were the things that I felt would truly allow me to express
-                    myself. But as my self study progressed and I got closer and closer to attaining a job, I thought
-                    more about what I would actually do as a professional. "What kinds of games would I make?",
-                    "Who would these games be for?", "Would I even get to work on the music? Or the story?" I eventually
-                    realized that I would not have the chance to explore these things as long as I was under someone
-                    else's umbrella and that the only way I could pursue them is if I made the games myself. A shattered
-                    dream once more? Eh, more like a new perspective...But now what do I do with all of these programmer skills?
-                </p>
-                <p class = "paragraph" id = "aboutme-description-3">
-                    Currently, the plan is open ended. I enjoy putting my web design and photography skills to use on
-                    freelance projects, but I am also still making an effort to merge my traditional engineering skills
-                    with my software ones in order to work in a more design oriented field. Part of me feels like I'm
-                    back to square one, still contemplating the 'long road ahead', but the other part of me can't help
-                    but appreciate all that I've learned over these past 2 years. This road may not end soon, but with
-                    new talent and a new perspective, I've got a much better idea of where to go.
-                </p>
+							<p class = "description-body" id = "aboutme-description-1">
+								So after I graduated college in 2014 I had second thoughts about the mechanical engineering and material science industries
+								and decided to make a move to software development. With the guidance of a couple of friends in the industry and some free online
+								courses, I was able to develop an entirely new skill set and build a handful of projects over the course of a year and a half.
+								While I've been learning how to program primarily within the context of web development, I am now heading full steam into
+								game development.
+							</p>
+							<p class = "description-body" id = "aboutme-description-2">
+								What made this an easy choice didn't so much have
+								to do with me growing up with video games, but that creating them incorporated a lot of other
+								disciplines that I'm interested in: design, digital art, photography, music, storytelling, etc.
+								These were the things that I felt would truly allow me to express myself. And while there is a video game
+								stigma among the older generations (I'm talking to the parents out there), it should be known that
+								the all encompossing nature of video games allows them to be wholesome projects that
+								require much more than just quick reflexes and a sharp memory.
+							</p>
+							<p class = "description-body" id = "aboutme-description-3">
+								In addition to learning more about game development, I enjoy putting my web design and photography skills to use on
+								freelance projects. You can find some of my work in the Portfolio and Photography sections of the website.
+							</p>
+						</div>
+					</div>
+				</div>
             </section>
 
-            <section id = "contact-bar">
-                <table class = "table" id = "contact-table">
-                    <tr id = contact-row-1>
-                        <td id = "item-1">
-                            <a href = "mailto:silva.d.dominic@Gmail.com" target="_blank">
+            <section id = "contact-bar-section">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-xs-6 col-sm-3">
+							<a href = "mailto:silva.d.dominic@Gmail.com" title="G-mail" target="_blank">
                                 <img class = "contact-icon" id = "email-icon" src = "resources/main-page-icons/gmail-icon.svg"/>
                             </a>
-                        </td>
-                        <td id = "item-2">
-                            <a href = "https://www.linkedin.com/in/silvaDominic" target="_blank">
+						</div>
+
+						<div class="col-xs-6 col-sm-3">
+                            <a href = "https://www.linkedin.com/in/silvaDominic" title="LinkedIn" target="_blank">
                                 <img class = "contact-icon" id = "linkedin-icon" src = "resources/main-page-icons/alt-linkedin-icon.svg"/>
                             </a>
-                        </td>
-                        <td id = "item-3">
-                            <a href = "https://github.com/silvaDominic" target="_blank">
+						</div>
+
+						<div class="col-xs-6 col-sm-3">
+                            <a href = "https://github.com/silvaDominic" title="Github" target="_blank">
                                 <img class = "contact-icon" id = "github-icon" src = "resources/main-page-icons/alt-github-icon.svg"/>
                             </a>
-                        </td>
-                        <td id = "item-4">
-                            <a href = "resources/Online-Software-Resume-DS.pdf" target="_blank">
+						</div>
+
+						<div class="col-xs-6 col-sm-3">
+                            <a href = "resources/Online-Software-Resume-DS.pdf" title="Resume" target="_blank">
                                 <img class = "contact-icon" id = "resume-icon" src = "resources/main-page-icons/resume-icon.svg"/>
                             </a>
-                        </td>
-                    </tr>
-                </table>
+						</div>
+					</div>
+				</div>
             </section>
         </div>
     </div>
 
-<!-------------------------------------------------- TOOLS-SECTION ---------------------------------------------------->
-    <div class = "container" id = "toolbox-section">
+<!-------------------------------------------------- CURRENT-PROJECS-SECTION ---------------------------------------------------->
+    <div id = "current-project-section" class="primary-section">
         <div class = "content">
-            <table class = "table" id = "toolbox-table">
-                <tr id = "languages-header"><th class = "header" colspan="3">Languages</th></tr>
-                <tr id = "toolbox-row-1">
-                    <td>
-                        <object class = "badge" id = "python-icon" data = "resources/toolbox-icons/python-icon.svg" type = "image/svg+xml"></object>
-                        <span class = "label languages">Python</span>
-                    </td>
-                    <td>
-                        <object class = "badge" id = "java-icon" data = "resources/toolbox-icons/java-icon.svg" type = "image/svg+xml"></object>
-                        <span class = "label languages">Java</span>
-                    </td>
-                    <td>
-                        <object class = "badge" id = "c-sharp-icon" data = "resources/toolbox-icons/c-sharp-icon.svg" type = "image/svg+xml"></object>
-                        <span class = "label languages">C-Sharp</span>
-                    </td>
-                </tr>
-                <tr id = "toolbox-row-2">
-                    <td>
-                        <object class = "badge" id = "html-icon" data = "resources/toolbox-icons/html-icon.svg" type = "image/svg+xml"></object>
-                        <span class = "label languages">HTML5</span>
-                    </td>
-                    <td>
-                        <object class = "badge" id = "css-icon" data = "resources/toolbox-icons/css-icon.svg" type = "image/svg+xml"></object>
-                        <span class = "label languages">CSS3</span>
-                    </td>
-                    <td>
-                        <object class = "badge" id = "js-icon" data = "resources/toolbox-icons/js-icon.svg" type = "image/svg+xml"></object>
-                        <span class = "label languages">JavaScript</span>
-                    </td>
-                </tr>
-                <tr id = "toolbox-row-3">
-                    <td></td> <!--Empty <td> to center mysql-icon-->
-                    <td>
-                        <object class = "badge" id = "mysql-icon" data = "resources/toolbox-icons/mysql-icon.svg" type = "image/svg+xml"></object>
-                        <span class = "label languages">MySQL</span>
-                    </td>
-                </tr>
+			<section id = "current-project-description" class="section-description">
+				<div class="container-fluid">
+					<div class="title-name"><span class = "name">Current Projects</span></div>
 
-                <tr id = "tools-header"><th class = "header" colspan="3">Tools</th></tr>
-                <tr id = "toolbox-row-4">
-                    <td>
-                        <object class = "badge" id = "pycharm-icon" data = "resources/toolbox-icons/pycharm-icon.svg" type = "image/svg+xml"></object>
-                        <span class = "label tools">Pycharm</span>
-                    </td>
-                    <td>
-                        <object class = "badge" id = "intellij-icon" data = "resources/toolbox-icons/intellij-icon.svg" type = "image/svg+xml"></object>
-                        <span class = "label tools">Intellij</span>
-                    </td>
-                    <td>
-                        <object class = "badge" id = "vs-icon" data = "resources/toolbox-icons/visual-studio-icon.svg" type = "image/svg+xml"></object>
-                        <span class = "label tools">Visual Studios</span>
-                    </td>
-                </tr>
-                <tr id = "toolbox-row-5">
-                    <td>
-                        <object class="badge" id="jsp-icon" data="resources/toolbox-icons/jsp-icon.svg" type="image/svg+xml"></object>
-                        <span class="label tools">JSP</span>
-                    </td>
-                    <td>
-                        <object class = "badge" id = "apache-icon" data = "resources/toolbox-icons/apache-icon.svg" type = "image/svg+xml"></object>
-                        <span class = "label tools">Apache</span>
-                    </td>
-                    <td>
-                        <object class = "badge" id = "tomcat-icon" data = "resources/toolbox-icons/tomcat-icon.svg" type = "image/svg+xml"></object>
-                        <span class = "label tools">Tomcat</span>
-                    </td>
-                </tr>
-                <tr id = "toolbox-row-6">
+					<p class = "description-body" id = "current-project-description-body">Currently I'm working on a couple of projects.
+					The first is a chat application that is intended to expand the functionality of existing popular chat applications. This project has been
+					stop and go for a while now since it's being worked on with a group of friends, but we're slowly building up to it with each passing month.
+					The second is not a specific project, but more of a mini portfolio for video game development. I've already accumulated a handful games, but am now diving into
+					both the Unity and Unreal game engines and plan to have a built a few more games by summer's end.
+					</p>
+				</div>
+            </section>
 
-                    <td>
-                        <object class = "badge" id = "git-icon" data = "resources/toolbox-icons/git-icon.svg" type = "image/svg+xml"></object>
-                        <span class = "label tools">Git</span>
-                    </td>
-                    <td>
-                        <object class = "badge" id = "maven-icon" data = "resources/toolbox-icons/maven-icon.svg" type = "image/svg+xml"></object>
-                        <span class = "label tools">Maven</span>
-                    </td>
-                    <td>
-                        <object class = "badge" id = "gradle-icon" data = "resources/toolbox-icons/gradle-icon.svg" type = "image/svg+xml"></object>
-                        <span class = "label tools">Gradle</span>
-                    </td>
-                </tr>
-                <tr id = "toolbox-row-7">
-                    <td>
-                        <object class = "badge" id = "photoshop-icon" data = "resources/toolbox-icons/photoshop-icon.svg" type = "image/svg+xml"></object>
-                        <span class = "label tools">Photoshop</span>
-                    </td>
-                    <td>
-                        <object class = "badge" id = "illustrator-icon" data = "resources/toolbox-icons/illustrator-icon.svg" type = "image/svg+xml"></object>
-                        <span class = "label tools">Illustrator</span>
-                    </td>
-                    <td>
-                        <object class="badge" id="bootstrap-icon" data="resources/toolbox-icons/bootstrap-icon.svg" type="image/svg+xml"></object>
-                        <span class="label tools">Bootstrap</span>
-                    </td>
-                </tr>
-
-                <tr id = "toolbox-row-8">
-                    <td>
-                        <object class="badge" id="unity-icon" data="resources/toolbox-icons/unity-icon.svg" type="image/svg+xml"></object>
-                        <span class="label tools">Unity</span>
-                    </td>
-                    <td>
-                        <object class="badge" id="firebase-icon" data="resources/toolbox-icons/firebase-icon.svg" type="image/svg+xml"></object>
-                        <span class="label tools">Firebase</span>
-                    </td>
-                    <td>
-                        <object class="badge" id="mongodb-icon" data="resources/toolbox-icons/mongodb-icon.svg" type="image/svg+xml"></object>
-                        <span class="label tools">MongoDB</span>
-                    </td>
-                </tr>
-
-                <tr id = "fr-lib-header"><th class = "header" colspan="3">Frameworks|Libraries</th></tr>
-                <tr id = "toolbox-row-9">
-                    <td>
-                        <object class = "badge" id = "spring-icon" data = "resources/toolbox-icons/spring-icon.svg" type = "image/svg+xml"></object>
-                        <span class = "label fr-lib">Spring</span>
-                    </td>
-                    <td>
-                        <object class = "badge" id = "jquery-icon" data = "resources/toolbox-icons/jquery-icon.svg" type = "image/svg+xml"></object>
-                        <span class = "label fr-lib">JQuery</span>
-                    </td>
-                    <td>
-                        <object class = "badge" id = "spark-icon" data = "resources/toolbox-icons/spark-icon.svg" type = "image/svg+xml"></object>
-                        <span class = "label fr-lib">Spark</span>
-                    </td>
-                </tr>
-                <tr class="toolbox-row-10">
-                    <td></td> <!--Used to center cell-->
-                    <td>
-                        <object class="badge" id="angular-js-icon" data="resources/toolbox-icons/angular-js-icon.svg" type="image/svg+xml"></object>
-                        <span class="label fr-lib">Angular</span>
-                    </td>
-                </tr>
-            </table>
+			<section id="current-project-portfolio-section" class="project-section">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-6">
+							<div class = "project-node" >
+								<a href = "current-projects-section/iris-project/iris-project.html">
+									<div class = "project-title" id = "iris-title"><span>Iris</span></div>
+									<img id= "iris-image" src = "resources/portfolio-icons/iris-project-icon.svg" />
+								</a>
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<div class="project-node">
+								<a href = "current-projects-section/games-project/games-project.html">
+									<div class = "project-title" id = "game-projects-title"><span>Games</span></div>
+									<img id= "game-projects-icon" src = "resources/portfolio-icons/games-project-icon.svg" />
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
         </div>
     </div>
 
 <!------------------------------------------------- PORTFOLIO-SECTION ----------------------------------------------------->
-    <div class = "container" id = "portfolio-section">
+    <div id = "portfolio-section" class="primary-section">
         <div class = "content">
+            <section id = "portfolio-description" class="section-description">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col">
+							<div class="title-name"><span class = "name">Portfolio</span></div>
 
-            <section id = "portfolio-description">
-                <p class = "paragraph" id = "portfolio-description-body">Below you'll find some arcade games that I made while
-                    learning how to program. While short and sweet, they demonstrate some core programming & game mechanic
-                    principles and were fun to make. Currently, I'm in the process of learning Unity in order to develop
-                    my own video games. I think ultimately, I'd like to work with my brothers to make a retro JRPG,
-                    creating everything from the artwork and music to the story and core game mechanics. In the meantime
-                    though, I'll be working on smaller scale games to help develop my skills.
-                </p>
+							<p class = "description-body" id = "portfolio-description-body">As an engineer, I've worked on a number of projects
+								ranging from mechanical to software. Having orginally studied mechancial engineering and material science in college, I
+								had the opportunity to get my hands dirty through the act of manufacturing and construction. With my recent transition into the software world
+								however, it's my mind that has been largely at work, focsuing more on the abstract and recursive nature of computers.
+								Below you'll find a mix of professional, academic, and hobby related projects, all of which have served as stepping stones in my learning process.
+							</p>
+						</div>
+					</div>
+				</div>
             </section>
 
-            <table class = "table" id = "project-table">
-                <tr id = "project-row-1" align="center">
-                    <td colspan="2">
-						<div class = "project-button">
-							<a href = "website-project/website-project.html">
-								<span class = "project-title" id = "website-project-title">Portfolio Website</span>
-								<img id = "website-project-icon" src = "resources/portfolio-icons/website-project-icon.svg"/>
-							</a>
-                        </div>
-                    </td>
-                    <td colspan="2">
-						<div class="project-button">
-							<a href = "game-projects/game-projects.html">
-								<span class = "project-title" id = "game-projects-title">Games</span>
-								<img id= "game-projects-icon" src = "resources/portfolio-icons/game-projects-icon.svg" />
-							</a>
+			<section id = "portfolio-project-section" class="project-section">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-6 col-md-4">
+							<div class = "project-node" >
+								<a href = "portfolio-section/personal-website-project/personal-website-project.html">
+									<div class = "project-title" id = "personal-website-title"><span>Personal Website</span></div>
+									<img id= "personal-website-image" src = "resources/portfolio-icons/personal-website-project-icon.svg"/>
+								</a>
+							</div>
 						</div>
-                    </td>
-                    <td colspan="2">
-                        <div class = "project-button">
-							<a href = "iris-project/iris-projet.html">
-                                <span class = "project-title" id = "iris-project-title">Iris</span>
-                                <img id = "iris-project-icon" src = "resources/portfolio-icons/iris-project-icon.svg"/>
-                            </a>
-                        </div>
-                    </td>
-                </tr>
-
-                <tr id = "projects-row-2" align="center">
-                    <td colspan="3" align="right">
-                        <div class = "project-button">
-                            <a href = "solar-boat-project/solar-boat-project.html">
-                                <span class = "project-title" id = "solar-boat-project-title">Solar Boat</span>
-                                <img id = "solar-boat-icon" src = "resources/portfolio-icons/solar-boat-icon.svg" />
-                            </a>
-                        </div>
-                    </td>
-                    <td colspan="3" align="left">
-						<div class = "project-button">
-							<a href = "personal-projects/personal-projects.html">
-								<span class = "project-title" id = "personal-projects-title">Personal Projects</span>
-								<img id = "personal-projects-icon" src = "resources/portfolio-icons/personal-projects-icon.svg"/>
-							</a>
+						<div class="col-sm-6 col-md-4">
+							<div class = "project-node">
+								<a href = "portfolio-section/solar-boat-project/solar-boat-project.html">
+									<div class = "project-title" id = "solar-boat-project-title"><span>Solar Boat</span></div>
+									<img id = "solar-boat-icon" src = "resources/portfolio-icons/solar-boat-project-icon.svg" />
+								</a>
+							</div>
 						</div>
-                    </td>
-                </tr>
-            </table>
+						<div class="col-sm-6 col-md-4">
+							<div class = "project-node">
+								<a href = "portfolio-section/senior-design-project/senior-design-project.html">
+									<div class = "project-title" id = "senior-design-project-title"><span>CO Suppression Device</span></div>
+									<img id = "senior-design-project-icon" src = "resources/portfolio-icons/senior-design-project-icon-00.svg"/>
+								</a>
+							</div>
+						</div>
+						<div class="col-sm-6 col-md-4">
+							<div class = "project-node">
+								<a href = "portfolio-section/gabble-project/gabble-project.html">
+									<div class = "project-title" id = "gabble-project-title"><span>Gabble</span></div>
+									<img id = "gabble-project-icon" src = "resources/portfolio-icons/gabble-project-icon.svg"/>
+								</a>
+							</div>
+						</div>
+						<div class="col-sm-6 col-md-4">
+							<div class = "project-node">
+								<a href = "portfolio-section/lestudionyc-website-project/lestudionyc-website-project.html">
+									<div class = "project-title" id = "barbers-society-title"><span>Le Studio NYC</span></div>
+									<img id = "lestudionyc-image" src = "resources/portfolio-icons/lestudionyc-icon.png" />
+								</a>
+							</div>
+						</div>
+						<div class="col-sm-6 col-md-4">
+							<div class = "project-node">
+								<a href = "portfolio-section/barbers-society-website-project/barbers-society-website-project.html">
+									<div class = "project-title" id = "barbers-society-title"><span>Barbers Society</span></div>
+									<img id = "barbers-society-image" src = "resources/portfolio-icons/barbers-society-icon.png" />
+								</a>
+							</div>
+						</div>
+						<div class="col-sm-12 col-md-4 offset-md-4">
+							<div class = "project-node">
+								<a href = "portfolio-section/resume-project/resume-project.html">
+									<div class = "project-title" id = "resume-title"><span>Resume</span></div>
+									<img id = "resume-image" src = "resources/portfolio-icons/resume-project-icon.svg"/>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+            </section>
         </div>
     </div>
 
 <!----------------------------------------------- PHOTOGRAPHY-SECTION ------------------------------------------------->
-    <div class = "container" id = "photography-section">
+    <div id = "photography-section" class="primary-section">
         <div class = "content">
+            <section id = "photography-description" class="section-description">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col">
+							<div class="title-name"><span class = "name">Photography</span></div>
 
-            <section id = "photography-description">
-                <p id = "photography-description-body"> My interest in photography and photo editing developed after
-                    the release of Halo 3 in 2007. The game featured a 'Theater Mode' that allowed players to rewatch
-                    their gameplay experiences and snap pictures of pretty much whatever they liked. As my library
-                    expanded, I eventually began to explore photo and video editing capturing landscapes and moments
-                    from the game world that Halo 3 offered. From there I moved to my mom's digital camera, then to my
-                    friend's DSLR in college, and eventually to my own DSLR recently.
+							<p id = "photography-description-body" class="description-body"> My interest in photography and photo editing developed after
+								the release of Halo 3 in 2007. The game featured a 'Theater Mode' that allowed players to rewatch
+								their gameplay experiences and snap pictures of pretty much whatever they liked. As my library
+								expanded, I eventually began to explore photo and video editing capturing landscapes and moments
+								from the game world that Halo 3 offered. From there, I used whatever cameria I could get my hands on, moving from my mom's digital camera,
+								to my friend's DSLR in college, and eventually to my own DSLR.
 
-                    I've taken thousands of pictures since my initial interest back in 2007 and have selected a
-                    few of albums to share here. You'll find my recently accumulated work ranging from intimate
-                    nature shots to candid views of a bustling port town.</p>
+								I've taken thousands of pictures since my initial interest back in 2007 and have selected a
+								few of albums to share here. You'll find my recently accumulated work ranging from intimate
+								nature shots, to candid views of a bustling New York City, to some more professional work.
+							</p>
+						</div>
+					</div>
+				</div>
             </section>
 
-            <table class = "table" id = "photography-table">
-                <tr>
-                    <td colspan="2" class = "photo-links">
-                        <a class = "photo-button" href = "port-jeff/port-jeff-album.html">
-                            <span class = "title">Port Jefferson</span>
-                            <img class = "door" id = "dock" src = "resources/photography-links/dock.png"/>
-                        </a>
-                    </td>
-                    <td colspan="2" class = "photo-links">
-                        <a class = "photo-button"  href = "nature/nature-album.html">
-                            <span class = "title">Nature</span>
-                            <img class = "door" id = "nature-door" src = "resources/photography-links/nature-door.png"/>
-                        </a>
-                    </td>
-                    <td colspan="2" class = "photo-links">
-                        <a class = "photo-button" href = "restaurant/restaurant-album.html">
-                            <span class = "title">Kitchen</span>
-                            <img class = "door" id = "kitchen-door" src = "resources/photography-links/kitchen-door.png"/>
-                        </a>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td colspan="3" align="right" class = "photo-links">
-                        <a class = "photo-button" href = "nyc/nyc-album.html">
-                            <span class = "title">New York City</span>
-                            <img class = "door" id = "subway-door" src = "resources/photography-links/subway-door.png"/>
-                        </a>
-                    </td>
-
-                    <td colspan="3" align="left" class = "photo-links">
-                        <a class = "photo-button" href = "exploration/exploration-album.html">
-                            <span class = "title">Exploration</span>
-                            <img class = "door" id = "exploration-door" src = "resources/photography-links/exploration-door.png"/>
-                        </a>
-                    </td>
-                </tr>
-            </table>
+			<section id = "photography-portfolio-section" class="project-section">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-sm-6 col-lg-4">
+							<a class = "photo-node"  href = "photography-section/nature/nature-album.html">
+								<div class = "album-title"><span>Nature</span></div>
+								<img class = "door" id = "nature-door" src = "resources/photography-icons/nature-door.png"/>
+							</a>
+						</div>
+						<div class="col-sm-6 col-lg-4">
+							<a class = "photo-node" href = "photography-section/nyc/nyc-album.html">
+								<div class = "album-title"><span>Professional</span></div>
+								<img class = "door" id = "sety-door" src = "resources/photography-icons/set-door.png"/>
+							</a>
+						</div>
+						<div class="col-sm-6 col-lg-4">
+							<a class = "photo-node" href = "photography-section/port-jeff/port-jeff-album.html">
+								<div class = "album-title"><span>Port Jefferson</span></div>
+								<img class = "door" id = "dock" src = "resources/photography-icons/dock-door.png"/>
+							</a>
+						</div>
+						<div class="col-sm-6 col-lg-4">
+							<a class = "photo-node" href = "photography-section/kitchen/kitchen-album.html">
+								<div class = "album-title"><span>Kitchen</span></div>
+								<img class = "door" id = "kitchen-door" src = "resources/photography-icons/kitchen-door.png"/>
+							</a>
+						</div>
+						<div class="col-sm-6 col-lg-4">
+							<a class = "photo-node" href = "photography-section/nyc/nyc-album.html">
+								<div class = "album-title"><span>New York City</span></div>
+								<img class = "door" id = "subway-door" src = "resources/photography-icons/subway-door.png"/>
+							</a>
+						</div>
+						<div class="col-sm-6 col-lg-4">
+							<a class = "photo-node" href = "photography-section/exploration/exploration-album.html">
+								<div class = "album-title"><span>Exploration</span></div>
+								<img class = "door" id = "exploration-door" src = "resources/photography-icons/exploration-door.png"/>
+							</a>
+						</div>
+					</div>
+				</div>
+            </section>
         </div>
     </div>
  </body>
