@@ -58,10 +58,6 @@ header{
 	text-align: center;
 }
 
-.comparison span {
-	padding: 3vh 0;
-}
-
 .diagram-description{
 	padding-bottom: 3vw;
 	text-align: center;
@@ -81,7 +77,8 @@ header{
 
 .project-diagram:nth-child(even) {
 	background-color: #F0F0F0;
-	padding: 3vw 0;
+	padding-top: 8.5vh;
+  padding-bottom: 8.5vh;
 }
 
 .project-diagram img{
@@ -148,13 +145,14 @@ header{
 	max-width: 300px;
 }
 
-.tools-header h1{
+.tools-header h2{
 	text-align: center !important;
 	padding-bottom: 1vh;
 }
 
 .tools-section {
-	padding: 3vw 0;
+	padding-top: 8.5vh;
+  padding-bottom: 8.5vh;
 }
 
 .tools-section .col {
@@ -170,7 +168,7 @@ header{
 	.diagram-description, .project-description-body, .conclusion-body{
 		width: 85% !important;
 	}
-	
+
 	.short-row {
 		width: 90% !important;
 	}
@@ -178,26 +176,22 @@ header{
 
 
 @media screen and (max-width: 769px) {
-	.project-description-body, .conclusion-body, .project-description-body {
+	.project-description-body, .conclusion-body{
 		width: 95% !important;
 	}
-	
+
 	.diagram-description{
 		width: 95% !important;
 	}
-	
-	.image-row {
-	width: 90% !important;
-	}
-	
+
 	.project-diagram img {
 		margin: 15px 0;
 	}
-	
+
 	.project-brief {
 		padding: 2vw 3vw;
 	}
-	
+
 	.short-row {
 		width: 100% !important;
 	}
@@ -207,8 +201,14 @@ header{
 	.back-button {
 		display: none;
 	}
-	
-	.diagram-description {
-		padding: 0 10px;
+
+	.diagram-description, .project-description-body, .conclusion-body {
+    width: 100% !important;
+		padding: 0;
+    text-align: left;
 	}
+
+  h2 {
+    font-size: 1.5em !important;
+  }
 }

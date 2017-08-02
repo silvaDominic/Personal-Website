@@ -16,7 +16,7 @@
 
 	<body>
 		<div class="content">
-			<div class="back-button"><a href="#" onclick="history.back()"><img src="../../resources/toolbox-icons/back-button.svg"></a></div>
+			<div class="back-button"><a href="#" onclick="history.go(-1)"><img src="../../resources/toolbox-icons/back-button.svg"></a></div>
 
 			<header class="container-fluid">
 				<div class="row">
@@ -56,7 +56,7 @@
 				<div class="project-diagram container-fluid" id="intial-design-diagram">
 					<div class="row short-row">
 						<div class="col">
-							<h3 class="diagram-title">Initial Design</h3>
+							<h2 class="diagram-title">Initial Design</h2>
 							<p class="diagram-description">The idea was to create a very simple and more traditional looking website.
 								Have large button icons that lead to the subpages (portfolio/gallery). The middle section would be a more
 								verbose personal-website featuring an About Me paragraph, skills list, a few sentences on interests, and contact info.
@@ -73,8 +73,8 @@
 
 				<div class="project-diagram container-fluid" id="resume-design-diagram">
 					<div class="row short-row">
-						<div class="col">
-							<h3 class="diagram-title">Resume Design</h3>
+						<div class="col-sm-12">
+							<h2 class="diagram-title">Resume Design</h2>
 							<p class="diagram-description">The idea was to create a very simple and more traditional looking website.
 								Have large button icons that lead to the subpages (portfolio/gallery). The middle section would be a more
 								verbose personal-website featuring an About Me paragraph, skills list, a few sentences on interests, and contact info.
@@ -88,18 +88,20 @@
 						<div class="col-md-6"><img class="img-responsive" src="../../resources/webdev-project-images/personal-website-project-images/resume-design-photography-page-01.png" style="width:100%; height:auto;"></div>
 					</div>
 					<div class="row short-row">
-						<p class="diagram-description">
-							The games section and photography section were less of portfolios at the time and more of just general sections.
-							The game section featured a spinning wheel that would randomly select a game and display it in a popout window.
-							The initial design for the website would essentially become the design for the photography section.
-						</p>
+						<div class="col-sm-12">
+							<p class="diagram-description">
+								The games section and photography section were less of portfolios at the time and more of just general sections.
+								The game section featured a spinning wheel that would randomly select a game and display it in a popout window.
+								The initial design for the website would essentially become the design for the photography section.
+							</p>
+						</div>
 					</div>
 				</div>
 
 				<div class="project-diagram container-fluid" id="node-design-diagram">
 					<div class="row short-row">
 						<div class="col-sm-12">
-							<h3 class="diagram-title">Node Design</h3>
+							<h2 class="diagram-title">Node Design</h2>
 							<p class="diagram-description">Eventually, I found that the resume design wasn't really looking or feeling like a modern day site.
 								I went to the internet for help, found a few examples of what I liked, and landed on a top-to-bottom node design. It retained the
 								minimal aspect I wanted and would remain sleek without requiring too much styling or script.
@@ -127,7 +129,7 @@
 				<div class="project-diagram container-fluid" id="expanding-sections-design-diagram">
 					<div class="row short-row">
 						<div class="col-sm-12">
-							<h3 class="diagram-title">Expanding Section Design</h3>
+							<h2 class="diagram-title">Expanding Section Design</h2>
 							<p class="diagram-description">The expanding section design was by far my most uninspiring design I came up with. It was actually a second attempt
 								at incorporating more elaborate animation schemes (something I was getting too caught up in).
 							</p>
@@ -154,7 +156,7 @@
 				<div class="project-diagram container-fluid" id="expanding-node-design-diagram">
 					<div class="row short-row">
 						<div class="col-sm-12">
-							<h3 class="diagram-title">Expanding Node Design</h3>
+							<h2 class="diagram-title">Expanding Node Design</h2>
 							<p class="diagram-description">For the new design, I decided that everything would go on one page. It would include and
 								About Me section consisting of a few paragraphs and relevant social media links, a games section with a new grid layout,
 								a tools section that featured a table of all the latest tools and technologies I'm using, and a photography section which
@@ -209,54 +211,54 @@
 			<section class="tools-section container-fluid" id="personal-website-tool-section">
 				<div class="row">
 					<div class="col-sm-12 tools-header">
-						<h1><strong>Tool and Technologies</strong></h1>
+						<h2><strong>Tools and Technologies</strong></h2>
 					</div>
 				</div>
 
 				<div class="row">
 					<div class="col col-xs-6 col-sm-6 col-md-3 col-lg-3">
 							<object class = "tool-badge" id = "photoshop-icon" data = "../../resources/toolbox-icons/java-icon.svg" type = "image/svg+xml"></object>
-							<h3 class = "tool-label">Java</h3>
+							<span class = "tool-label">Java</span>
 					</div>
 
 					<div class="col col-xs-6 col-sm-6 col-md-3  col-lg-3">
 							<object class = "tool-badge" id = "illustrator-icon" data = "../../resources/toolbox-icons/tomcat-icon.svg" type = "image/svg+xml"></object>
-							<h3 class = "tool-label">Tomcat</h3>
+							<span class = "tool-label">Tomcat</span>
 					</div>
 
 					<div class="col col-xs-6 col-sm-6 col-md-3  col-lg-3">
 							<object class = "tool-badge" id = "marvel-app-icon" data = "../../resources/toolbox-icons/apache-icon.svg" type = "image/svg+xml"></object>
-							<h3 class = "tool-label">Apache</h3>
+							<span class = "tool-label">Apache</span>
 					</div>
 
 					<div class="col col-xs-6 col-sm-6 col-md-3  col-lg-3">
 							<object class = "tool-badge" id = "photoshop-icon" data = "../../resources/toolbox-icons/js-icon.svg" type = "image/svg+xml"></object>
-							<h3 class = "tool-label">Javascript</h3>
+							<span class = "tool-label">Javascript</span>
 					</div>
 
 					<div class="col col-xs-6 col-sm-6 col-md-3  col-lg-3">
 							<object class = "tool-badge" id = "illustrator-icon" data = "../../resources/toolbox-icons/html-icon.svg" type = "image/svg+xml"></object>
-							<h3 class = "tool-label">HTML5</h3>
+							<span class = "tool-label">HTML5</span>
 					</div>
 
 					<div class="col col-xs-6 col-sm-6 col-md-3  col-lg-3">
 							<object class = "tool-badge" id = "marvel-app-icon" data = "../../resources/toolbox-icons/css-icon.svg" type = "image/svg+xml"></object>
-							<h3 class = "tool-label">CSS3</h3>
+							<span class = "tool-label">CSS3</span>
 					</div>
 
 					<div class="col col-xs-6 col-sm-6 col-md-3  col-lg-3">
 							<object class = "tool-badge" id = "photoshop-icon" data = "../../resources/toolbox-icons/spring-icon.svg" type = "image/svg+xml"></object>
-							<h3 class = "tool-label">Spring</h3>
+							<span class = "tool-label">Spring</span>
 					</div>
 
 					<div class="col col-xs-6 col-sm-6 col-md-3  col-lg-3">
 							<object class = "tool-badge" id = "marvel-app-icon" data = "../../resources/toolbox-icons/jquery-icon.svg" type = "image/svg+xml"></object>
-							<h3 class = "tool-label">Jquery</h3>
+							<span class = "tool-label">Jquery</span>
 					</div>
 
 					<div class="col col-xs-12 col-sm-12 col-md-12  col-lg-12">
 							<object class = "tool-badge" id = "illustrator-icon" data = "../../resources/toolbox-icons/illustrator-icon.svg" type = "image/svg+xml"></object>
-							<h3 class = "tool-label">Illustrator</h3>
+							<span class = "tool-label">Illustrator</span>
 					</div>
 				</div>
 			</section>

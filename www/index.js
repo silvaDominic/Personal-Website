@@ -54,6 +54,7 @@ $(document).ready(function() {
 	var prevNode = null;
 	var	nodes = new Map();
 
+	// Create URI instance
 	var uri = new URI();
 
 	// Setup for nodes
@@ -65,7 +66,8 @@ $(document).ready(function() {
 	// Setup for node container
 	var nodeContainer = new Container('#node-container', null, nodes);
 
-	// Check for initila load using query parameters
+	// Check for initial load using query parameters
+	// Reset containers if not
 	if (uri.hasQuery("section")) {
 		var prevSection = uri.search(true)['section'];
 		var targetNode = nodeContainer.children.get(prevSection);

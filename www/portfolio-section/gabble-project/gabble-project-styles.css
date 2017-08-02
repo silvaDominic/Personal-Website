@@ -17,15 +17,15 @@
 
 .header-title {
 	font-weight: 600;
-	padding-top: 30px;
+	padding-bottom: 30px;
 }
 
-.header-title:first-child {
-	color: #66B2FF;
-}
-
-.header-title:nth-child(2) {
+#seeker-title{
 	color: #CC0000;
+}
+
+#setter-title{
+	color: #66B2FF;
 }
 
 .back-button:hover {
