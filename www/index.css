@@ -578,7 +578,7 @@ html, body{
 
 /*---------------------------------------------- RESPINSIVE CSS -------------------------------------------------*/
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 1050px) {
 	.section-title span:first-child {
 		font-size: 70%;
 	}
