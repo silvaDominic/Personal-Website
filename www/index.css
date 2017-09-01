@@ -364,6 +364,14 @@ html, body{
 	padding: 4%;
 }
 
+@media all and (orientation:landscape) and (max-height: 414px) {
+  #aboutme-section {
+    width: 86% !important;
+    left: 8% !important;
+    top: auto !important;
+  }
+}
+
 /*------------------------------------------------ CURRENT-PROJECT-SECTION ---------------------------------------------------*/
 
 #current-project-description{
@@ -578,6 +586,8 @@ html, body{
 
 /*---------------------------------------------- RESPINSIVE CSS -------------------------------------------------*/
 
+
+
 @media screen and (max-width: 1050px) {
 	.section-title span:first-child {
 		font-size: 70%;
@@ -628,10 +638,6 @@ html, body{
 		width: 90 !important;
 	}
 
-	#aboutme-section {
-		top: 24vw !important;
-		width: 100%;
-	}
 
 	.section-title {
 		height: 17vw;
@@ -659,6 +665,11 @@ html, body{
 	.name {
 		font-size: 72px !important;
 	}
+
+  #aboutme-section {
+    width: 100% !important;
+    top: 26vw !important;
+  }
 
 	#aboutme-icon, #portfolio-icon, #photography-icon, #current-project-icon {
 		top: auto !important;
@@ -701,4 +712,55 @@ html, body{
 	#aboutme-description{
 		width: 100%;
 	}
+}
+
+@media all and (orientation:landscape) and (max-height: 414px) {
+  .primary-section {
+    width: 86% !important;
+    left: 8% !important;
+    top: -20% !important;
+  }
+
+  .primary-section .content {
+    padding-top: 0;
+  }
+
+  #aboutme-section {
+    width: 86% !important;
+    left: 8% !important;
+    top: 0 !important;
+  }
+
+  .primary-section .description-body {
+    text-align: left !important;
+  }
+
+  #node-container.augmented {
+    top:50% !important;
+    width: 15%;
+    height: 100%;
+    left: 7.5%;
+  }
+
+  #node-container.augmented .node {
+    width: 14vw !important;
+    height: 14vw !important;
+    padding: 2vw !important;
+  }
+
+  #node-container.augmented .section-title {
+    width: 10vw !important;
+    height: 10vw !important;
+  }
+
+  #node-container .node {
+		width: 23vw !important;
+		height: auto !important;
+		display: inline-block !important;
+		padding: 3vw !important;
+  }
+
+  .section-title span:nth-child(2){
+    font-size: 130%;
+  }
 }
