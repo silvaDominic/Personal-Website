@@ -9,7 +9,7 @@
 
 .project-banner img {
 	width: 59vw;
-	padding: 6vh 0;
+	padding: 3.2vw 0 !important;
 }
 
 #mechanical-icon, #electrical-icon {

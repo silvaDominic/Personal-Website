@@ -7,7 +7,7 @@
     position: relative;
     text-align: center;
 	max-width: 300px;
-	margin: 0 auto;
+	margin: 20px auto;
 	padding: 12px;
 }
 
@@ -102,11 +102,11 @@
     background-color: #1B75BB;
 }
 
-#roller-ball-title, #box-shooter-title {
+#unity-diagram .game-title {
 	background-color: #1B75BB;
 }
 
-#roller-ball-image, #box-shooter-image, #roller-ball-title, #box-shooter-title {
+#unity-diagram .game-title, #unity-diagram img {
 	border: 0.75vh solid #1B75BB;
     border-radius: 50%;	
 }

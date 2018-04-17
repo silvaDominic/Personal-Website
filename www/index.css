@@ -421,21 +421,30 @@ html, body{
     background-color: #7392FF;
 }
 
-#lestudionyc-image, #lestudionyc-title{
+#TAC-website-title{
+    background-color: #E99E4C;
+}
+
+#TAC-website-image, #TAC-website-title{
+    border: 0.75vh solid #0635A1;
+    border-radius: 50%;
+}
+
+#lestudionyc-image, #lestudionyc-website-title{
     border: 0.75vh solid #FC8296;
     border-radius: 50%;
 }
 
-#lestudionyc-title{
+#lestudionyc-website-title{
     background-color: #FC8296;
 }
 
-#barbers-society-image, #barbers-society-title{
+#barbers-society-image, #barbers-society-website-title{
     border: 0.75vh solid #453333;
     border-radius: 50%;
 }
 
-#barbers-society-title{
+#barbers-society-wesbite-title{
     background-color: #453333;
 }
 

@@ -203,12 +203,12 @@ header{
 	}
 
 	.diagram-description, .project-description-body, .conclusion-body {
-    width: 100% !important;
+		width: 100% !important;
 		padding: 0;
-    text-align: left;
+		text-align: left;
 	}
 
-  h2 {
-    font-size: 1.5em !important;
-  }
+	h2 {
+		font-size: 1.5em !important;
+	}
 }
