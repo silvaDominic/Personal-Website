@@ -23,13 +23,9 @@ ul > li {
 	margin-bottom: 1em;
 	margin-left: auto;
 	margin-right: auto;
-	list-style-type: none;
 }
 
 ul {
-	width: 45%;
-	margin-left: auto;
-	margin-right: auto;
 	text-align: left;
 }
 
@@ -39,11 +35,4 @@ ul {
 
 .back-button:hover {
 	background-color: #32BDBD;
-}
-
-@media screen and (max-width: 769px){
-	ul {
-		width: 95% !important;
-		text-align: center !important;
-	}
 }

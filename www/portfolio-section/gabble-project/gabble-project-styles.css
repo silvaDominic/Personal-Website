@@ -18,14 +18,21 @@
 .header-title {
 	font-weight: 600;
 	padding-bottom: 30px;
+	text-align: center !important;
 }
 
 #seeker-title{
 	color: #CC0000;
+	padding-top: 18px;
 }
 
 #setter-title{
 	color: #66B2FF;
+	padding-top: 18px;
+}
+
+.project-description-section .short-row, .project-diagram-section .short-row:first-child, .conclusion-section .short-row {
+	width: 55% !important;	
 }
 
 .back-button:hover {
@@ -34,4 +41,28 @@
 
 .phase-row {
 	background-color: #F0F0F0;
+}
+
+.short-row {
+	width: 73% !important;
+}
+
+@media screen and (max-width: 950px) {
+	.project-description-section .short-row, .project-diagram-section .short-row:first-child, .conclusion-section .short-row {
+		width: 90% !important;	
+	}
+	
+	.short-row {
+		width: 90% !important;
+	}
+}
+
+@media screen and (max-width: 769px) {
+	.project-description-section .short-row, .project-diagram-section .short-row:first-child, .conclusion-section .short-row {
+		width: 100% !important;	
+	}
+	
+	.short-row {
+		width: 100% !important;
+	}
 }

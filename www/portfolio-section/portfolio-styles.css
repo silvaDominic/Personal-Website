@@ -55,15 +55,35 @@ header{
 }
 
 .project-diagram-section {
-	text-align: center;
+	text-align: left;
 }
 
-.diagram-description{
-	padding-bottom: 3vw;
+.diagram-description, .caption {
+	text-align: left;
+	color: #000000;
+}
+
+.caption {
+	padding-top: 8px;
+	padding-bottom: 16px;
+}
+
+.diagram-description {
+	padding: 20px 0;
+}
+
+.caption {
+	font-size: 0.9rem;
 	text-align: center;
-	width: 65%;
-	margin: 0 auto;
 	color: #4b4a4a;
+	width: 85%;
+	margin: 0 auto;
+}
+
+.center-block {
+	float: none !important;
+	margin: 0 auto !important;
+	display: block !important;
 }
 
 .project-diagram {
@@ -78,11 +98,16 @@ header{
 .project-diagram:nth-child(even) {
 	background-color: #F0F0F0;
 	padding-top: 8.5vh;
-  padding-bottom: 8.5vh;
+	padding-bottom: 8.5vh;
 }
 
-.project-diagram img{
-	margin: 15px;
+.img-responsive {
+	max-width:100%; 
+	height:auto;
+}
+
+.img-eighty {
+	width: 80% !important;
 }
 
 .project-description-section, .conclusion-section{
@@ -98,8 +123,7 @@ header{
     position: relative;
 	margin: 0 auto;
 	padding: 15px 0;
-	text-align: center;
-	width: 65%;
+	text-align: left;
 }
 
 .project-title {
@@ -110,6 +134,7 @@ header{
 	line-height: 0.75;
 	word-break: keep-all;
 	white-space: nowrap;
+	text-align: left;
 }
 
 .diagram-title {
@@ -122,7 +147,11 @@ header{
 	padding: 2vw 0;
 }
 
-.project-brief{
+.project-diagram-section img {
+	margin: 20px 0;
+}
+
+.project-brief {
 	display: block;
     position: relative;
 	color:gray;
@@ -161,38 +190,59 @@ header{
 
 .short-row {
 	margin: 0 auto !important;
-	width: 75%;
+	width: 55%;
 }
 
-@media screen and (max-width: 950px) {
-	.diagram-description, .project-description-body, .conclusion-body{
-		width: 85% !important;
-	}
+.code-snippet {
+	overflow-y: scroll;
+	max-height: 600px;
+	max-width: 600px;
+}
 
+.diagram-title + p{
+	padding-top: 0 !important;
+}
+
+.outline {
+	border: 1px solid black;
+}
+
+.lightgrey {
+	border-color: lightgrey !important;
+}
+
+
+
+@media screen and (max-width: 950px) {
 	.short-row {
 		width: 90% !important;
+	}
+	
+	.diagram-description {
+		padding: 16px 0 !important;
 	}
 }
 
 
 @media screen and (max-width: 769px) {
-	.project-description-body, .conclusion-body{
-		width: 95% !important;
-	}
-
-	.diagram-description{
-		width: 95% !important;
-	}
-
-	.project-diagram img {
-		margin: 15px 0;
+	.diagram-description {
+		padding: 14px 0 !important;
 	}
 
 	.project-brief {
-		padding: 2vw 3vw;
+		padding: 2vw 3vw !important;
 	}
 
 	.short-row {
+		width: 100% !important;
+	}
+	
+	.row {
+		width: 100% !important;
+		margin-left: 0 !important;
+	}
+	
+	.img-eighty {
 		width: 100% !important;
 	}
 }
@@ -203,12 +253,19 @@ header{
 	}
 
 	.diagram-description, .project-description-body, .conclusion-body {
-		width: 100% !important;
-		padding: 0;
-		text-align: left;
+		text-align: left !important;
+	}
+	
+	.diagram-description {
+		padding: 10px 0 !important;
 	}
 
 	h2 {
 		font-size: 1.5em !important;
+	}
+	
+	.caption {
+		width: 100%;
+		text-align: left;
 	}
 }

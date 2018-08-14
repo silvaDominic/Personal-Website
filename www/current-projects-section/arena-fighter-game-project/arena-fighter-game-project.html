@@ -1,0 +1,263 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Current Projects - Arena Fighter Game</title>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+
+		<!-- Load JS and CSS -->
+		<link rel = "stylesheet" type = "text/css" href = "../../portfolio-section/portfolio-styles.css"/>
+		<link rel = "stylesheet" type = "text/css" href = "arena-fighter-game-styles.css"/>
+		<link rel = "stylesheet" type = "text/css" href = "../../resources/fonts/stylesheet.css"/>
+		<link rel = "stylesheet" type = "text/css" href = "../../lib/bootstrap-4.0.0-alpha.6-dist/css/bootstrap.min.css"/>
+		<link rel = "stylesheet" type = "text/css" href = "../../lib/bootstrap-4.0.0-alpha.6-dist/css/bootstrap-grid.min.css"/>
+	</head>
+
+	<body>
+		<div class="content">
+			<div class="back-button"><a href="#" onclick="history.go(-1)"><img src="../../resources/toolbox-icons/back-button.svg"></a></div>
+
+			<header class="container-fluid">
+				<div class="row">
+					<div class="col">
+						<span class="project-title">Arena Fighter Game</span>
+						<h5 class="project-brief">An arena fighter inspired by Super Smash Bros. and Rock, Paper, Scissors.</h5>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="project-banner col">
+						<img class="img-responsive center-block" src="../../resources/portfolio-icons/RPS-logo.svg">
+					</div>
+				</div>
+			</header>
+
+			<section class="project-description-section container-fluid">
+				<div class="short-row">
+					<div class="row">
+						<div class="col">
+							<p class="project-description-body">
+								The game is to be a 2D, competitive, multiplayer, brawler. The game will feature 3-character types with different play styles. 
+								Each character will have the same standard type of attacks but will play differently according to their respective style. 
+								Primary gameplay will involve players fighting each other in attempt to knock each other out and/or for a higher objective(s).
+								The style of the game will be a surreal use of real photographs for the environments and game objects.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="project-diagram-section">
+				<div class="project-diagram container-fluid" id="initial-design-diagram">
+					<div class=" short-row">
+						<div class="row">
+							<div class="col-sm-12">
+								<h2 class="diagram-title">Inspiration and Initial Design</h2>
+								<p class="diagram-description">Inspiration for this game was solely based on the mechanics; I've had a desire for some time to create a game similar to
+								Super Smash Bros. that would include an array of custom characters designed and illustrated by myself. However, with this being my first project
+								I didn't want to get too involved with asset creation and the extensive amount balancing that would be required for more than a handful of characters. It would simply
+								be too ambitious of a first project. Instead, my plan was to create a 'lite' version of the game, featuring only 3 characters, each with distinct play-styles. This would also
+								provide me with a solid framework for the more comprehensive version of the game I'd like to eventually make.
+								</p>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-md-6"><img class="img-responsive center-block" src="../../resources/personal-projects-images/arena-fighter-game-project-images/early-ideas-01.png" style="border: 1px solid black;"></div>
+							<div class="col-md-6"><img class="img-responsive center-block" src="../../resources/personal-projects-images/arena-fighter-game-project-images/early-ideas-02.png" style="border: 1px solid black;"></div>
+							<div class="col-sm-12"><p class="caption">Some initial ideas for the mechanics and theme of the game.</p></div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="project-diagram container-fluid" id="early-dev-diagram">
+					<div class=" short-row">
+						<div class="row">
+							<div class="col-sm-12">
+								<h2 class="diagram-title">Getting My Feet Wet</h2>
+								<p class="diagram-description"> Before I did anything involving, I wanted to simply throw <span style="font-style: italic;">something</span> together. It didn't have to 
+									resemble anything concrete; I just wanted to get a box moving around on a platform and think about where I should go from there.
+								</p>
+							</div>
+						</div>
+						
+						<div class="row">
+							<div class="col-sm-12"><img class="img-responsive center-block" src="../../resources/personal-projects-images/arena-fighter-game-project-images/basic-movement.gif" style="width: 100%; border: 2px solid lightgrey;"></div>
+							<div class="col-sm-12"><p class="caption">Quite literally a box moving on a platform.</p></div>
+						</div>
+						
+												
+						<div class="row">
+							<div class="col-sm-12">
+								<p class="diagram-description"> As I tried to expand the behavior of the character however, I realized very quickly that the number of if-statements I used would explode. 
+									Switch statements and enums representing state were my quick fix, but even then I could tell that this wasn't the right move. 
+									It was then that I remembered <a href="http://gameprogrammingpatterns.com/state.html" target="_blank"> an article</a> I stumbled on a while ago (before I was ready for anything like this) 
+									that covers the exact issue I was having.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="project-diagram container-fluid" id="state-machine-diagram">
+					<div class=" short-row">
+						<div class="row">
+							<div class="col-sm-12">
+								<h2 class="diagram-title">State Machines</h2>
+								<p class="diagram-description"> The answer to my behavior problem was the state machine. The idea is simple: behaviours are consolidated into state objects that can be processed by a single
+									entity (the state machine). If a player wants to jump, the input is evaluated and the state is changed. This allowed for a very encapsulated and scalable model for handling behavior. While
+									the concept sounds simple, it took quite a bit of time before I had this translated into code and even longer for me to critique it and develop a flow for implementing each new behavior.
+								</p>
+							</div>
+						</div>
+						
+						<div class="row mx-auto">
+							<div class="col-md-6 code-snippet">
+								<script src="https://gist.github.com/silvaDominic/d4d09c7bfb97e4f1a3a20bc12ebf58d3.js"></script>
+							</div>
+							<div class="col-md-6 code-snippet">
+								<script src="https://gist.github.com/silvaDominic/fe617b5c342545663979487230537d1e.js"></script>
+							</div>
+							<div class="col-sm-12"><p class="caption">The state machine class (left) allows for changing states, excuting the state's update method, and switching to the previous state. Each state
+								inherits from an IState interface (right) that possesses basic functionality like enter/exiting and executing the state logic.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="project-diagram container-fluid" id="research-diagram">
+					<div class=" short-row">
+						<div class="row">
+							<div class="col-sm-12">
+								<h2 class="diagram-title">Research</h2>
+								<p class="diagram-description"> When I wasn't developing I was doing research. At times, this literally meant playing Super Smash Bros. Although, 'playing' is not necessarily what I was doing.
+									I would spend time going through each character and understanding how combos are registered and input is handled. During this time, I actually began to pick up on subtleties I hadn't
+									noticed before. For instance, a slow acceleration of the character would gradually move them to a 'full speed' running state. A quick horizontal snap of the analog stick however, would instantly 
+									bring the character to a faster-than-full-speed running state.
+								</p>
+							</div>
+						</div>
+						
+						<div class="row">
+							<div class="col-md-12">
+								<img class="img-responsive center-block" src="../../resources/personal-projects-images/arena-fighter-game-project-images/run-comparison.gif" style="width: 100%; border: 2px solid lightgrey;">
+								<p class="caption">The player can be seen moving back and forth at a regular speed and then quickly moving to a very fast speed.</p>
+							</div>
+						</div>
+						
+						<div class="row">
+							<div class="col-sm-12">
+								<p class="diagram-description"> I also found out that other people had done similar <a href="https://smashboards.com/threads/character-weight-list-fall-speed-list-and-random-things.162546/" target="_blank">research</a> 
+								in order to find out the different properties of each character. For the most part though, most of my research has been less on game design and more with understanding more technical challenges like
+								how advanced input systems work or when asynchronous programming needs to be considered.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="project-diagram container-fluid" id="input-handling-diagram">
+					<div class=" short-row">
+						<div class="row">
+							<div class="col-sm-12">
+								<h2 class="diagram-title">Input Handling</h2>
+								<p class="diagram-description"> One thing I really took for granted when beginning this project, was how essential input management was.
+									This was particularly difficult when I was trying to evaluate multiple inputs at once. While checking for multiple at the same time is possible,
+									a player must enter all inputs at the same exact time. It also didn't allow for checking the same input twice or chaining.
+								</p>
+							</div>
+						</div>
+					
+						<div class="row">
+							<div class="col-sm-12">
+								<script src="https://gist.github.com/silvaDominic/070a0ae45522c5dbcb5410755e717798.js"></script>
+							</div>
+							<div class="col-sm-12"><p class="caption"> Not a robust solution for checking input.</p></div>
+						</div>
+						
+						<div class="row">
+							<div class="col-sm-12">
+								<p class="diagram-description"> Early versions of an input manager involved checking a custom Combo object that contained 2 types of input, inspecting this object
+									to determine how it should be evaluted and then processing the secondary input using coroutines. This was, as it sounds, slow, buggy, and only allowed for checking two inputs. 
+								</p>
+							</div>
+						</div>
+						
+						<div class="row">
+							<div class="col-md-12 code-snippet"><script src="https://gist.github.com/silvaDominic/d35d6f54a2033f02234829d511adcfab.js"></script></div>
+							<div class="col-sm-12"><p class="caption">The overcomplicated ComboMonitor class that utilized coroutines. Notice the variety of different input handlers
+								that had to be created and the many fields that need to be accessed to decide how the input is processed.</p></div>
+						</div>
+						
+						<div class="row">
+							<div class="col-sm-12"><p class="diagram-description">Eventually, I found a tip online that suggested removing a dedicated input manager and instead rewriting my custom Combo object to have a CheckInput method that it could run on itself. 
+									A combo would be represented as a series of strings that would be evaluated one by one: first button pressed? Move up the chain. Second button matches combo? Move up the chain. Third button
+									not pressed in time. Combo unsuccessful, return false. This model was simple, allowed any sized combos, and reused the same logic for each evaluation.
+							</p></div>
+						</div>
+						
+						<div class="row">
+							<div class="col-md-12 code-snippet"><script src="https://gist.github.com/silvaDominic/3158bc04caa9bd58a202282d39ccf27e.js"></script></div>
+							<div class="col-sm-12"><p class="caption">The much simpler and robust JoyCombo class featuring its own evaluation (Check) method. A large if statement
+								does a thorough check of the possible inputs.</p></div>
+						</div>
+					</div>
+				</div>
+			</section>
+			
+			<section class="conclusion-section">
+				<div class="container-fluid conclusion">
+					<div class=" short-row">
+						<div class="row">
+							<div class="col">
+								<h2 class="diagram-title text-center">Next Steps</h2>
+								<p class="conclusion-body"> The first phase of developing this game has been a lot of research and trying new things. With a functioning state machine and proper combo class
+									together, development has sped up very quickly and I can now focus on fleshing out each character's movement & fighting profile. At the moment, the look of the game has not really 
+									evolved passed the block on a platform state (functionality has obviously been the main focus). Animating characters is right around the corner however, and I plan on doing a preliminary
+									photoshoot for one of the characters to see how animating real images will look.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="tools-section container-fluid" id="games-tool-section">
+				<div class="row">
+					<div class="col-sm-12 tools-header">
+						<h2><strong>Tool and Technologies</strong></h2>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-sm-6 col-md-4">
+						<object class = "tool-badge" id = "c-sharp-icon" data = "../../resources/toolbox-icons/c-sharp-icon.svg" type = "image/svg+xml"></object>
+						<h3 class = "tool-label">C Sharp</h3>
+					</div>
+
+					<div class="col-sm-6 col-md-4">
+						<object class = "tool-badge" id = "unity-icon" data = "../../resources/toolbox-icons/unity-icon.svg" type = "image/svg+xml"></object>
+						<h3 class = "tool-label">Unity</h3>
+					</div>
+					
+					<div class="col-sm-6 col-md-4">
+						<object class = "tool-badge" id = "photoshop-icon" data = "../../resources/toolbox-icons/photoshop-icon.svg" type = "image/svg+xml"></object>
+						<span class = "tool-label">Photoshop</span>
+					</div>
+					
+					<div class="col-sm-6 col-md-4 offset-md-2">
+							<object class = "tool-badge" id = "illustrator-icon" data = "../../resources/toolbox-icons/illustrator-icon.svg" type = "image/svg+xml"></object>
+							<span class = "tool-label">Illustrator</span>
+					</div>
+					
+					<div class="col-sm-6 offset-sm-3 col-md-4 offset-md-0">
+						<object class = "tool-badge" id = "blender-icon" data = "../../resources/toolbox-icons/blender-icon.svg" type = "image/svg+xml"></object>
+						<h3 class = "tool-label">Blender</h3>
+					</div>
+				</div>
+			</section>
+		</div>
+	</body>
+</html>

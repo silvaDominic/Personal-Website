@@ -1,0 +1,20 @@
+.project-description-section, .conclusion-section{
+	background-color: #17C95F;
+}
+
+.project-brief {
+	padding-top: 3vw !important;
+	padding-bottom: 1vw !important;
+}
+
+.project-banner img {
+	padding: 1vw 0 !important;
+}
+
+.back-button:hover {
+	background-color: #17C95F;
+}
+
+.tools-section {
+	background-color: #ffffff;
+}

@@ -42,7 +42,7 @@ html, body{
     margin: auto;
     padding-bottom: 4vw;
     font-size: 1.2em;
-	text-align: center;
+	text-align: left;
 	font-weight: 400;
 }
 
@@ -379,22 +379,13 @@ html, body{
 	background-color: #8EC641;
 }
 
-#game-projects-title, #game-projects-icon{
-    border: 0.75vh solid #FCCD09;
+#arena-fighter-project-title, #arena-fighter-project-icon{
+    border: 0.75vh solid #17C95F;
     border-radius: 50%;
 }
 
-#game-projects-title{
-    background-color: #FFDE17;
-}
-
-#iris-title, #iris-image{
-    border: 0.75vh solid #494849;
-    border-radius: 50%;
-}
-
-#iris-title{
-    background-color: #FFDE17;
+#arena-fighter-project-title {
+	background-color: #17C95F;
 }
 
 #current-project-section .project-title {
@@ -417,14 +408,6 @@ html, body{
     border-radius: 50%;
 }
 
-#personal-website-title{
-    background-color: #7392FF;
-}
-
-#TAC-website-title{
-    background-color: #E99E4C;
-}
-
 #TAC-website-image, #TAC-website-title{
     border: 0.75vh solid #0635A1;
     border-radius: 50%;
@@ -435,17 +418,9 @@ html, body{
     border-radius: 50%;
 }
 
-#lestudionyc-website-title{
-    background-color: #FC8296;
-}
-
 #barbers-society-image, #barbers-society-website-title{
     border: 0.75vh solid #453333;
     border-radius: 50%;
-}
-
-#barbers-society-wesbite-title{
-    background-color: #453333;
 }
 
 #resume-image, #resume-title{
@@ -453,17 +428,9 @@ html, body{
     border-radius: 50%;
 }
 
-#resume-title{
-    background-color: #989898;
-}
-
-#iris-project-icon, #iris-project-title{
-    border: 0.75vh solid #494849;
+#game-dev-icon, #game-dev-title {
+    border: 0.75vh solid #F6DC46;
     border-radius: 50%;
-}
-
-#iris-project-title{
-    background-color: #B881B8;
 }
 
 #solar-boat-icon, #solar-boat-project-title{
@@ -471,17 +438,9 @@ html, body{
     border-radius: 50%;
 }
 
-#solar-boat-project-title{
-    background-color: #78B0F4;
-}
-
 #website-project-icon, #website-project-title{
     border: 0.75vh solid #EC008C;
     border-radius: 50%;
-}
-
-#website-project-title{
-    background-color: #EC008C;
 }
 
 #personal-projects-icon, #personal-projects-title{
@@ -489,26 +448,14 @@ html, body{
     border-radius: 50%;
 }
 
-#personal-projects-title{
-    background-color: #fed93e;
-}
-
 #senior-design-project-icon, #senior-design-project-title{
-    border: 0.75vh solid #606060;
+    border: 0.75vh solid #32BDBD;
     border-radius: 50%;
-}
-
-#senior-design-project-title{
-    background-color: #F6DC46;
 }
 
 #gabble-project-icon, #gabble-project-title{
     border: 0.75vh solid #BE1E2D;
     border-radius: 50%;
-}
-
-#gabble-project-title{
-    background-color: #000000;
 }
 
 #portfolio-section .project-title {
