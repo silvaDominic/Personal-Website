@@ -7,23 +7,31 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1">
 
 		<!-- Load JS and CSS -->
-		<script src="http://code.jquery.com/jquery-1.12.1.min.js"></script>
-		<script src="../../lib/jssor.slider-25.0.7.min.js" type="text/javascript"></script>
 		<link rel = "stylesheet" type = "text/css" href = "../portfolio-styles.css"/>
 		<link rel = "stylesheet" type = "text/css" href = "TAC-website-project-styles.css"/>
 		<link rel = "stylesheet" type = "text/css" href = "../../resources/fonts/stylesheet.css"/>
-		<link rel = "stylesheet" type = "text/css" href = "../../lib/bootstrap-4.0.0-alpha.6-dist/css/bootstrap.min.css"/>
-		<link rel = "stylesheet" type = "text/css" href = "../../lib/bootstrap-4.0.0-alpha.6-dist/css/bootstrap-grid.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../../lib/bootstrap-4.0.0-alpha.6-dist/css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../../lib/bootstrap-4.0.0-alpha.6-dist/js/bootstrap.min.js"/>
 	</head>
 
 	<body>
 		<div class="content">
-			<div class="back-button"><a href="#" onclick="history.go(-1)"><img src="../../resources/toolbox-icons/back-button.svg"></a></div>
+			<div class="back-button">
+				<a href="#" onclick="history.go(-1)">
+					<img src="../../resources/toolbox-icons/back-button.svg">
+				</a>
+			</div>
+
+			<div class="home-button">
+				<a title="Home" href="../../index.html">
+					<img src="../../resources/toolbox-icons/home-button.svg" alt="">
+				</a>
+			</div>
 
 			<header class="container-fluid">
 				<div class="row">
 					<div class="col">
-						<span class="project-title">The Answer Company</span>
+						<span class="project-header-title">The Answer Company</span>
 						<h5 class="project-brief">A comprehensive website for custom print and promotional products</h5>
 					</div>
 				</div>
@@ -40,7 +48,7 @@
 					<div class="row">
 						<div class="col">
 							<p class="project-description-body">
-								TheAnswerCompany.com is a custom wordpress site that strikes a balance between design
+								TheAnswerCompany.com is a completely custom site that strikes a balance between design
 								and function. Pages maintain a logical, visual order while coming together to still boast
 								a comprehensive catalog with over 40 pages. While I did not develop the original site, I have since
 								taken the lead on the project, maintaining, expanding, and improving the site for the past year.
@@ -59,7 +67,7 @@
 								<h2 class="diagram-title">Fine Tuning</h2>
 								<p class="diagram-description">
 									In general, website development can broadly be broken down into two phases: the initial construction and the subsequent
-									maintenance and scaling that follows. As the primary developer on the site, I often receive requests to
+									maintenance and scaling that follows. As the primary developer of the site, I often receive requests to
 									add new elements, adjust styling, or update the content.
 								</p>
 							</div>
@@ -177,14 +185,29 @@
 			<section class="tools-section container-fluid" id="barbers-society-website-tool-section">
 				<div class="row">
 					<div class="col-sm-12 tools-header">
-						<h2><strong>Tools and Technologies</strong></h2>
+						<span>Tools and Technologies</span>
 					</div>
 				</div>
 
 				<div class="row">
 					<div class="col-xs-6 col-sm-6 col-md-4">
-						<object class = "tool-badge" id = "wordpress-icon" data = "../../resources/toolbox-icons/wordpress-icon.svg" type = "image/svg+xml"></object>
-						<span class = "tool-label">Wordpress</span>
+						<object class = "tool-badge" id = "php-icon" data = "../../resources/toolbox-icons/php-icon.svg" type = "image/svg+xml"></object>
+						<span class = "tool-label">PHP</span>
+					</div>
+
+					<div class="col-xs-6 col-sm-6 col-md-4">
+						<object class = "tool-badge" id = "illustrator-icon" data = "../../resources/toolbox-icons/html-icon.svg" type = "image/svg+xml"></object>
+						<span class = "tool-label">HTML5</span>
+					</div>
+
+					<div class="col-xs-6 col-sm-6 col-md-4">
+						<object class = "tool-badge" id = "css-icon" data = "../../resources/toolbox-icons/css-icon.svg" type = "image/svg+xml"></object>
+						<span class = "tool-label">CSS3</span>
+					</div>
+
+					<div class="col-xs-6 col-sm-6 col-md-4">
+						<object class = "tool-badge" id = "javascript-icon" data = "../../resources/toolbox-icons/js-icon.svg" type = "image/svg+xml"></object>
+						<span class = "tool-label">Javascript</span>
 					</div>
 
 					<div class="col-xs-6 col-sm-6 col-md-4">
@@ -193,18 +216,8 @@
 					</div>
 					
 					<div class="col-xs-6 col-sm-6 col-md-4">
-						<object class = "tool-badge" id = "bootstrap-icon" data = "../../resources/toolbox-icons/fat-cow-webhosting-icon.svg" type = "image/svg+xml"></object>
+						<object class = "tool-badge" id = "fatcow-icon" data = "../../resources/toolbox-icons/fat-cow-webhosting-icon.svg" type = "image/svg+xml"></object>
 						<span class = "tool-label">FatCow</span>
-					</div>
-					
-					<div class="col-xs-6 col-sm-6 col-md-4">
-						<object class = "tool-badge" id = "illustrator-icon" data = "../../resources/toolbox-icons/html-icon.svg" type = "image/svg+xml"></object>
-						<span class = "tool-label">HTML5</span>
-					</div>
-
-					<div class="col-xs-6 col-sm-6 col-md-4">
-						<object class = "tool-badge" id = "css-icon" data = "../../resources/toolbox-icons/css-icon.svg" type = "image/svg+xml"></object>
-						<span class = "tool-label">CSS</span>
 					</div>
 					
 					<div class="col-xs-6 col-sm-6 col-md-4">

@@ -46,7 +46,7 @@ Container.prototype.setClickState = function(clickState) {
 
 // ------------------------------------------------- MAIN --------------------------------------------------------------
 
-$(document).ready(function() {
+jQuery(document).ready(function($) {
 	//Hide all content initially
 	$('.primary-section').hide();
 
@@ -75,7 +75,7 @@ $(document).ready(function() {
 	} else {
 		 //Fade in on initial load
 	 	$('body').hide();
-		$('body').fadeIn(2000);
+		$('body').fadeIn(1000);
 	}
 
   // Handle click behavior for each node and its respective section

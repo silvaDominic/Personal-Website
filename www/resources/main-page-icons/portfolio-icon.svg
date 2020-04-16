@@ -2,26 +2,13 @@
 <!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="person-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-	 y="0px" width="131.372px" height="131.373px" viewBox="0 0 131.372 131.373" style="enable-background:new 0 0 131.372 131.373;"
-	 xml:space="preserve">
-<style type="text/css">
-<![CDATA[
-	.st0{fill:#ADADAD;}
-	.st1{fill:#1C194F;}
-	.st2{fill:#22D689;}
-	.st3{fill:none;stroke:#CCCCCC;stroke-width:5;stroke-miterlimit:10;}
-	.st4{fill:#FED93E;}
-]]>
-</style>
-<g id="circle">
-	<circle class="st3" cx="65.686" cy="65.686" r="63.186"/>
-</g>
-<path class="st4" d="M54.901,25.411c-3.97,0-7.191,3.221-7.191,7.191v7.186h7.191v-5.389c0-0.991,0.807-1.797,1.795-1.797h17.978
-	c0.993,0,1.8,0.806,1.8,1.797v5.389h7.188v-7.186c0-3.97-3.229-7.191-7.188-7.191H54.901z"/>
-<polygon class="st1" points="100.053,75.196 95.745,96.774 35.632,96.774 31.315,75.196 "/>
-<polygon class="st2" points="108.827,68.013 22.543,68.013 29.735,103.962 101.639,103.962 "/>
-<polygon class="st2" points="105.233,43.388 105.233,54.171 98.049,54.171 98.049,50.577 33.327,50.577 33.327,54.171 
-	26.138,54.171 26.138,43.388 "/>
-<polygon class="st0" points="103.519,60.443 26.999,60.443 26.028,56.661 104.659,56.661 "/>
-<polygon class="st0" points="103.519,65.27 26.999,65.27 26.028,62.796 104.659,62.796 "/>
+	 y="0px" width="144px" height="144px" viewBox="0 0 144 144" enable-background="new 0 0 144 144" xml:space="preserve">
+<path fill="#FED93E" d="M16.41,32.287c-5.918,0-10.721,4.802-10.721,10.722v10.714H16.41v-8.036c0-1.477,1.204-2.679,2.677-2.679
+	h26.806c1.479,0,2.683,1.202,2.683,2.679v8.036h10.719V43.009c0-5.919-4.815-10.722-10.719-10.722H16.41z"/>
+<polygon fill="#1C194F" points="83.732,106.516 77.307,138.688 -12.32,138.688 -18.756,106.516 "/>
+<polygon fill="#22D689" points="96.813,95.805 -31.835,95.805 -21.112,149.405 86.096,149.405 "/>
+<polygon fill="#22D689" points="91.455,59.091 91.455,75.167 80.744,75.167 80.744,69.809 -15.756,69.809 -15.756,75.167 
+	-26.475,75.167 -26.475,59.091 "/>
+<polygon fill="#ADADAD" points="88.898,84.518 -25.191,84.518 -26.64,78.88 90.598,78.88 "/>
+<polygon fill="#ADADAD" points="88.898,91.715 -25.191,91.715 -26.64,88.028 90.598,88.028 "/>
 </svg>

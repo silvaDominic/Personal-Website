@@ -2,6 +2,10 @@
 	background-color: #0635A1;
 }
 
+.project-diagram:nth-child(even) {
+	background-color: rgba(233, 158, 78, 0.2);
+}
+
 .project-title {
 	position:relative;
 	font-size:8.5vw;
@@ -15,7 +19,7 @@
 }
 
 .back-button:hover {
-	background-color: #0635A1;
+	background-color: #E99E4C;
 }
 
 .project-description-body a {

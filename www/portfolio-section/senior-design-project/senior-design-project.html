@@ -10,18 +10,28 @@
 		<link rel = "stylesheet" type = "text/css" href = "../portfolio-styles.css"/>
 		<link rel = "stylesheet" type = "text/css" href = "senior-design-project-styles.css"/>
 		<link rel = "stylesheet" type = "text/css" href = "../../resources/fonts/stylesheet.css"/>
-		<link rel = "stylesheet" type = "text/css" href = "../../lib/bootstrap-4.0.0-alpha.6-dist/css/bootstrap.min.css"/>
-		<link rel = "stylesheet" type = "text/css" href = "../../lib/bootstrap-4.0.0-alpha.6-dist/css/bootstrap-grid.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../../lib/bootstrap-4.0.0-alpha.6-dist/css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../../lib/bootstrap-4.0.0-alpha.6-dist/js/bootstrap.min.js"/>
 	</head>
 
 	<body>
 		<div class="content">
-			<div class="back-button"><a href="#" onclick="history.go(-1)"><img src="../../resources/toolbox-icons/back-button.svg"></a></div>
+			<div class="back-button">
+				<a href="#" onclick="history.go(-1)">
+					<img src="../../resources/toolbox-icons/back-button.svg">
+				</a>
+			</div>
+
+			<div class="home-button">
+				<a title="Home" href="../../index.html">
+					<img src="../../resources/toolbox-icons/home-button.svg" alt="">
+				</a>
+			</div>
 
 			<header class="container-fluid">
 				<div class="row">
 					<div class="col">
-						<span class="project-title">CO Suppression Device</span>
+						<span class="project-header-title">CO Suppression Device</span>
 						<h5 class="project-brief">A portable device used to detect and suppress a carbon monoxide outbreak by filtering contaminated air</h5>
 					</div>
 				</div>
@@ -283,27 +293,27 @@
 			<section class="tools-section container-fluid" id="senior-design-tool-section">
 				<div class="row">
 					<div class="col-sm-12 tools-header">
-						<h2><strong>Tools and Technologies</strong></h2>
+						<span>Tools and Technologies</span>
 					</div>
 				</div>
 
 				<div class="row">
-					<div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
+					<div class="col-4 col-sm-3">
 						<object class = "tool-badge" id = "solidwork-icon" data = "../../resources/toolbox-icons/solidworks-icon.svg" type = "image/svg+xml"></object>
 						<span class = "tool-label">Solid Works</span>
 					</div>
 
-					<div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
+					<div class="col-4 col-sm-3">
 						<object class = "tool-badge" id = "sketchup-icon" data = "../../resources/toolbox-icons/sketchup-icon.svg" type = "image/svg+xml"></object>
 						<span class = "tool-label">SketchUp</span>
 					</div>
 
-					<div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
-						<object class = "tool-badge" id = "google-icon" data = "../../resources/toolbox-icons/google-icon.svg" type = "image/svg+xml"></object>
+					<div class="col-4 col-sm-3">
+						<object class = "tool-badge" id = "google-icon" data = "../../resources/toolbox-icons/google-icon-alt.svg" type = "image/svg+xml"></object>
 						<span class = "tool-label">Google Suite</span>
 					</div>
 
-					<div class="col-xs-6 col-sm-6 col-md-12 col-lg-3">
+					<div class="col-4 col-sm-3">
 						<object class = "tool-badge" id = "power-hand-tools-icon" data = "../../resources/toolbox-icons/tools-icon.svg" type = "image/svg+xml"></object>
 						<span class = "tool-label">Power/Hand Tools</span>
 					</div>

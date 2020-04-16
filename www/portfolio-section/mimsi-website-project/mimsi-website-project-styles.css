@@ -1,0 +1,62 @@
+a {
+    color: #211551 !important;
+}
+
+.project-description-section, .conclusion-section{
+    background-image: linear-gradient(180deg, #E31C79, #C31265);
+}
+
+.mimsi-button{
+    display: block;
+    position: relative;
+    text-align: center;
+    max-width: 300px;
+    margin: 20px auto;
+    padding: 12px;
+}
+
+.mimsi-button a {
+    display: block;
+    position: relative;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.mimsi-button span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.mimsi-button img{
+    display: flex;
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+}
+
+.mimsi-title:hover{
+    opacity: 0;
+}
+
+.mimsi-title{
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0.7;
+    color: white;
+    font-size: 175%;
+    z-index: 1;
+    -moz-transition: all 0.35s ease;
+    -webkit-transition: all 0.35s ease;
+    -o-transition: all 0.35s ease;
+    -ms-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+}
+
+.back-button:hover {
+    background-color: #5e2751;
+}

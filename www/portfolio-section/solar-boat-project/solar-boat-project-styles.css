@@ -1,6 +1,10 @@
 .project-description-section, .conclusion-section{
-	background-color: #F7DD46;
+	background-image: linear-gradient(180deg, #F7DD46, #F0CD00);
 	color: black !important;
+}
+
+.project-diagram:nth-child(2n) {
+	background-color: rgba(247, 221, 70, 0.2);
 }
 
 .tools-section {

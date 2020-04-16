@@ -2,10 +2,15 @@
 html, body{
     height: 100%;
     width: 100%;
-    font-family: 'nexa_lightregular', 'nexa_boldregular', 'geometria_lightlight', 'HelveticaNeue-Light',
-                  "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    font-family: "Yu Gothic Light", "Bebas Neue", "Ostrich Sans Medium", Helvetica, Arial, sans-serif !important;
 	margin: 0;
 	padding: 0;
+    color: #07262d;
+}
+
+a {
+    color: #ff6700 !important;
+    font-weight: 700;
 }
 
 /*-------------------------------------------------- PROJECTS --------------------------------------------------------*/
@@ -22,86 +27,27 @@ html, body{
     margin: auto auto;
     width: 100%;
     height: auto;
-	padding: 8vw 0;
 }
 
 .section-description {
 	display: block;
     position: relative;
-    margin: 0 auto;
     font-size: 1.2em;
     height: auto;
     width: 100%;
 	z-index: -1;
+    margin-top: 8em;
+    padding: 4em 0;
 }
 
 .description-body {
     display: block;
     position: relative;
-    width: 70%;
+    width: 65%;
     margin: auto;
-    padding-bottom: 4vw;
     font-size: 1.2em;
 	text-align: left;
 	font-weight: 400;
-}
-
-.project-section {
-	padding: 4vw 0;
-	width: 80%;
-	margin: 0 auto;
-}
-
-.project-title{
-    display: block;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-	font-size: 180%;
-	font-weight: 600;
-    opacity: 0.85;
-    color: white;
-    z-index: 1;
-    -moz-transition: all 0.35s ease;
-    -webkit-transition: all 0.35s ease;
-    -o-transition: all 0.35s ease;
-    -ms-transition: all 0.35s ease;
-    transition: all 0.35s ease;
-}
-
-.project-title:hover{
-    opacity: 0;
-}
-
-.project-node{
-    display: block;
-    position: relative;
-    text-align: center;
-	max-width: 300px;
-	margin: 0 auto;
-	padding: 12px;
-}
-
-.project-node a {
-	display: block;
-	position: relative;
-	text-align: center;
-	margin: 0 auto;
-}
-
-.project-node span {
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%, -50%);
-	width: 100%;
-}
-
-.project-node img{
-	display: block;
-	margin: 0 auto;
-    position: relative;
-	width: 100%;
 }
 
 .title-name{
@@ -109,15 +55,106 @@ html, body{
     display: block;
     text-align: center;
     z-index: 1;
-	padding-top: 5vh;
-	padding-bottom: 3vh;
+	padding-bottom: 3em;
+    font-family: "Bebas Neue";
 }
 
 .name{
     position: relative;
 	display: inline-block;
-    font-size: 96px;
+    font-size: 6em;
 	line-height: 1.2;
+}
+
+.project-image {
+    border-radius: 50%;
+}
+
+.project-section {
+    padding: 4em 0;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.project-title, .contact-title{
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    font-weight: 600;
+    opacity: 0.85;
+    color: white;
+    z-index: 1;
+    line-height: 1.2;
+    -moz-transition: all 0.35s ease;
+    -webkit-transition: all 0.35s ease;
+    -o-transition: all 0.35s ease;
+    -ms-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+    font-family: "Ostrich Sans Medium";
+    font-size: 3em;
+}
+
+.project-title:hover span, .contact-title:hover span {
+    opacity: 0;
+}
+
+.project-title span, .contact-title span {
+    -moz-transition: all 0.35s ease;
+    -webkit-transition: all 0.35s ease;
+    -o-transition: all 0.35s ease;
+    -ms-transition: all 0.35s ease;
+    transition: 0.35s all ease;
+}
+
+.project-node img {
+    border-radius: 50%;
+}
+
+.project-title:hover, .contact-title:hover {
+    background: transparent !important;
+}
+
+
+.project-title:hover ~ img {
+    transform: scale(1.2);
+}
+
+.project-node{
+    display: block;
+    position: relative;
+    text-align: center;
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 12px;
+}
+
+.project-node a {
+    display: block;
+    position: relative;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+
+.project-node span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.project-node img{
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+    -moz-transition: all 0.35s ease;
+    -webkit-transition: all 0.35s ease;
+    -o-transition: all 0.35s ease;
+    -ms-transition: all 0.35s ease;
+    transition: all 0.35s ease;
 }
 
 /*-------------------------------------------------- MAIN-MENU -------------------------------------------------------*/
@@ -169,13 +206,13 @@ html, body{
 }
 
 .node.augmented .section-title {
-	font-size: 140%;
+	font-size: 1.5em;
 }
 
 .node img {
-	border-radius: 50%;
-	background-color: white;
-	z-index: 99;
+    border-radius: 50%;
+    z-index: 99;
+    box-shadow: 0 10px 20px #303131;
 }
 
 .node img {
@@ -184,63 +221,65 @@ html, body{
 
 .node:hover{
     cursor: pointer;
+    background-color: white;
+}
+
+.node.clicked .section-title{
+    opacity: 1;
 }
 
 .section-title {
-	display: block;
+    display: block;
     position: absolute;
     height: 100%;
     width: 100%;
-	font-size: 185%;
-	font-weight: 600;
-    opacity: 0.0;
+    font-weight: 600;
+    font-size: 3em;
     color: white;
     z-index: 1;
+    opacity: 0;
     -moz-transition: all 0.35s ease;
     -webkit-transition: all 0.35s ease;
     -o-transition: all 0.35s ease;
     -ms-transition: all 0.35s ease;
     transition: all 0.35s ease;
-	border-radius: 50%;
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%, -50%);
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .section-title:hover {
-	opacity: 0.85;
+    opacity: 1;
 }
 
 .section-title span {
-	left: 50%;
-	top: 50%;
-	width: 100%;
-	position: absolute;
-	transform: translate(-50%, -50%);
-	text-align: center;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: "Ostrich Sans Medium";
+    line-height: 1.15;
 }
 
 .section-title span:nth-child(2) {
-	display: none;
-}
-
-#aboutme-label:hover{
-    opacity: 0.7;
+    display: none;
 }
 
 #aboutme-icon{
     top: 0.5vw;
     left: 0.5vw;
-    background-color:'transparent';
 }
 
-#aboutme-icon .section-title {
-	background-color: #7392FF;
+#aboutme-title {
+    background-color: #cfd678;
 }
 
-#aboutme-icon img:hover, #aboutme-icon.clicked img{
-    background-color: #7392ff;
-}
+#aboutme-icon img {
+    transition: 0.35s all ease;
+    background-image: linear-gradient(180deg, #cfd678, #9aa428);}
 
 #portfolio-icon{
     top: 0.5vw;
@@ -248,12 +287,16 @@ html, body{
     float: right;
 }
 
-#portfolio-icon .section-title {
-	background-color: #FE802D;
+#portfolio-title {
+    background-color: #ff6700;
 }
 
-#portfolio-icon img:hover, #portfolio-icon.clicked img{
-    background-color: #FE802D;
+#portfolio-icon img {
+    background-image: linear-gradient(180deg, #ff6700,#f03a10);
+}
+
+#current-projects-title {
+    background-color: #17aca2;
 }
 
 #current-project-icon{
@@ -262,12 +305,8 @@ html, body{
     float: right;
 }
 
-#current-project-icon .section-title {
-	background-color: #8EC641;
-}
-
-#current-project-icon img:hover, #current-project-icon.clicked img{
-    background-color: #8EC641;
+#current-project-icon img {
+    background-image: linear-gradient(180deg, #aae7e3, #17aca2);
 }
 
 #photography-icon {
@@ -275,84 +314,26 @@ html, body{
     left: 0.5vw;
 }
 
-#photography-icon .section-title {
-	background-color: #BE4E58;
+#photography-title {
+    background-color: #186475;
 }
 
-#photography-icon img:hover, #photography-icon.clicked img{
-    background-color: #BE4E58;
+#photography-icon img {
+    background-image: linear-gradient(360deg, #07262d, #186475);
 }
 
 /*---------------------------------------------- ABOUTME-SECTION -----------------------------------------------------*/
-#aboutme-section{
-    display: block;
-    position: relative;
-    margin: auto auto;
-    width: 75%;
-    height: auto;
-    background-color: #edebeb;
-	padding: 0 !important;
-}
-
-#aboutme-description .title-name {
-	color: #7392ff !important;
-	padding-bottom: 0 !important;
-}
-
-#first-name{
-    font-family: 'nexa_lightregular', Helvetica, Arial, sans-serif;
-    font-weight: lighter;
-}
-
-#last-name{
-    font-family: 'nexa_boldregular', Helvetica, Arial, sans-serif;
-    font-weight: bold;
-}
-
 #aboutme-description{
-    display: block;
-    position: relative;
-    margin: auto auto;
-    height: auto;
-    width: 90%;
-    padding-bottom: 3vh;
-    z-index: 1;
+    background-image: linear-gradient(180deg, #cfd678, #9aa428);
 }
 
-#aboutme-description .description-body{
-	width: 100% !important;
-	text-align: left !important;
+.contact-title {
+    border-radius: 50%;
+    background-color: #ff6700;
 }
 
-#aboutme-header{
-    color: #7392ff;
-	padding-top: 4vw;
-	padding-bottom: 1vw;
-}
-
-#contact-bar-section{
-    display: block;
-    position: relative;
-    margin: 0 auto;
-	padding: 15px 0;
-    width: 100%;
-    height: auto;
-    background-color: #7392ff;
-}
-
-#contact-bar-section a{
-    text-align: center;
-    font-size: 2vw;
-    color: #f3f3f3;
-    -moz-transition: all 0.3s;
-    -webkit-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    -ms-transition: all 0.3s;
-    transition: all 0.3s;
-}
-
-#contact-bar-section a:hover{
-    opacity: 0.5;
+.contact-title:hover ~ img {
+    transform: scale(1.05);
 }
 
 .contact-icon{
@@ -361,116 +342,43 @@ html, body{
 	width: 80%;
     border-radius: 50%;
 	margin: 0 auto;
-	padding: 4%;
-}
-
-@media all and (orientation:landscape) and (max-height: 414px) {
-  #aboutme-section {
-    width: 86% !important;
-    left: 8% !important;
-    top: auto !important;
-  }
 }
 
 /*------------------------------------------------ CURRENT-PROJECT-SECTION ---------------------------------------------------*/
 
 #current-project-description{
     color: #fff;
-	background-color: #8EC641;
+    background-image: linear-gradient(180deg, #aae7e3, #17aca2);
 }
 
-#arena-fighter-project-title, #arena-fighter-project-icon{
-    border: 0.75vh solid #17C95F;
+#current-project-section .project-title{
+    background-color: #bac446;
     border-radius: 50%;
+    transition: background 0.35s !important;
 }
 
 #arena-fighter-project-title {
 	background-color: #17C95F;
 }
 
-#current-project-section .project-title {
-	background-color: #FCCD09 !important;
-}
-
-#current-project-section .project-title, #current-project-section .project-icon {
-	border: 0.75vh solid #754C29 !important;
-}
-
 /*------------------------------------------------- PORTFOLIO-SECTION ----------------------------------------------------*/
 
-#portfolio-description{
+#portfolio-description {
     color: #fff;
-	background-color: #FE802D;
+    background-image: linear-gradient(180deg, #ff6700,#f03a10);
 }
 
-#personal-website-title, #personal-website-image{
-    border: 0.75vh solid #7392FF;
+#portfolio-section .project-title{
+	background-color: #22B0A7;
     border-radius: 50%;
+    transition: background 0.35s !important;
 }
 
-#TAC-website-image, #TAC-website-title{
-    border: 0.75vh solid #0635A1;
-    border-radius: 50%;
-}
-
-#lestudionyc-image, #lestudionyc-website-title{
-    border: 0.75vh solid #FC8296;
-    border-radius: 50%;
-}
-
-#barbers-society-image, #barbers-society-website-title{
-    border: 0.75vh solid #453333;
-    border-radius: 50%;
-}
-
-#resume-image, #resume-title{
-    border: 0.75vh solid #11153e;
-    border-radius: 50%;
-}
-
-#game-dev-icon, #game-dev-title {
-    border: 0.75vh solid #F6DC46;
-    border-radius: 50%;
-}
-
-#solar-boat-icon, #solar-boat-project-title{
-    border: 0.75vh solid #F6DC46;
-    border-radius: 50%;
-}
-
-#website-project-icon, #website-project-title{
-    border: 0.75vh solid #EC008C;
-    border-radius: 50%;
-}
-
-#personal-projects-icon, #personal-projects-title{
-    border: 0.75vh solid #fe802d;
-    border-radius: 50%;
-}
-
-#senior-design-project-icon, #senior-design-project-title{
-    border: 0.75vh solid #32BDBD;
-    border-radius: 50%;
-}
-
-#gabble-project-icon, #gabble-project-title{
-    border: 0.75vh solid #BE1E2D;
-    border-radius: 50%;
-}
-
-#portfolio-section .project-title {
-	background-color: #22D689 !important;
-
-}
-
-#portfolio-section .project-icon, #portfolio-section .project-title {
-	border: 0.75vh solid #FED93E !important;
-}
 /*---------------------------------------------- PHOTOGRAPHY-SECTION -------------------------------------------------*/
 
 #photography-description{
     color: white;
-    background-color: #BE1E2D;
+    background-image: linear-gradient(360deg, #07262d, #186475);
 }
 
 #photography-portfolio-section{
@@ -489,20 +397,13 @@ html, body{
     width: 100%;
 }
 
-.photo-links img{
-    position: relative;
-    margin: auto auto;
-    width: 100%;
-}
-
 .album-title{
     display: block;
     position: absolute;
     height: 100%;
     width: 100%;
-    opacity: 0.6;
-    color: #666666;
-    font-size: 2.0em;
+    color: #07262d;
+    font-size: 3.0em;
     text-align: center;
     z-index: 1;
     -moz-transition: all 0.35s ease;
@@ -510,8 +411,8 @@ html, body{
     -o-transition: all 0.35s ease;
     -ms-transition: all 0.35s ease;
     transition: all 0.35s ease;
-    background-color: white;
     border-radius: 1.5vw;
+    font-family: "Ostrich Sans Medium";
 }
 
 .album-title span {
@@ -524,6 +425,10 @@ html, body{
 
 .album-title:hover{
     opacity: 0;
+}
+
+.album-title:hover ~ img{
+    transform: scale(1.1);
 }
 
 .door{
@@ -540,7 +445,30 @@ html, body{
     width: 30%
 }
 
-/*---------------------------------------------- RESPINSIVE CSS -------------------------------------------------*/
+#photography-description-body span {
+    font-style: italic;
+}
+
+#nature-album .album-title {
+    color: #006838;
+}
+
+#port-jeff-album .album-title {
+    color: #f1592a;
+}
+
+#kitchen-album .album-title {
+    color: #000000;
+}
+
+#nyc-album .album-title {
+    color: #2161a7;
+}
+
+#explorations-album .album-title {
+    color: #ffffff;
+}
+/*---------------------------------------------- RESPONSIVE CSS -------------------------------------------------*/
 
 
 
@@ -570,7 +498,6 @@ html, body{
 		height: 24vw;
 		z-index: 99;
 		background-color: #fff;
-		opacity: 0.8;
 		-moz-transition: width 0.3s, top 0.3s;
 		-webkit-transition: width 0.3s, top 0.3s;
 		-o-transition: width 0.3s, top 0.3s;
@@ -590,10 +517,13 @@ html, body{
 	}
 
 	.project-section {
-		padding: 15vw 0 !important;
-		width: 90 !important;
+		padding: 2.5em 0 !important;
+		width: 90% !important;
 	}
 
+    .project-title, .contact-title {
+        font-size: 2em;
+    }
 
 	.section-title {
 		height: 17vw;
@@ -609,6 +539,10 @@ html, body{
 		font-size: 190%;
 	}
 
+    .section-description {
+        margin-top: 0;
+    }
+
 	.node {
 		position: relative !important;
 		width: 23vw !important;
@@ -621,11 +555,6 @@ html, body{
 	.name {
 		font-size: 72px !important;
 	}
-
-  #aboutme-section {
-    width: 100% !important;
-    top: 26vw !important;
-  }
 
 	#aboutme-icon, #portfolio-icon, #photography-icon, #current-project-icon {
 		top: auto !important;
@@ -654,7 +583,7 @@ html, body{
 @media screen and (max-width: 500px) {
 	.description-body, .primary-section {
 		width: 100% !important;
-    text-align: left;
+        text-align: left;
 	}
 
 	.name {
@@ -663,10 +592,6 @@ html, body{
 
 	.section-title span:nth-child(2){
 		font-size: 150%;
-	}
-
-	#aboutme-description{
-		width: 100%;
 	}
 }
 
@@ -681,18 +606,12 @@ html, body{
     padding-top: 0;
   }
 
-  #aboutme-section {
-    width: 86% !important;
-    left: 8% !important;
-    top: 0 !important;
-  }
-
   .primary-section .description-body {
     text-align: left !important;
   }
 
   #node-container.augmented {
-    top:50% !important;
+    top: 50% !important;
     width: 15%;
     height: 100%;
     left: 7.5%;

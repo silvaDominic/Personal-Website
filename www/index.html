@@ -1,314 +1,288 @@
 <!--------------------------------------------------- GENERAL --------------------------------------------------------->
 <!DOCTYPE HTML>
-<html lang = "en">
+<html lang="en">
 
- <head>
-     <meta charset="utf-8">
-	 <meta name="viewport" content="width=device-width,initial-scale=1">
-     <title>Installation-01</title>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Installation-01</title>
 
-	<script src="http://code.jquery.com/jquery-3.2.1.js"></script>
-	<script type = "text/javascript" src = "index.js"></script>
-	<script src="lib/URI.min.js" type="text/javascript"></script>
-	<link rel = "stylesheet" type = "text/css" href = "index.css"/>
-	<link rel = "stylesheet" type = "text/css" href = "resources/fonts/stylesheet.css"/>
-	<link rel = "stylesheet" type = "text/css" href = "lib/bootstrap-4.0.0-alpha.6-dist/css/bootstrap.min.css"/>
-	<link rel = "stylesheet" type = "text/css" href = "lib/bootstrap-4.0.0-alpha.6-dist/css/bootstrap-grid.min.css"/>
- </head>
+    <script src="lib/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+    <script src="lib/URI.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="index.css"/>
+    <link rel="stylesheet" type="text/css" href="resources/fonts/stylesheet.css"/>
+    <link rel="stylesheet" type="text/css" href="lib/bootstrap-4.0.0-alpha.6-dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="lib/bootstrap-4.0.0-alpha.6-dist/js/bootstrap.min.js"/>
+</head>
 
 <body>
 
 <!-------------------------------------------------- NODES ---------------------------------------------------------->
-    <div class = "nodes" id = "node-container">
-        <div id = "aboutme-icon" class = "node">
-			<div class = "section-title" id = "aboutme-title"><span>About Me</span><span>A</span></div>
-            <img src = "resources/main-page-icons/person-icon.svg"/>
-        </div>
-		<div id = "portfolio-icon" class = "node">
-			<div class = "section-title" id = "portfolio-title"><span>Portfolio</span><span>P</span></div>
-            <img src = "resources/main-page-icons/portfolio-icon.svg"/>
-        </div>
-		<div id = "photography-icon" class = "node">
-			<div class = "section-title" id = "photography-title"><span>Photography</span><span>Ph</span></div>
-            <img src = "resources/main-page-icons/camera-icon.svg"/>
-        </div>
-        <div id = "current-project-icon" class = "node">
-			<div class = "section-title" id = "current-projects-title"><span>Current Projects</span><span>CP</span></div>
-            <img  src = "resources/main-page-icons/current-project-icon.svg"/>
-        </div>
+<div class="nodes" id="node-container">
+    <div id="aboutme-icon" class="node">
+        <div class="section-title" id="aboutme-title"><span>About Me</span><span>A</span></div>
+        <img src="resources/main-page-icons/person-icon.svg"/>
     </div>
+    <div id="portfolio-icon" class="node">
+        <div class="section-title" id="portfolio-title"><span>Portfolio</span><span>P</span></div>
+        <img src="resources/main-page-icons/portfolio-icon.svg"/>
+    </div>
+    <div id="photography-icon" class="node">
+        <div class="section-title" id="photography-title"><span>Photography</span><span>Ph</span></div>
+        <img src="resources/main-page-icons/camera-icon.svg"/>
+    </div>
+    <div id="current-project-icon" class="node">
+        <div class="section-title" id="current-projects-title"><span>Current Projects</span><span>CP</span></div>
+        <img src="resources/main-page-icons/current-project-icon.svg"/>
+    </div>
+</div>
 
 <!---------------------------------------------- ABOUTME-SECTION ------------------------------------------------------>
 
-    <div id = "aboutme-section" class="primary-section">
-        <div class = "content">
-            <section id = "aboutme-description" class="section-description">
-				<div class="container-fluid">
-					<div class="row">
-						<div class="col">
-							<div class="title-name"><span class = "name" id = "first-name">Dominic</span><span class = "name" id = "last-name">Silva</span></div>
+<div id="aboutme-section" class="primary-section">
+    <div class="content">
+        <section id="aboutme-description" class="section-description">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col">
+                        <div class="title-name"><span class="name">Dominic Silva</span></div>
 
-							<h3 id = "aboutme-header"><strong>New Game+</strong></h3>
+                        <p class="description-body">
+                            I’m a web developer, UX/UI designer, and photographer working out of NYC.
+                            I create modern websites and web apps.
+                            Check out some of my work in the Portfolio and Photography sections of my site.
+                            In addition to web development and photography, I like to make games. I’m
+                            working on a new one in my Current Projects section.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-							<p class = "description-body" id = "aboutme-description-1">
-								So after I graduated college in 2014 I had second thoughts about the mechanical engineering and material science industries
-								and decided to make a move to software development. With the guidance of a couple of friends in the industry and some 
-								free online courses, I was able to develop an entirely new skill set, build numerous projects, and land a job all within 2 years time.
-								While I've been learning how to program primarily within the context of web development, lately I've been working almost solely in
-								game development.
-							</p>
-							<p class = "description-body" id = "aboutme-description-2">
-								What made this an easy choice didn't so much have
-								to do with me growing up with video games, but that creating them incorporated a lot of other
-								disciplines that I'm interested in: design, digital art, photography, music, storytelling, etc.
-								These were the things that I felt would truly allow me to express myself. And while there is a video game
-								stigma among the older generations (I'm talking to the parents out there), it should be known that
-								the all encompassing nature of video games allows them to be wholesome projects that
-								require much more than just quick reflexes and a sharp memory.
-							</p>
-							<p class = "description-body" id = "aboutme-description-3">
-								In addition to learning more about game development, I enjoy putting my web design and photography skills to use on
-								freelance projects. You can find some of my work in the <a href="http://www.domsilva.com/?section=portfolioNode">Portfolio</a>
-								and <a href="http://www.domsilva.com/?section=photographyNode">Photography</a> sections of the website.
-							</p>
-						</div>
-					</div>
-				</div>
-            </section>
-
-            <section id = "contact-bar-section">
-				<div class="container-fluid">
-					<div class="row">
-						<div class="col-xs-6 col-sm-3">
-							<a href = "mailto:silva.d.dominic@Gmail.com" title="G-mail" target="_blank">
-                                <img class = "contact-icon" id = "email-icon" src = "resources/main-page-icons/gmail-icon.svg"/>
+        <section id="contact-section" class="project-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6 col-sm-3">
+                        <div class="project-node">
+                            <a href="mailto:silva.d.dominic@gmail.com" title="G-mail" target="_blank">
+                                <div class="contact-title">
+                                    <span>Gmail</span>
+                                </div>
+                                <img class="contact-icon" id="email-icon"
+                                     src="resources/main-page-icons/gmail-icon.svg"/>
                             </a>
-						</div>
+                        </div>
+                    </div>
 
-						<div class="col-xs-6 col-sm-3">
-                            <a href = "https://www.linkedin.com/in/silvaDominic" title="LinkedIn" target="_blank">
-                                <img class = "contact-icon" id = "linkedin-icon" src = "resources/main-page-icons/alt-linkedin-icon.svg"/>
+                    <div class="col-6 col-sm-3">
+                        <div class="project-node">
+                            <a href="https://www.linkedin.com/in/silvaDominic" title="LinkedIn" target="_blank">
+                                <div class="contact-title">
+                                    <span>LinkedIn</span>
+                                </div>
+                                <img class="contact-icon" id="linkedin-icon"
+                                     src="resources/main-page-icons/alt-linkedin-icon.svg"/>
                             </a>
-						</div>
+                        </div>
+                    </div>
 
-						<div class="col-xs-6 col-sm-3">
-                            <a href = "https://github.com/silvaDominic" title="Github" target="_blank">
-                                <img class = "contact-icon" id = "github-icon" src = "resources/main-page-icons/alt-github-icon.svg"/>
+                    <div class="col-6 col-sm-3">
+                        <div class="project-node">
+                            <a href="https://github.com/silvaDominic" title="Github" target="_blank">
+                                <div class="contact-title">
+                                    <span>GitHub</span>
+                                </div>
+                                <img class="contact-icon" id="github-icon"
+                                     src="resources/main-page-icons/alt-github-icon.svg"/>
                             </a>
-						</div>
+                        </div>
+                    </div>
 
-						<div class="col-xs-6 col-sm-3">
-                            <a href = "resources/Online-Software-Resume-DS.pdf" title="Resume" target="_blank">
-                                <img class = "contact-icon" id = "resume-icon" src = "resources/main-page-icons/resume-icon.svg"/>
+                    <div class="col-6 col-sm-3">
+                        <div class="project-node">
+                            <a href="resources/Dominic-Silva-Online-Software-Resume.pdf" title="Resume" target="_blank">
+                                <div class="contact-title">
+                                    <span>Resume</span>
+                                </div>
+                                <img class="contact-icon" id="resume-icon"
+                                     src="resources/main-page-icons/resume-icon.svg"/>
                             </a>
-						</div>
-					</div>
-				</div>
-            </section>
-        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
+</div>
 
-<!-------------------------------------------------- CURRENT-PROJECS-SECTION ---------------------------------------------------->
-    <div id = "current-project-section" class="primary-section">
-        <div class = "content">
-			<section id = "current-project-description" class="section-description">
-				<div class="container-fluid">
-					<div class="title-name"><span class = "name">Current Projects</span></div>
+<!-------------------------------------------------- CURRENT-PROJECTS-SECTION ---------------------------------------------------->
+<div id="current-project-section" class="primary-section">
+    <div class="content">
+        <section id="current-project-description" class="section-description">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col">
+                        <div class="title-name"><span class="name">Current Projects</span></div>
 
-					<p class = "description-body" id = "current-project-description-body">
-					At the moment, I'm focusing all of my attention on a single project. The aim is to create a video game from the ground up,
-					designing and developeing everything from the core game mechanics to the game assets. This project will act as the first
-					video game I've developed solely by myself and my goal is to release it to the public by the end of the year.
-					<br>
-				</div>
-            </section>
+                        <p class="description-body" id="current-project-description-body">
+                            At the moment, I'm working on a video game project using the Unity game engine. The aim is
+                            to create a video game from the ground up, designing and developing everything from the core
+                            game mechanics to the game assets.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-			<section id="current-project-portfolio-section" class="project-section">
-				<div class="container">
-					<div class="row">
-						<div class="col-sm-12">
-							<div class="project-node">
-								<a href = "current-projects-section/arena-fighter-game-project/arena-fighter-game-project.html">
-									<div class = "project-title" id = "arena-fighter-project-title"><span>Arena Fighter Game</span></div>
-									<img id= "arena-fighter-project-icon" src = "resources/portfolio-icons/RPS-logo.svg" />
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-        </div>
+        <section id="current-project-portfolio-section" class="project-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="project-node">
+                            <a href="current-projects-section/arena-fighter-game-project/arena-fighter-game-project.html">
+                                <div class="project-title" id="arena-fighter-project-title">
+                                    <span>Arena Fighter Game</span>
+                                </div>
+                                <img id="arena-fighter-project-icon" class="project-image"
+                                     src="resources/portfolio-icons/RPS-logo.svg"/>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
+</div>
 
 <!------------------------------------------------- PORTFOLIO-SECTION ----------------------------------------------------->
-    <div id = "portfolio-section" class="primary-section">
-        <div class = "content">
-            <section id = "portfolio-description" class="section-description">
-				<div class="container-fluid">
-					<div class="row">
-						<div class="col">
-							<div class="title-name"><span class = "name">Portfolio</span></div>
+<div id="portfolio-section" class="primary-section">
+    <div class="content">
+        <section id="portfolio-description" class="section-description">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col">
+                        <div class="title-name"><span class="name">Portfolio</span></div>
 
-							<p class = "description-body" id = "portfolio-description-body">As an engineer, I've worked on a number of projects
-								ranging from mechanical to software. Having originally studied mechanical engineering and material science in college, I
-								had the opportunity to get my hands dirty through the act of manufacturing and construction. With my recent transition into the software world
-								however, it's my mind that has been largely at work, focusing more on the abstract and recursive nature of computers.
-								Below, you'll find a mix of professional, academic, and hobby related projects, all of which have served as stepping stones in my learning process.
-							</p>
-						</div>
-					</div>
-				</div>
-            </section>
+                        <p class="description-body" id="portfolio-description-body">
+                            I come from a diverse engineering background, studying mechanical engineering and material
+                            science in college and taking on software and web development soon after. I’ve had the
+                            chance to work with some wonderful people, create some truly interesting projects, and even
+                            start my own company. Below you’ll find select work from my academic career to my
+                            professional.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-			<section id = "portfolio-project-section" class="project-section">
-				<div class="container">
-					<div class="row">
-						<div class="col-sm-6 col-md-4">
-						  <div class = "project-node" >
-							<a href = "portfolio-section/TAC-website-project/TAC-website-project.html">
-							  <div class = "project-title" id = "TAC-website-title"><span>The Answer Company</span></div>
-							  <img id= "TAC-website-image" src = "resources/portfolio-icons/TAC-project-icon.png"/>
-							</a>
-						  </div>
-						</div>
-						<div class="col-sm-6 col-md-4">
-							<div class = "project-node">
-								<a href = "portfolio-section/barbers-society-website-project/barbers-society-website-project.html">
-									<div class = "project-title" id = "barbers-society-website-title"><span>Barbers Society</span></div>
-									<img id = "barbers-society-image" src = "resources/portfolio-icons/barbers-society-project-icon.png" />
-								</a>
-							</div>
-						</div>
-						<div class="col-sm-6 col-md-4">
-							<div class = "project-node">
-								<a href = "portfolio-section/lestudionyc-website-project/lestudionyc-website-project.html">
-									<div class = "project-title" id = "lestudionyc-website-title"><span>Le Studio NYC</span></div>
-									<img id = "lestudionyc-image" src = "resources/portfolio-icons/lestudionyc-project-icon.png" />
-								</a>
-							</div>
-						</div>
-						<div class="col-sm-6 col-md-4">
-							<div class = "project-node" >
-								<a href = "portfolio-section/personal-website-project/personal-website-project.html">
-									<div class = "project-title" id = "personal-website-title"><span>Personal Website</span></div>
-									<img id= "personal-website-image" src = "resources/portfolio-icons/personal-website-project-icon.svg"/>
-								</a>
-							</div>
-						</div>
-						<div class="col-sm-6 col-md-4">
-							<div class = "project-node">
-								<a href = "portfolio-section/gabble-project/gabble-project.html">
-									<div class = "project-title" id = "gabble-project-title"><span>Gabble</span></div>
-									<img id = "gabble-project-icon" src = "resources/portfolio-icons/gabble-project-icon.svg"/>
-								</a>
-							</div>
-						</div>
-						<div class="col-sm-6 col-md-4">
-							<div class = "project-node">
-								<a href = "portfolio-section/games-project/games-project.html">
-									<div class = "project-title" id = "game-dev-title"><span>Game Dev</span></div>
-									<img id = "game-dev-icon" src = "resources/portfolio-icons/game-dev-icon.svg"/>
-								</a>
-							</div>
-						</div>
-						<div class="col-sm-6 col-md-4">
-							<div class = "project-node">
-								<a href = "portfolio-section/solar-boat-project/solar-boat-project.html">
-									<div class = "project-title" id = "solar-boat-project-title"><span>Solar Boat</span></div>
-									<img id = "solar-boat-icon" src = "resources/portfolio-icons/solar-boat-project-icon.svg" />
-								</a>
-							</div>
-						</div>
-						<div class="col-sm-6 col-md-4">
-							<div class = "project-node">
-								<a href = "portfolio-section/senior-design-project/senior-design-project.html">
-									<div class = "project-title" id = "senior-design-project-title"><span>CO Suppression Device</span></div>
-									<img id = "senior-design-project-icon" src = "resources/portfolio-icons/senior-design-project-icon-00.svg"/>
-								</a>
-							</div>
-						</div>
-						<div class="col-sm-6 col-md-4">
-							<div class = "project-node">
-								<a href = "portfolio-section/resume-project/resume-project.html">
-									<div class = "project-title" id = "resume-title"><span>Resume Redesign</span></div>
-									<img id = "resume-image" src = "resources/portfolio-icons/resume-project-icon.svg"/>
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-            </section>
-        </div>
+        <section id="portfolio-project-section" class="project-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-4">
+                        <div class="project-node">
+                            <a href="portfolio-section/web-development/web-development.html">
+                                <div class="project-title" id="web-dev-title"><span>Web Development</span></div>
+                                <img id="web-dev-image" src="resources/portfolio-icons/webdev-project-icon.svg"/>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <div class="project-node">
+                            <a href="portfolio-section/game-development/game-development.html">
+                                <div class="project-title" id="game-dev-title"><span>Game Dev</span></div>
+                                <img id="game-dev-icon" src="resources/portfolio-icons/game-dev-icon.svg"/>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <div class="project-node">
+                            <a href="portfolio-section/archive/archive.html">
+                                <div class="project-title" id="archive-title"><span>Archive</span></div>
+                                <img id="archive-image" src="resources/portfolio-icons/archive-icon.svg"/>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
+</div>
 
 <!----------------------------------------------- PHOTOGRAPHY-SECTION ------------------------------------------------->
-    <div id = "photography-section" class="primary-section">
-        <div class = "content">
-            <section id = "photography-description" class="section-description">
-				<div class="container-fluid">
-					<div class="row">
-						<div class="col">
-							<div class="title-name"><span class = "name">Photography</span></div>
+<div id="photography-section" class="primary-section">
+    <div class="content">
+        <section id="photography-description" class="section-description">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col">
+                        <div class="title-name"><span class="name">Photography</span></div>
 
-							<p id = "photography-description-body" class="description-body"> My interest in photography and photo editing developed after
-								the release of Halo 3 in 2007. The game featured a 'Theater Mode' that allowed players to rewatch
-								their gameplay experiences and snap pictures of pretty much whatever they liked. As my library
-								expanded, I eventually began to explore photo and video editing, capturing landscapes and moments
-								from the game world that Halo 3 offered. From there, I used whatever camera I could get my hands on, moving from my mom's digital camera,
-								to my friend's DSLR in college, to eventually my own.
+                        <p id="photography-description-body" class="description-body">
+                            My interest in photography and photo editing developed from an unlikely source; a video
+                            game.
+                            Halo 3 came out in 2007 and featured what was called a <span>Theater Mode</span> that
+                            allowed players
+                            to rewatch their gameplay experiences and, of course, take pictures. Eventually, I began to
+                            explore photo and video editing, uploading photos to my home computer and editing them with
+                            Photoshop. From there, I started using whatever camera I could get my hands on until I was
+                            able to afford my own.
+                        </p>
+                        <br>
+                        <p class="description-body">
+                            I've taken thousands of pictures since my initial interest back in 2007 and have selected a
+                            few of albums to share here. You'll find my recently accumulated work ranging from intimate
+                            nature shots, to candid views of a bustling New York City, to some more professional work.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-								I've taken thousands of pictures since my initial interest back in 2007 and have selected a
-								few of albums to share here. You'll find my recently accumulated work ranging from intimate
-								nature shots, to candid views of a bustling New York City, to some more professional work.
-							</p>
-						</div>
-					</div>
-				</div>
-            </section>
-
-			<section id = "photography-portfolio-section" class="project-section">
-				<div class="container-fluid">
-					<div class="row">
-						<div class="col-sm-6 col-lg-4">
-							<a class = "photo-node"  href = "photography-section/nature/nature-album.html">
-								<div class = "album-title"><span>Nature</span></div>
-								<img class = "door" id = "nature-door" src = "resources/photography-icons/nature-door.png"/>
-							</a>
-						</div>
-						<div class="col-sm-6 col-lg-4">
-							<a class = "photo-node" href = "photography-section/professional/professional-album.html">
-								<div class = "album-title"><span>Professional</span></div>
-								<img class = "door" id = "set-door" src = "resources/photography-icons/set-door.png"/>
-							</a>
-						</div>
-						<div class="col-sm-6 col-lg-4">
-							<a class = "photo-node" href = "photography-section/port-jeff/port-jeff-album.html">
-								<div class = "album-title"><span>Port Jefferson</span></div>
-								<img class = "door" id = "dock" src = "resources/photography-icons/dock-door.png"/>
-							</a>
-						</div>
-						<div class="col-sm-6 col-lg-4">
-							<a class = "photo-node" href = "photography-section/kitchen/kitchen-album.html">
-								<div class = "album-title"><span>Kitchen</span></div>
-								<img class = "door" id = "kitchen-door" src = "resources/photography-icons/kitchen-door.png"/>
-							</a>
-						</div>
-						<div class="col-sm-6 col-lg-4">
-							<a class = "photo-node" href = "photography-section/nyc/nyc-album.html">
-								<div class = "album-title"><span>New York City</span></div>
-								<img class = "door" id = "subway-door" src = "resources/photography-icons/subway-door.png"/>
-							</a>
-						</div>
-						<div class="col-sm-6 col-lg-4">
-							<a class = "photo-node" href = "photography-section/exploration/exploration-album.html">
-								<div class = "album-title"><span>Exploration</span></div>
-								<img class = "door" id = "exploration-door" src = "resources/photography-icons/exploration-door.png"/>
-							</a>
-						</div>
-					</div>
-				</div>
-            </section>
-        </div>
+        <section id="photography-portfolio-section" class="project-section">
+            <div class="container-fluid">
+                <div class="row">
+                    <div id="nature-album" class="col-sm-6 col-lg-4">
+                        <a class="photo-node" href="photography-section/nature/nature-album.html">
+                            <div class="album-title"><span>Nature</span></div>
+                            <img class="door" id="nature-door" src="resources/photography-icons/nature-door.png"/>
+                        </a>
+                    </div>
+                    <div id="professional-album" class="col-sm-6 col-lg-4">
+                        <a class="photo-node" href="photography-section/professional/professional-album.html">
+                            <div class="album-title"><span>Professional</span></div>
+                            <img class="door" id="set-door" src="resources/photography-icons/set-door.png"/>
+                        </a>
+                    </div>
+                    <div id="port-jeff-album" class="col-sm-6 col-lg-4">
+                        <a class="photo-node" href="photography-section/port-jeff/port-jeff-album.html">
+                            <div class="album-title"><span>Port Jefferson</span></div>
+                            <img class="door" id="dock" src="resources/photography-icons/dock-door.png"/>
+                        </a>
+                    </div>
+                    <div id="kitchen-album" class="col-sm-6 col-lg-4">
+                        <a class="photo-node" href="photography-section/kitchen/kitchen-album.html">
+                            <div class="album-title"><span>Kitchen</span></div>
+                            <img class="door" id="kitchen-door" src="resources/photography-icons/kitchen-door.png"/>
+                        </a>
+                    </div>
+                    <div id="nyc-album" class="col-sm-6 col-lg-4">
+                        <a class="photo-node" href="photography-section/nyc/nyc-album.html">
+                            <div class="album-title"><span>New York City</span></div>
+                            <img class="door" id="subway-door" src="resources/photography-icons/subway-door.png"/>
+                        </a>
+                    </div>
+                    <div id="explorations-album" class="col-sm-6 col-lg-4">
+                        <a class="photo-node" href="photography-section/exploration/exploration-album.html">
+                            <div class="album-title"><span>Explorations</span></div>
+                            <img class="door" id="exploration-door"
+                                 src="resources/photography-icons/exploration-door.png"/>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
- </body>
- </html>
+</div>
+</body>
+</html>
