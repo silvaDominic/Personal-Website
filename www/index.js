@@ -7,7 +7,7 @@ function Container(id, contentId,  children = new Map(), isAugmented = false, is
 	this.isAugmented = isAugmented;
 	this.isClicked = isClicked;
 	this.isFaded = isFaded;
-}
+};
 
 Container.prototype.toggleAugment = function(doAnimation = false) {
 	doAnimation ? $(this.id).addClass('animate') : $(this.id).removeClass('animate');
@@ -20,19 +20,19 @@ Container.prototype.toggleAugment = function(doAnimation = false) {
 		this.isAugmented = false;
 	}
 	return this; // Allows chaining
-}
+};
 
 Container.prototype.toggleFade = function(fadeInDur, fadeOutDur, target = this.id) {
 	if (!this.isFaded){
 			$(target).fadeIn(fadeInDur);
 			this.isFaded = true;
     } else {
-			$(target).fadeOut(fadeOutDur)
+			$(target).fadeOut(fadeOutDur);
 			this.isFaded = false;
 
     }
   return this; // Allows chaining
-}
+};
 
 Container.prototype.setClickState = function(clickState) {
 	if (clickState == true) {
@@ -42,7 +42,7 @@ Container.prototype.setClickState = function(clickState) {
 		$(this.id).removeClass('clicked');
 		this.isClicked = false;
 	}
-}
+};
 
 // ------------------------------------------------- MAIN --------------------------------------------------------------
 
@@ -50,12 +50,11 @@ jQuery(document).ready(function($) {
 	//Hide all content initially
 	$('.primary-section').hide();
 
-	// Static variables
-	var prevNode = null;
-	var	nodes = new Map();
+	let prevNode = null;
+	let	nodes = new Map();
 
 	// Create URI instance
-	var uri = new URI();
+	let uri = new URI();
 
 	// Setup for nodes
 	// Instantiate node with parent id and content id object
@@ -64,18 +63,19 @@ jQuery(document).ready(function($) {
 	nodes.set('portfolioNode', new Container('#portfolio-icon', '#portfolio-section'));
 	nodes.set('photographyNode', new Container('#photography-icon', '#photography-section'));
 	// Setup for node container
-	var nodeContainer = new Container('#node-container', null, nodes);
+	let nodeContainer = new Container('#node-container', null, nodes);
 
 	// Check for initial load using query parameters
 	// Reset containers if not
 	if (uri.hasQuery("section")) {
-		var prevSection = uri.search(true)['section'];
-		var targetNode = nodeContainer.children.get(prevSection);
+		$('body').fadeIn(750);
+		let prevSection = uri.search(true)['section'];
+		let targetNode = nodeContainer.children.get(prevSection);
 		resetContainers(targetNode);
 	} else {
 		 //Fade in on initial load
-	 	$('body').hide();
-		$('body').fadeIn(1000);
+	 	//$('body').hide();
+		$('body').fadeIn(750);
 	}
 
   // Handle click behavior for each node and its respective section
@@ -133,15 +133,15 @@ jQuery(document).ready(function($) {
             // Otherwise, fade out previous content and fade in content of current node
             if (prevNode == currNode) {
 				window.history.pushState(nodeContainer, '', uri.removeSearch('section')); //Removes section when menu is closed query parameters
-                currNode.toggleFade(550, 200, currNode.contentId).setClickState(false);
+                currNode.toggleFade(550, 250, currNode.contentId).setClickState(false);
                 toggleMenu();
             } else if (prevNode != null) {
 				window.scrollTo(0, 0); // Reset view when fading between content
-                prevNode.toggleFade(550, 200, prevNode.contentId).setClickState(false);
-                currNode.toggleFade(550, 200, currNode.contentId).setClickState(true);
+                prevNode.toggleFade(550, 250, prevNode.contentId).setClickState(false);
+                currNode.toggleFade(550, 250, currNode.contentId).setClickState(true);
             }
         } else {
-            currNode.toggleFade(550, 200, currNode.contentId).setClickState(true);
+            currNode.toggleFade(550, 250, currNode.contentId).setClickState(true);
             toggleMenu();
         }
         	prevNode = currNode; // Sets current node to previous node after every call

@@ -1,22 +1,35 @@
 <!DOCTYPE HTML>
 
-<html>
+<html lang="en">
 
 <head>
-	<title>Exploration Album</title>
-	<meta charset="utf-8"/>
+    <title>Exploration Album</title>
+    <meta charset="utf-8"/>
 
-	<!-- Load Resource Libraries (JQuery and Galleria)-->
-	<script src="http://code.jquery.com/jquery-1.12.1.min.js"></script>
-	<script src = "galleria/galleria-1.4.2.min.js"></script>
+    <!-- Load JS and CSS -->
+    <link rel = "stylesheet" type = "text/css" href = "../photography-styles.css"/>
+    <link rel="stylesheet" href="../../lib/galleria/themes/fullscreen/galleria.fullscreen.min.css">
 
-	<!-- Load JS and CSS -->
-	<script type = "text/javascript" src = "exploration-behavior.js"></script>
-	<link rel = "stylesheet" type = "text/css" href = "../photography-styles.css"/>
+    <script src="../../lib/jquery-3.4.1.min.js"></script>
+    <script type = "text/javascript" src = "exploration-album.js"></script>
+    <script src="../../lib/galleria/galleria.js"></script>
+    <script src="../../lib/galleria/themes/fullscreen/galleria.fullscreen.min.js"></script>
+    <script src="../../common/js/galleria-slider.js"></script>
+
 </head>
 
 <body>
-	<div class="back-button"><a href="#" onclick="history.go(-1)"><img src="../../resources/toolbox-icons/back-button.svg"></a></div>
+<div class="back-button"><a href="#" onclick="history.go(-1)"><img src="../../resources/toolbox-icons/back-button.svg"></a>
+</div>
+
+<div class="galleria">
+    <img src="../../resources/webdev-project-images/lestudionyc-website-project-images/lestudionyc-about-screen.png"
+         alt="">
+    <img src="../../resources/webdev-project-images/lestudionyc-website-project-images/lestudionyc-blog-screen.png"
+         alt="">
+    <img src="../../resources/webdev-project-images/lestudionyc-website-project-images/lestudionyc-booking-screen.png"
+         alt="">
+</div>
 </body>
 
 </html>

@@ -1,7 +1,7 @@
 html, body{
     height: 100%;
     width: 100%;
-	font-family: "Yu Gothic Light", "Bebas Neue", "Ostrich Sans Medium", Helvetica, Arial, sans-serif !important;
+	font-family: "Yu Gothic Light", 'bebas_neueregular',"ostrich_sansmedium", "ostrich_sanslight", Helvetica, Arial, sans-serif !important;
 	margin: 0;
 	font-size: 1.2rem;
 }
@@ -90,7 +90,7 @@ header{
 .caption {
 	font-size: 0.8rem;
 	text-align: center;
-	color: #4b4a4a;
+	color: #5e5e5e;
 	width: 90%;
 	margin: 0 auto;
 }
@@ -149,7 +149,7 @@ header{
 	color: #07262D;
 	line-height: 0.75;
 	text-align: center;
-	font-family: "Ostrich Sans Medium";
+	font-family: "ostrich_sansmedium";
 }
 
 .project-title:hover ~ img {
@@ -171,7 +171,7 @@ header{
 	color: #07262D;
 	line-height: 1.0;
 	text-align: center;
-	font-family: "Bebas Neue";
+	font-family: "bebas_neueregular";
 }
 
 .diagram-title {
@@ -185,7 +185,7 @@ header{
 }
 
 .project-diagram-section img {
-	margin: 20px 0;
+	margin-top: 20px;
 }
 
 .project-brief {
@@ -214,7 +214,7 @@ header{
 .tools-header{
 	text-align: center !important;
 	padding-bottom: 1vh;
-	font-family: "Ostrich Sans Medium";
+	font-family: "ostrich_sansmedium";
 	font-size: 8vh;
 	line-height: 1.2;
 }
@@ -333,5 +333,9 @@ header{
 
 	.tool-label {
 		font-size: 1.0rem;
+	}
+
+	.tool-badge {
+		width: 70%;
 	}
 }

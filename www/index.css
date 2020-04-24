@@ -2,16 +2,21 @@
 html, body{
     height: 100%;
     width: 100%;
-    font-family: "Yu Gothic Light", "Bebas Neue", "Ostrich Sans Medium", Helvetica, Arial, sans-serif !important;
+    font-family: "Yu Gothic Light", 'bebas_neueregular',"ostrich_sansmedium", "ostrich_sanslight", Helvetica, Arial, sans-serif !important;
 	margin: 0;
 	padding: 0;
     color: #07262d;
+}
+
+body {
+    display: none;
 }
 
 a {
     color: #ff6700 !important;
     font-weight: 700;
 }
+
 
 /*-------------------------------------------------- PROJECTS --------------------------------------------------------*/
 
@@ -48,6 +53,7 @@ a {
     font-size: 1.2em;
 	text-align: left;
 	font-weight: 400;
+    color: white;
 }
 
 .title-name{
@@ -56,7 +62,8 @@ a {
     text-align: center;
     z-index: 1;
 	padding-bottom: 3em;
-    font-family: "Bebas Neue";
+    font-family: "bebas_neueregular";
+    color: white;
 }
 
 .name{
@@ -91,7 +98,7 @@ a {
     -o-transition: all 0.35s ease;
     -ms-transition: all 0.35s ease;
     transition: all 0.35s ease;
-    font-family: "Ostrich Sans Medium";
+    font-family: "ostrich_sansmedium";
     font-size: 3em;
 }
 
@@ -167,8 +174,8 @@ a {
     -o-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    height: 35vw;
-    width: 35vw;
+    height: 30vw;
+    width: 30vw;
 }
 
 #node-container.animate {
@@ -186,8 +193,8 @@ a {
 
 .node{
     position: fixed;
-    width: 15vw;
-	height: 15vw;
+    width: 12vw;
+	height: 12vw;
     border-radius: 50%;
 	z-index: 99;
 }
@@ -201,8 +208,8 @@ a {
 }
 
 .node.augmented {
-	width: 8vw;
-	height: 8vw;
+	width: 6vw;
+	height: 6vw;
 }
 
 .node.augmented .section-title {
@@ -260,7 +267,7 @@ a {
     position: absolute;
     transform: translate(-50%, -50%);
     text-align: center;
-    font-family: "Ostrich Sans Medium";
+    font-family: "ostrich_sansmedium";
     line-height: 1.15;
 }
 
@@ -412,7 +419,8 @@ a {
     -ms-transition: all 0.35s ease;
     transition: all 0.35s ease;
     border-radius: 1.5vw;
-    font-family: "Ostrich Sans Medium";
+    font-family: "ostrich_sansmedium";
+    text-shadow: 2px 4px 5px grey;
 }
 
 .album-title span {
