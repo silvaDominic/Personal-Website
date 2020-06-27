@@ -121,6 +121,10 @@ header{
 	height:auto;
 }
 
+.img-full-width {
+	width: 100%;
+}
+
 .img-eighty {
 	width: 80% !important;
 }
@@ -224,7 +228,7 @@ header{
 	padding-bottom: 8.5vh;
 }
 
-.tools-section .col {
+.tools-section .col-4, .tools-section .col-3, .tools-section .col-6 {
 	padding: 2vw 0;
 }
 

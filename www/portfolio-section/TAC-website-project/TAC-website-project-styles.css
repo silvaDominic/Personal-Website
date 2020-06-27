@@ -22,8 +22,8 @@
 	background-color: #E99E4C;
 }
 
-.project-description-body a {
-	color: #E99E4C;
+a {
+	color: #E99E4C !important;
 }
 
 .project-description-body a:hover {

@@ -10,12 +10,17 @@ html, body{
 
 body {
     display: none;
+    /*cursor: url(resources/toolbox-icons/cursor.svg), auto !important;*/
 }
 
 a {
     color: #ff6700 !important;
     font-weight: 700;
 }
+
+/*.cursor {
+    cursor: url(resources/toolbox-icons/cursor.svg), auto !important;
+}*/
 
 
 /*-------------------------------------------------- PROJECTS --------------------------------------------------------*/

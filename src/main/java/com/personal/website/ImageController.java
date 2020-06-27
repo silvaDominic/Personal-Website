@@ -8,6 +8,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -29,7 +30,7 @@ public class ImageController {
     String getAlbumImages(@PathVariable String path) {
 
         // Set resource path and create Image list
-/*        String imgDirectory = "/media/reclaimer/shared/software-development/personal-website/www/resources/images/" + path + "/big";*/
+/*        String imgDirectory = "D:\\_software-development\\personal-website\\website-images" + path;*/
         String imgDirectory = "/var/www/personal-website/images/" + path + "/big";
         ArrayList<Image> files = listImageFiles(imgDirectory);
         //System.out.println(imgDirectory); <-- For debugging
