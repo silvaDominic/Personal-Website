@@ -4,11 +4,14 @@ html {
 }
 
 .gallery {
-	display: flex;
-	flex-direction: column;
+
 }
 
-div[data-text='gallery-wrap'] {
+.gallery img {
+
+}
+
+div[data-text='gallery-viewer-wrap'] img {
 
 }
 

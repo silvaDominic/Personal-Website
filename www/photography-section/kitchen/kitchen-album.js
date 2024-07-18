@@ -2,8 +2,9 @@ cloudinary.galleryWidget({
     container: '#kitchen-gallery',
     cloudName: 'dkgj10lo2',
     mediaAssets: [{ tag: 'kitchen-image', mediaType: 'image' }],
-    carouselStyle: "thumbnails",
+    carouselStyle: "none",
     carouselLocation: "bottom",
-    aspectRatio: '3:2',
+    aspectRatio: '16:9',
     mode: 'expanded',
+    zoom: false,
 }).render();
