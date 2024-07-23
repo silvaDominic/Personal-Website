@@ -51,10 +51,10 @@
                         Working as a UI developer isn't just about taking designs and materializing them. As one
                         advances in their career, it's often expected to be familiar with different UI design patterns
                         and to be able to contribute to the evolution of designs along with the product and design
-                        teams. I covered a lot of ground at <a target="_blank" href="https://kasisto.com/">Kasisto</a>
+                        teams. I covered a lot of ground at <a id="project-description-link" target="_blank" href="https://kasisto.com/">Kasisto</a>
                         during my time there. Most of it was spent rearchitecting the project and creating a custom
-                        component library, but there was one instance where my design experience directly lead to the
-                        resolution of some very troubling UX.
+                        component library, but there was one instance where my design experience in particular directly
+                        led to the resolution of a troubling UX problem.
                     </p>
                 </div>
             </div>
@@ -114,17 +114,16 @@
 
                     <div class="col-sm-12">
                         <p class="caption">Observe just how much content could fit in a single accordion. The workspace
-                            is cluttered and cumbersome when working between queries.</p>
+                            is cluttered and cumbersome especially when working between queries.</p>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col-sm-12">
                         <p class="diagram-description">
-                            What made this problem particularly acute was that the accordions were <em>reorderable</em>
-                            as well as the responses within them! You can imagine how cumbersome and frustrating it
-                            would be
-                            work between 2 different accordions.
+                            What made this problem particularly acute was that, not only were the accordions reorderable
+                            but their responses within them were too! You can imagine how cumbersome and frustrating it
+                            would be to work between multiple different accordions.
                         </p>
                     </div>
                 </div>
@@ -139,7 +138,7 @@
                         <p class="diagram-description">
                             In addition to all of the rearchitecting going on with the web portal, a design team had
                             audited the application and was working to deploy a new design system with vital features
-                            getting the first treatment. While there were some UX improvements, it was all mostly a
+                            getting the first treatment. While there were some UX improvements throughout, it was all mostly a
                             fresh coat of paint. The product and design team couldn't ignore the problem with this
                             response page however and was working to make the experience more intuitive. Unfortunately,
                             both product and design teams became too fixated on the existing accordion pattern and
@@ -157,7 +156,7 @@
                     </div>
 
                     <div class="col-sm-12">
-                        <p class="caption">Observe how the accordions and corresponding content simply look rounded are
+                        <p class="caption">Observe how the accordions and corresponding content simply look rounded and
                             less generic. One improvement that was welcome was removing a creation form and instead
                             making the response content editable all the time.</p>
                     </div>
@@ -187,10 +186,7 @@
                     </div>
 
                     <div class="col-sm-12">
-                        <p class="caption">Observe how when an anchor point is selected, a list of alternative positions
-                            can be selected. However, another improvement that corresponded with moving forms into the
-                            responses themselves was making the response type dropdown only present when adding a new
-                            one.</p>
+                        <p class="caption">Observe how when an existing anchor point is selected, a list of alternative positions can be selected.</p>
                     </div>
                 </div>
 
@@ -239,12 +235,12 @@
                         <div class="diagram-description">
                             <p>
                                 After a couple of weeks of trying to make the new design work, I expressed to the team that I
-                                wasn't feeling confident in the design and was going to explore an alternative.
+                                wasn't feeling confident in the design and was going to explore an alternative myself.
                             </p>
 
                             <p>
                                 I took a look at my previous role at <a target="_blank" href="https://domsilva.com/portfolio-section/hubcap-website-project/hubcap-website-project.html">Hubcap</a>
-                                where I face a lot of design challenges as well. The bulk of the development work I did
+                                where I faced a lot of design challenges as well. The bulk of the development work I did
                                 there was for a vendor side web portal that featured a car wash menu creation page. I went
                                 through several iterations of designing this page and faced similar UX issues. In this
                                 instance, we were trying render a series of menus alongside a form used to create/edit them.
@@ -295,7 +291,7 @@
                             <div class="col-sm-12">
                                 <p class="caption">Observe how only the selected menu's content is displayed. This
                                     format also allowed for the introduction of "One Time/Monthly" options and a color
-                                    key without sacrificing any screen real-estate. It could even be scaled
+                                    key without sacrificing any screen real estate. It could even be scaled
                                     horizontally if necessary.</p>
                             </div>
                         </div>
@@ -312,7 +308,7 @@
                         <p class="diagram-description">
                             After considering what I had learned from my previous work at Hubcap, I took some time to
                             see how I could adapt the design to the Kasisto work. The thought was to take the query
-                            types and abstract them to a side panel. From there selecting any particular query type
+                            types and abstract them to a side panel. From there, selecting any particular query type
                             would load the related content beside it. Recall that reordering these query types and their
                             respective responses was also a requirement. Not only could responses be represented in a
                             nested tree list within the side panel, but the reordering could take place there as well.
@@ -342,7 +338,7 @@
                                 In order to sell this I had to present this to the team with more than just words. I
                                 happened to be working in Confluence at the time and to my surprise, the UI was basically
                                 what I was aiming for -- nested document titles in the left side panel and the content of
-                                the page that was selected in the main body besides it. The documents were even reorderable!
+                                the page that was selected in the main body beside it. The documents were even reorderable!
                                 I decided to mock up a dataset we had <em>in</em>&nbsp;Confluence along with some cropped screenshots
                                 from the UI designs. I pitched it to the team very similarly as I did here -- recalled
                                 Hubcap experience and resolution and then solidified it with a crude reproduction using a
@@ -351,11 +347,10 @@
                             </p>
 
                             <p>
-
-                                Come implementation time I had a much better idea of how to go about it and it proved to be
-                                far simpler. Aside from getting positive recognition from the greater team and company,
-                                initial customer feedback was very positive and was typically emphasized as the favorite
-                                part of the web portal redesign.
+                                Come implementation time I had a much better idea of how to go about it and it proved to
+                                be far simpler. Aside from getting positive recognition from the greater team and
+                                company, initial customer feedback for the redesign was very positive with an emphasis
+                                on improvements to this feature.
                             </p>
                         </div>
                     </div>
@@ -370,12 +365,7 @@
                 <div class="row">
                     <div class="col-sm-12">
                         <p class="conclusion-body">
-                            This anecdote feels like such a classic example of 'thinking outside the box' or 'taking a
-                            step back'. My favorite part of it is that the outcome was overwhelming positive --
-                            designers felt more confident and could put there efforts elsewhere, I had a <em>much</em>
-                            better
-                            time implementing the feature, and users got a vastly improved UX that wasn't unfamiliar.
-                        </p>
+                            This anecdote feels like such a classic example of 'thinking outside the box' or 'taking a step back'. Some times you just need to pick your head up, take a breather, and come back to the problem with a clear mind. While I earned another experience under my belt, the best part was that the outcome was overwhelming positive -- designers felt more confident and could put their efforts elsewhere, I had a <em>much</em> better time implementing the feature, and users were much less frustrated.                        </p>
                     </div>
                 </div>
             </div>
