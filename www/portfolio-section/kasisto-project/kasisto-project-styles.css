@@ -1,5 +1,9 @@
+#project-description-link {
+    color: #1b2029 !important;
+}
+
 a {
-    color: #03a96f !important;
+    color: #026341 !important;
 }
 
 .project-description-section, .conclusion-section{
