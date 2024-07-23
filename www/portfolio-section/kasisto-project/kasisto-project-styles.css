@@ -1,0 +1,11 @@
+a {
+    color: #03a96f !important;
+}
+
+.project-description-section, .conclusion-section{
+    background-image: linear-gradient(180deg, #03a96f, #026341);
+}
+
+.project-diagram:nth-child(2n) {
+    background-color: rgba(3, 169, 111, 0.2);
+}

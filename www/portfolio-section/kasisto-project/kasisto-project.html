@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Portfolio - Kasisto</title>
+
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <!-- Load JS and CSS -->
+    <link rel="stylesheet" type="text/css" href="../portfolio-styles.css"/>
+    <link rel="stylesheet" type="text/css" href="kasisto-project-styles.css"/>
+    <link rel="stylesheet" type="text/css" href="../../resources/fonts/stylesheet.css"/>
+    <link rel="stylesheet" type="text/css" href="../../lib/bootstrap-4.0.0-alpha.6-dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../../lib/bootstrap-4.0.0-alpha.6-dist/js/bootstrap.min.js"/>
+</head>
+<body>
+<div class="content">
+    <div class="back-button">
+        <a href="#" onclick="history.go(-1)">
+            <img src="../../resources/toolbox-icons/back-button.svg"/>
+        </a>
+    </div>
+
+    <div class="home-button">
+        <a title="Home" href="../../index.html">
+            <img src="../../resources/toolbox-icons/home-button.svg"/>
+        </a>
+    </div>
+
+    <header class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <span class="project-header-title">Kasisto</span>
+                <h5 class="project-brief">A conversational AI tool for the finance industry</h5>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="project-banner col">
+                <img class="img-responsive center-block"
+                     src="../../resources/portfolio-icons/kasisto-logo-full.svg">
+            </div>
+        </div>
+    </header>
+
+    <section class="project-description-section container-fluid">
+        <div class="row short-row">
+            <div class="row">
+                <div class="col">
+                    <p class="project-description-body">
+                        Working as a UI developer isn't just about taking designs and materializing them. As one
+                        advances in their career, it's often expected to be familiar with different UI design patterns
+                        and to be able to contribute to the evolution of designs along with the product and design
+                        teams. I covered a lot of ground at <a target="_blank" href="https://kasisto.com/">Kasisto</a>
+                        during my time there. Most of it was spent rearchitecting the project and creating a custom
+                        component library, but there was one instance where my design experience directly lead to the
+                        resolution of some very troubling UX.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="project-diagram-section">
+        <div class="project-diagram container-fluid" id="wrong-tool-diagram">
+            <div class="row short-row">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h2 class="diagram-title">Wrong Tool For The Job</h2>
+                        <p class="diagram-description">
+                            Without getting too much into the business logic, this feature was highly trafficked and
+                            vital when it came to configuring how and when a conversational model would deliver a
+                            response to particular user queries. These responses where configured using a list of
+                            <a target="_blank"
+                               href="https://www.nngroup.com/articles/accordions-on-desktop/">accordion</a> UI elements
+                            where each
+                            accordion featured a series of potential responses linked to a particular query type.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <img class="img-responsive"
+                             src="../../resources/webdev-project-images/kasisto-project-images/kasisto-ux-improvements-v1-feature-abstract-01.webp"
+                             style="width:100%; height:auto;">
+                    </div>
+
+                    <div class="col-sm-12">
+                        <p class="caption">A mockup of the original feature's design. Aside from a title and description
+                            above the list, the feature looked very close to this representation.</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <p class="diagram-description">
+                            The contents of each accordion however, featured a conditional form that could be used to
+                            add one or more responses for that particular query. With many different response types, the
+                            accordion could quickly fill up with <em>multiple viewports</em> worth of content. Not to
+                            mention
+                            there was no limit on the number of query types. So not only could the accordion list grow
+                            quite long, but the contents of each could also get even longer.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <img class="img-responsive"
+                             src="../../resources/webdev-project-images/kasisto-project-images/kasisto-ux-improvements-v1-feature-abstract-02.webp"
+                             style="width:100%; height:auto;">
+                    </div>
+
+                    <div class="col-sm-12">
+                        <p class="caption">Observe just how much content could fit in a single accordion. The workspace
+                            is cluttered and cumbersome when working between queries.</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <p class="diagram-description">
+                            What made this problem particularly acute was that the accordions were <em>reorderable</em>
+                            as well as the responses within them! You can imagine how cumbersome and frustrating it
+                            would be
+                            work between 2 different accordions.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-diagram container-fluid" id="designing-with-heads-down-diagram">
+            <div class="row short-row">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h2 class="diagram-title">Designing With Heads Down</h2>
+                        <p class="diagram-description">
+                            In addition to all of the rearchitecting going on with the web portal, a design team had
+                            audited the application and was working to deploy a new design system with vital features
+                            getting the first treatment. While there were some UX improvements, it was all mostly a
+                            fresh coat of paint. The product and design team couldn't ignore the problem with this
+                            response page however and was working to make the experience more intuitive. Unfortunately,
+                            both product and design teams became too fixated on the existing accordion pattern and
+                            instead of considering different UI components altogether were simply exploring ways to
+                            reinvent and improve the accordion pattern.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <img class="img-responsive"
+                             src="../../resources/webdev-project-images/kasisto-project-images/kasisto-ux-improvements-v2-feature-abstract-01-with-form-fields.webp"
+                             style="width:100%; height:auto;">
+                    </div>
+
+                    <div class="col-sm-12">
+                        <p class="caption">Observe how the accordions and corresponding content simply look rounded are
+                            less generic. One improvement that was welcome was removing a creation form and instead
+                            making the response content editable all the time.</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <p class="diagram-description">
+                            If you've ever worked with <a target="_blank"
+                                                          href="https://www.nngroup.com/articles/drag-drop">drag and
+                            drop</a>
+                            elements in a UI you'll know that it has its limitation when moving beyond the fold. Given
+                            how many viewports worth of content there could be for any particular query type, direct
+                            manipulation of these accordions (or the responses within them) could involve dragging
+                            content vertically for an unreasonable amount of time. The design teams solution to this was
+                            to eliminate this feature and have it be controlled by anchor points that showed the
+                            position of the response and a drop down of positions to reorder to...
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <img class="img-responsive"
+                             src="../../resources/webdev-project-images/kasisto-project-images/kasisto-ux-improvements-v2-feature-abstract-01-drow-downs-highlight.png"
+                             style="width:100%; height:auto;">
+                    </div>
+
+                    <div class="col-sm-12">
+                        <p class="caption">Observe how when an anchor point is selected, a list of alternative positions
+                            can be selected. However, another improvement that corresponded with moving forms into the
+                            responses themselves was making the response type dropdown only present when adding a new
+                            one.</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <p class="diagram-description">
+                            Mind you that the reordering applied to both the query types (accordion items) <em>and</em>
+                            the
+                            content within them (responses). So this anchor-dropdown feature was present on
+                            <strong>two</strong>
+                            levels! On top of this, vertical lines were added to connect the anchor points to help a
+                            user differentiate between elements and levels. The feature began to smell of
+                            overengineering.
+                        </p>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <img class="img-responsive img-full-width"
+                                 src="../../resources/webdev-project-images/kasisto-project-images/kasisto-ux-improvements-v2-feature-abstract-01-vertical-line-highlight.png"
+                                 style="width:100%; height:auto;">
+                        </div>
+
+                        <div class="col-sm-12">
+                            <p class="caption">Anchor lines present for query types and responses to help with the
+                                visually awkward design.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <p class="diagram-description">
+                            As a developer, I was beginning to get a lot of anxiety looking at this -- aside from the
+                            design not really feeling like a genuine improvement in terms of UX, it was looking to be a
+                            convoluted and costly implementation.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-diagram container-fluid" id="a-step-back-diagram">
+            <div class="row short-row">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h2 class="diagram-title">Taking a Step Back</h2>
+                        <div class="diagram-description">
+                            <p>
+                                After a couple of weeks of trying to make the new design work, I expressed to the team that I
+                                wasn't feeling confident in the design and was going to explore an alternative.
+                            </p>
+
+                            <p>
+                                I took a look at my previous role at <a target="_blank" href="https://domsilva.com/portfolio-section/hubcap-website-project/hubcap-website-project.html">Hubcap</a>
+                                where I face a lot of design challenges as well. The bulk of the development work I did
+                                there was for a vendor side web portal that featured a car wash menu creation page. I went
+                                through several iterations of designing this page and faced similar UX issues. In this
+                                instance, we were trying render a series of menus alongside a form used to create/edit them.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <img class="img-responsive img-full-width"
+                             src="../../resources/webdev-project-images/kasisto-project-images/hubcap-package-manager-v1.png"
+                             style="width:100%; height:auto;">
+                    </div>
+
+                    <div class="col-sm-12">
+                        <p class="caption">Observe how all the menus are present at once and how the form below is
+                            within a box only about a 3rd of the viewport.</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="diagram-description">
+                            <p>
+                                Regardless of my efforts, I just couldn't find a design that wasn't a compromise to either
+                                the form or menus. Similar to my team at Kasisto, I was transfixed on accommodating
+                                <em>this</em> design. I took a break for a day or two and when I came back to it, had an
+                                epiphany -- I don't need to render all of these menus at once. In fact, there really wasn't
+                                even a point in rendering a polished looking menu <em>at all</em>.
+                            </p>
+
+                            <p>
+                                After another day of considering an alternative, I landed on a far more intuitive design
+                                that was more scaleable -- abstracting the subject and content to a side panel and rendering
+                                the form to the right of it. This opened up so much screen real estate to the user and made
+                                working through the form far more comfortable.
+                            </p>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <img class="img-responsive img-full-width"
+                                     src="../../resources/webdev-project-images/kasisto-project-images/hubcap-package-manager-v2.jpg"
+                                     style="width:100%; height:auto;">
+                            </div>
+
+                            <div class="col-sm-12">
+                                <p class="caption">Observe how only the selected menu's content is displayed. This
+                                    format also allowed for the introduction of "One Time/Monthly" options and a color
+                                    key without sacrificing any screen real-estate. It could even be scaled
+                                    horizontally if necessary.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-diagram container-fluid" id="fresh-perspective-diagram">
+            <div class="row short-row">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h2 class="diagram-title">A Fresh Perspective</h2>
+                        <p class="diagram-description">
+                            After considering what I had learned from my previous work at Hubcap, I took some time to
+                            see how I could adapt the design to the Kasisto work. The thought was to take the query
+                            types and abstract them to a side panel. From there selecting any particular query type
+                            would load the related content beside it. Recall that reordering these query types and their
+                            respective responses was also a requirement. Not only could responses be represented in a
+                            nested tree list within the side panel, but the reordering could take place there as well.
+                            The result was a far cleaner UI that was much easier to reason about.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <img class="img-responsive"
+                             src="../../resources/webdev-project-images/kasisto-project-images/kasisto-ux-improvements-v3-feature-abstract.webp"
+                             style="width:100%; height:auto;">
+                    </div>
+
+                    <div class="col-sm-12">
+                        <p class="caption">Observe how much better utilized the space is. A typical tree view is
+                            rendered to the left as an abstraction of the actual content. This layout added the ability
+                            to quickly focus on responses too.</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="diagram-description">
+                            <p>
+                                In order to sell this I had to present this to the team with more than just words. I
+                                happened to be working in Confluence at the time and to my surprise, the UI was basically
+                                what I was aiming for -- nested document titles in the left side panel and the content of
+                                the page that was selected in the main body besides it. The documents were even reorderable!
+                                I decided to mock up a dataset we had <em>in</em>&nbsp;Confluence along with some cropped screenshots
+                                from the UI designs. I pitched it to the team very similarly as I did here -- recalled
+                                Hubcap experience and resolution and then solidified it with a crude reproduction using a
+                                tool <em>that also</em> utilized this UX pattern. By the end of the next day, the design team had
+                                produced some new designs and all of the awkwardness had been thwarted.
+                            </p>
+
+                            <p>
+
+                                Come implementation time I had a much better idea of how to go about it and it proved to be
+                                far simpler. Aside from getting positive recognition from the greater team and company,
+                                initial customer feedback was very positive and was typically emphasized as the favorite
+                                part of the web portal redesign.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="conclusion-section">
+        <div class="container-fluid conclusion">
+            <div class="short-row">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <p class="conclusion-body">
+                            This anecdote feels like such a classic example of 'thinking outside the box' or 'taking a
+                            step back'. My favorite part of it is that the outcome was overwhelming positive --
+                            designers felt more confident and could put there efforts elsewhere, I had a <em>much</em>
+                            better
+                            time implementing the feature, and users got a vastly improved UX that wasn't unfamiliar.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+</body>
+</html>
