@@ -1,0 +1,358 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+    <title>Portfolio - Fantasy</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <!-- Load JS and CSS -->
+    <link rel="stylesheet" type="text/css" href="../portfolio-styles.css"/>
+    <link rel="stylesheet" type="text/css" href="fantasy-website-project-styles.css"/>
+    <link rel="stylesheet" type="text/css" href="../../resources/fonts/stylesheet.css"/>
+    <link rel="stylesheet" type="text/css" href="../../lib/bootstrap-4.0.0-alpha.6-dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../../lib/bootstrap-4.0.0-alpha.6-dist/js/bootstrap.min.js"/>
+</head>
+
+<body>
+<div class="content">
+    <div class="back-button">
+        <a href="#" onclick="history.go(-1)">
+            <img src="../../resources/toolbox-icons/back-button.svg">
+        </a>
+    </div>
+
+    <div class="home-button">
+        <a title="Home" href="../../index.html">
+            <img src="../../resources/toolbox-icons/home-button.svg" alt="">
+        </a>
+    </div>
+
+    <header class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <span class="project-header-title">Fantasy</span>
+                <h5 class="project-brief">A sleek portfolio website for the product and innovation design firm, Fantasy
+                    Inc.</h5>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="project-banner col">
+                <img class="img-responsive center-block"
+                     src="../../resources/portfolio-icons/fantasy-logo-full.svg">
+            </div>
+        </div>
+    </header>
+
+    <section class="project-description-section container-fluid">
+        <div class=" short-row">
+            <div class="row">
+                <div class="col">
+                    <p class="project-description-body">
+                        <a id="project-description-link" href="www.fantasy.co" target="_blank">Fantasy</a> reached out
+                        to me with an urgent need to optimize image and video rendering on their media heavy portfolio
+                        site. It evoked more of a presentation featuring large, full screen images and videos that
+                        represented each section/topic.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="project-diagram-section">
+        <div class="project-diagram container-fluid" id="simple-for-some-diagram">
+            <div class=" short-row">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h2 class="diagram-title">Problem</h2>
+                        <p class="diagram-description">
+                            The images & videos being rendered were full high definition (1080p) and struggled to load
+                            immediately resulting in a delay between scroll and play time and in some cases even pausing
+                            and buffering. Additionally, these sections transitioned to their respective content when
+                            clicked with a custom slider that utilized translation animations that would occasionally
+                            stutter and performed different between browsers.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12"><img class="img-full-width"
+                                             src="../../resources/webdev-project-images/fantasy-website-project/fantasy-website-interaction-demo.gif"
+                                             style="width:100%;"></div>
+
+                    <div class="col-sm-12"><p class="caption"><a
+                            href="https://www.nngroup.com/articles/scrolljacking-101/" target="_blank">Scroll
+                        jacking</a> is used to produce a more slideshow like experience. Notice how dramatic the
+                        translations are.</p></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-diagram container-fluid" id="pixel-perfect-diagram">
+            <div class="short-row">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h2 class="diagram-title">Challenge</h2>
+                        <p class="diagram-description">
+                            Identify performance issues, come up with a solution, and implement a fix in just 2 weeks.
+                            Rather than leaving determination to someone elses eyes, I was to also provide performance
+                            reports proving that the solutions had indeed worked.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-diagram container-fluid" id="scaling-up-diagram">
+            <div class="short-row">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h2 class="diagram-title">Approach</h2>
+
+                        <div class="diagram-description">
+                            <p>
+                                Because of the short time frame of this task, I couldn't take my time settling in and
+                                digesting the project. I worked with the engineering manager and a senior dev to give me
+                                a run down of the following:
+                            </p>
+
+                            <ul>
+                                <li>Overview of project architecture</li>
+                                <li>Features where problem occurs</li>
+                                <li>Services used to host media</li>
+                            </ul>
+
+                            <p>
+                                After 2 days I had more than a surface level understanding of the project and put
+                                together a quick diagram of the project to help better visualize the issue and reference
+                                with developers as I made changes.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12"><img class="img-full-width"
+                                             src="../../resources/webdev-project-images/fantasy-website-project/fantasy-architecture-diagram-v1.webp"
+                                             style="width:100%;"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-diagram container-fluid" id="findings-diagram">
+            <div class="short-row">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h2 class="diagram-title">Findings</h2>
+
+                        <div class="diagram-description">
+                            <p>
+                                The first issue I found was that the list of components that represented the
+                                sections/topics did not incorporate any kind of lazy loading. That meant that all of the
+                                1080p thumbnails and their corresponding videos (some times up to a minute in length)
+                                were all being downloaded with all of the other assets on the page on initial load. This
+                                amounted to over 100 megabytes of content that took several seconds to download. </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12"><img class="img-full-width"
+                                             src="../../resources/webdev-project-images/fantasy-website-project/fantasy-performance-before.png"
+                                             style="width:100%;"></div>
+                    <div class="col-sm-12"><p class="caption">Observe how media makes up a majority of the download size
+                        and contributes to most of the time the request takes.</p></div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="diagram-description">
+
+                        </div>
+                        <p>
+                            Unfortunately, after a closer look at the component architecture of this feature, there
+                            wasn't a quick and elegant way to implement lazy loading without a costly reimplementation
+                            that would surely take longer than 2 weeks.
+                        </p>
+
+                        <p>
+                            I followed this up by looking into the backend services that were used to host the media.
+                            What I found was a very basic setup utilizing Amazon S3 storage buckets and a Cloudflare
+                            CDN. These 2 things are bare minimums for hosting any static media, but did not incorporate
+                            any additional processing (like image resizing, streaming video, device specific content)
+                            that this site desperately needed.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-diagram container-fluid" id="solutions-diagram">
+            <div class="short-row">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h2 class="diagram-title">Solutions</h2>
+
+                        <div class="diagram-description">
+                            <h3>Media Optimizations</h3>
+                            <p>With only one option available, I decided to flesh out their media services in order to
+                                better serve content across devices and improve load times. I utilized <a
+                                        href="https://docs.aws.amazon.com/lambda/latest/dg/welcome.html#when-to-use-lambda"
+                                        target="_blank">AWS Lambda</a> functions to write a script that automatically
+                                resized media into different sizes on upload. This further moved the media to different
+                                storage buckets that represented different devices that the browser client could target.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12"><img class="img-full-width"
+                                             src="../../resources/webdev-project-images/fantasy-website-project/fantasy-architecture-diagram-v2.webp"
+                                             style="width:100%;"></div>
+                    <div class="col-sm-12"><p class="caption">Observe how a new automated step sits between the manual
+                        upload and storage mechanism and how 3 device types are now supported.</p></div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="diagram-description">
+                            <p>Additionally, I experimented with 720p and 1080p media and found that the lower
+                                resolution didn't degrade quality in any meaningful way but did reduce size.</p>
+                            <p>The final optimization that really improved speeds however was changing the video type to
+                                a streaming format (DASH/HLS). This prevented videos from downloading in entirety before
+                                playing.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 col-sm-12"><img class="img-responsive"
+                                                         src="../../resources/webdev-project-images/fantasy-website-project/fantasy-waterfall-before.png"
+                                                         style="width:100%;"></div>
+
+                    <div class="col-md-6 col-sm-12"><img class="img-responsive"
+                                                         src="../../resources/webdev-project-images/fantasy-website-project/fantasy-waterfall-after.png"
+                                                         style="width:100%;"></div>
+                    <div class="col-sm-12"><p class="caption">Notice how the first waterfall chart shows standard format
+                        media loading in one shot while the second shows streaming format media loading in smaller
+                        pieces. This effectively cut out the potential for buffering and ensured videos played right
+                        away.</p></div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12">
+
+                        <div class="diagram-description">
+                            <h3>Animation Optimizations</h3>
+                            <p>I hadn't looked into the animation issue until I optimized everything else that could
+                                have had an impact on the stuttering issue. Unfortunately, it made little difference and
+                                I had to directly solve the problem. The first thing I did was increase the animation
+                                time as the media was transitioning far too fast. I then changed it from a non-linear
+                                transition to a linear one to reduce complexity.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-diagram container-fluid" id="results-diagram">
+            <div class="short-row">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h2 class="diagram-title">Results</h2>
+
+                        <div class="diagram-description">
+                            <h3>Media Optimizations</h3>
+                            <p>The results were immediately apparent. Load times improved by over 100% and initial
+                                downloads were now no more than a couple of megabytes.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12"><img class="img-full-width"
+                                             src="../../resources/webdev-project-images/fantasy-website-project/fantasy-performance-after.png"
+                                             style="width:100%;"></div>
+                    <div class="col-sm-12"><p class="caption">The streaming format change results in initial load times
+                        that are virtually immediate and substantially smaller in size.</p></div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="diagram-description">
+                            <h3>Animation Optimizations</h3>
+                            <p>Reducing animation speeds reduced stuttering slightly, but the linear transition type
+                                didn't work consistently across browser and so GPU acceleration (usually a last resort)
+                                was utilized which fixed the issue entirely.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="conclusion-section">
+        <div class="container-fluid conclusion">
+            <div class="short-row">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="conclusion-body">
+                            <p>
+                                After an intense 2 weeks, I had successfully and dramatically improved load times of the
+                                site and fixed the animation issue (even if it wasn't the solution I wanted). There was
+                                still work to do however and I wanted to make sure the team succeeded. Before signing
+                                off, I drafted up a document that incorporated everything I had learned about media
+                                optimization using AWS and any ideas I had about rearchitecting the seciton/topic slide
+                                components.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="tools-section container-fluid" id="barbers-society-website-tool-section">
+        <div class="row">
+            <div class="col-sm-12 tools-header">
+                <span>Tools and Technologies</span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-4 col-sm-3">
+                <object class="tool-badge" id="illustrator-icon" data="../../resources/toolbox-icons/html-icon.svg"
+                        type="image/svg+xml"></object>
+                <span class="tool-label">HTML5</span>
+            </div>
+
+            <div class="col-4 col-sm-3">
+                <object class="tool-badge" id="css-icon" data="../../resources/toolbox-icons/css-icon.svg"
+                        type="image/svg+xml"></object>
+                <span class="tool-label">CSS3</span>
+            </div>
+
+            <div class="col-4 col-sm-3">
+                <object class="tool-badge" id="javascript-icon" data="../../resources/toolbox-icons/js-icon.svg"
+                        type="image/svg+xml"></object>
+                <span class="tool-label">Javascript</span>
+            </div>
+
+            <div class="col-4 col-sm-3">
+                <object class="tool-badge" id="react-icon" data="../../resources/toolbox-icons/react-icon.svg"
+                        type="image/svg+xml"></object>
+                <span class="tool-label">ReactJS</span>
+            </div>
+
+            <div class="col-4 col-sm-3">
+                <object class="tool-badge" id="aws-icon" data="../../resources/toolbox-icons/aws-icon.svg"
+                        type="image/svg+xml"></object>
+                <span class="tool-label">AWS</span>
+            </div>
+        </div>
+    </section>
+</div>
+</body>
+</html>
