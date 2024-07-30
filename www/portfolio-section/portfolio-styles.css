@@ -326,8 +326,22 @@ header{
 		padding: 10px 0 !important;
 	}
 
+	.project-banner img {
+		padding: 30vw 0 !important;
+		width: 80vw !important;
+	}
+
+	.multi-line-title .project-banner img {
+		padding: 15vw 0 !important;
+		width: 80vw !important;
+	}
+
 	h2 {
 		font-size: 1.5em !important;
+	}
+
+	h3 {
+		font-size: 1.25em !important;
 	}
 	
 	.caption {
