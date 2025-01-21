@@ -1,0 +1,28 @@
+.project-description-section, .conclusion-section{
+	background-image: linear-gradient(180deg, #7474ed, #4141f4);
+}
+
+a {
+	color: #a35bb5 !important;
+}
+
+.project-diagram:nth-child(even) {
+	background-color: rgba(115, 115, 237, 0.2);
+}
+
+.project-brief {
+	padding-top: 3vw !important;
+	padding-bottom: 1vw !important;
+}
+
+.project-banner img {
+	padding: 2vw 0 !important;
+}
+
+.back-button:hover {
+	background-color: #a35bb5;
+}
+
+.tools-section {
+	background-color: #ffffff;
+}

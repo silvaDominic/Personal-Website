@@ -1,0 +1,35 @@
+.project-description-section, .conclusion-section{
+	background-color: #0635A1;
+}
+
+.project-diagram:nth-child(even) {
+	background-color: rgba(233, 158, 78, 0.2);
+}
+
+.project-title {
+	position:relative;
+	font-size:8.5vw;
+	color:black;
+	line-height: 0.75;
+}
+
+.tools-section {
+	background-color: #E99E4C;
+	color: black;
+}
+
+.back-button:hover {
+	background-color: #E99E4C;
+}
+
+a {
+	color: #E99E4C !important;
+}
+
+.project-description-body a:hover {
+	color: #000000;
+}
+
+.project-description-body a:visited {
+	color: #ea8516 !important;
+}

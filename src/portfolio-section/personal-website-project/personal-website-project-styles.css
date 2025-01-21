@@ -1,0 +1,16 @@
+.project-description-section, .conclusion-section{
+	background-image: linear-gradient(180deg, #cfd678, #9aa428);
+}
+
+.project-diagram:nth-child(even) {
+	background-color: rgba(207, 214, 120, 0.2);
+}
+
+.tools-section {
+	background-color: #AAE7E3;
+	color: black;
+}
+
+.back-button:hover {
+	background-color: #FF6700;
+}

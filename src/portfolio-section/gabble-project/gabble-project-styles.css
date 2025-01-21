@@ -1,0 +1,69 @@
+.project-description-section, .conclusion-section {
+	background-image: linear-gradient(180deg, #BE1E2D, #E8041A);
+}
+
+.tools-section {
+	background-color: #D1D3D4;
+}
+
+.phase {
+	display: block;
+	width: 100%;
+	height: 20%;
+	text-align: center;
+	font-size: 5vh;
+	padding: 1.25em 0;
+}
+
+.header-title {
+	font-weight: 600;
+	padding-bottom: 30px;
+	text-align: center !important;
+}
+
+#seeker-title{
+	color: #CC0000;
+	padding-top: 18px;
+}
+
+#setter-title{
+	color: #66B2FF;
+	padding-top: 18px;
+}
+
+.project-description-section .short-row, .project-diagram-section .short-row:first-child, .conclusion-section .short-row {
+	width: 55% !important;	
+}
+
+.back-button:hover {
+	background-color: #BE1E2D;
+}
+
+.phase-row {
+	background-color: rgba(190, 30, 45, 0.2);
+}
+
+.short-row {
+	width: 73% !important;
+}
+
+@media screen and (max-width: 950px) {
+	.project-description-section .short-row, .project-diagram-section .short-row:first-child, .conclusion-section .short-row {
+		width: 90% !important;	
+	}
+	
+	.short-row {
+		width: 90% !important;
+	}
+}
+
+@media screen and (max-width: 769px) {
+	.project-description-section .short-row, .project-diagram-section .short-row:first-child, .conclusion-section .short-row {
+		width: 100% !important;	
+	}
+	
+	.short-row {
+		width: 100% !important;
+		margin: 0 -15px
+	}
+}

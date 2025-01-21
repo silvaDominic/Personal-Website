@@ -1,0 +1,15 @@
+a {
+    color: #E31C79 !important;
+}
+
+.project-description-section, .conclusion-section{
+    background-image: linear-gradient(180deg, #702082, #4f0e5e);
+}
+
+.back-button:hover {
+    background-color: #E31C79;
+}
+
+.project-diagram:nth-child(2n) {
+    background-color: rgba(113, 33, 131, 0.2);
+}

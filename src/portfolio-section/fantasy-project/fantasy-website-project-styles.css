@@ -1,0 +1,15 @@
+#project-description-link {
+    color: #000000 !important;
+}
+
+a {
+    color: #ec2325 !important;
+}
+
+.project-description-section, .conclusion-section{
+    background-image: linear-gradient(180deg, #ec2325, #b21c1c);
+}
+
+.project-diagram:nth-child(2n) {
+    background-color: rgba(236, 35, 37, 0.2);
+}

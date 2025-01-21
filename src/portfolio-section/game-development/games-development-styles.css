@@ -1,0 +1,196 @@
+.project-diagram .col-sm-6 {
+    padding-bottom: 3em;
+}
+
+a {
+color: #ECC23B !important;
+}
+
+.project-description-section, .conclusion-section{
+    background-image: linear-gradient(180deg, #07262D, #01151A);
+}
+
+.project-diagram:nth-child(even) {
+    background-color: rgba(7, 38, 45, 0.1);
+}
+
+.primary-section {
+    display: none;
+}
+
+.primary-section .content {
+    padding-top: 20px;
+}
+
+.primary-section {
+    margin: auto auto;
+    width: 100%;
+    height: auto;
+    padding: 8vw 0;
+}
+
+.section-description {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    font-size: 1.2em;
+    height: auto;
+    width: 100%;
+    z-index: -1;
+}
+
+.description-body {
+    display: block;
+    position: relative;
+    width: 70%;
+    margin: auto;
+    padding-bottom: 4vw;
+    font-size: 1.2em;
+    text-align: left;
+    font-weight: 400;
+}
+
+.project-section {
+    padding: 4vw 0;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.project-diagram-section .project-title{
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    font-size: 180%;
+    font-weight: 600;
+    color: white;
+    border-radius: 1rem !important;
+    z-index: 1;
+    opacity: 0.85;
+    background-color: lightgrey;
+    -webkit-transition: all 0.35s ease;
+    -o-transition: all 0.35s ease;
+    -ms-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+}
+
+.project-title span {
+    -webkit-transition: all 0.35s ease;
+    -o-transition: all 0.35s ease;
+    -ms-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+}
+
+.project-diagram-section .project-title:hover {
+    background: transparent !important;
+}
+
+.project-diagram-section .project-title:hover span{
+    opacity: 0;
+}
+
+.project-diagram-section .project-title:hover ~ img{
+    transform: scale(1.05);
+}
+
+.project-image {
+    border-radius: 1rem;
+    transition: 0.35s all ease;
+}
+
+.project-node{
+    display: block;
+    position: relative;
+    text-align: center;
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 12px;
+}
+
+.project-node a {
+    display: block;
+    position: relative;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.project-node span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.project-node img{
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+    border-radius: 1rem;
+}
+
+.title-name{
+    position: relative;
+    display: block;
+    text-align: center;
+    z-index: 1;
+    padding-top: 5vh;
+    padding-bottom: 3vh;
+}
+
+.name{
+    position: relative;
+    display: inline-block;
+    font-size: 96px;
+    line-height: 1.2;
+}
+
+.back-button:hover {
+    background-color: #ecc23b;
+}
+
+.tools-section {
+    background-color: #00A79D;
+}
+
+
+#asteroids-title{
+    background-color: #F7931D;
+}
+
+
+#a2048-title{
+    background-color: #ECC33D;
+}
+
+#pong-title{
+    background-color: #8CC63E;
+}
+
+
+#blackjack-title{
+    background-color: #7F1416;
+}
+
+#tictactoe-title{
+    background-color: #1B75BB;
+}
+
+#unity-diagram .project-title {
+	background-color: #1B75BB;
+}
+
+.tools-section {
+    background-color: #425eab;
+}
+
+.tools-header span, .tool-label {
+    color: white;
+}
+
+@media screen and (max-width: 769px) {
+    .project-diagram .col-sm-6 {
+        padding-bottom: 1.5em;
+    }
+}
